@@ -1,1 +1,5 @@
+Accessibility Course Development (CD) Shell is a Computer Science senior project focused on improving accessibility, usability, and navigation within the Brightspace Learning Management System. The project delivers a redesigned Course Home layout, reusable HTML content templates, and navigation-focused widgets that reduce cognitive load and support students with disabilities and first-time LMS users.
 
+Rather than replacing Brightspace’s built-in accessibility features, this project builds portable, instructor-friendly resources that can be previewed, tested, and reused across courses. An external Google Sites showcase is used to iterate on designs, document use-cases, and gather feedback prior to LMS deployment.
+
+The final product includes a live Brightspace course shell, a public template repository, and accessibility-aligned documentation, evaluated through usability analysis and WCAG-informed design principles.
