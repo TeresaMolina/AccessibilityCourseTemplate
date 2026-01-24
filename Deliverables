@@ -1,0 +1,38 @@
+Final Deliverables
+
+Accessible Course Home Layout
+A redesigned Brightspace Course Home layout using official Brightspace widgets only, intentionally limited to up to 5 widgets (Brightspace maximum) to prevent visual overload.
+This layout prioritizes clarity and task separation for:
+
+first-time Brightspace users
+
+students with disabilities
+
+students who experience cognitive or navigational overload
+
+Reusable HTML Content Template Library
+A curated set of 8–12 accessible HTML content page templates that instructors can selectively choose from and embed within their courses as structured content blocks or “content-based widgets.”
+These templates include:
+
+clear navigation and content hierarchy
+
+low-cognitive-load layouts
+
+accessibility-aligned structure and styling
+
+Utility & Quick-Access Content Components
+Select templates and widgets will provide quick access to commonly needed course resources, such as:
+
+links to required tools (e.g., Respondus LockDown Browser)
+
+optional embedded utilities (e.g., timers for quizzes or exams, where appropriate)
+
+Public GitHub Repository & Deployment Site
+A GitHub repository containing:
+
+reusable HTML/CSS template code
+
+embedded snippets ready for copy/paste use
+
+documentation and usage instructions
+The repository will also be used to generate a lightweight deployment site for previewing templates and simplifying instructor adoption.
