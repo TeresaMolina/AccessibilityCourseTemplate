@@ -1,0 +1,10 @@
+:root { color-scheme: light; }
+body { font-family: system-ui, Arial, sans-serif; margin: 0; line-height: 1.5; }
+.container { max-width: 980px; margin: 0 auto; padding: 20px; }
+.sub { margin-top: 6px; opacity: 0.8; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; background: #fff; }
+.card h2 { margin-top: 0; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+.foot { opacity: 0.7; }
