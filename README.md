@@ -85,7 +85,7 @@ The solution is designed to be:
   - gather instructor/student feedback via surveys
 
 🔗 Preview Site:  
-To be given...
+- https://sites.google.com/view/accessibilitycoursetemplate/home
 ---
 
 ### 5. GitHub Repository
