@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BuddyAI (Curated Knowledge Pack)</title>
+  <link rel="stylesheet" href="assets/css/buddyai.css" />
+</head>
+<body>
+  <main class="container" aria-label="BuddyAI Help Page">
+    <header class="hero" role="banner">
+      <h1>BuddyAI</h1>
+      <p class="sub">
+        Ask questions using <strong>instructor-approved course material</strong> only.
+        No grades, no private data, no internet sourcing.
+      </p>
+    </header>
+
+    <section class="card" aria-label="Ask BuddyAI">
+      <h2>Ask a question</h2>
+
+      <label class="label" for="question">Your question</label>
+      <input id="question" class="input" type="text" placeholder="Example: What is the derivative power rule?" />
+
+      <div class="row">
+        <button id="askBtn" class="btn" type="button">Ask BuddyAI</button>
+        <button id="clearBtn" class="btn secondary" type="button">Clear</button>
+      </div>
+
+      <p class="hint">
+        Tip: Ask about formulas, definitions, where to find a topic, or what to do next.
+      </p>
+    </section>
+
+    <section class="card" aria-label="BuddyAI Response">
+      <h2>Response</h2>
+      <div id="answer" class="answer" role="status" aria-live="polite">
+        Ask a question to get started.
+      </div>
+
+      <div id="sourcesWrap" class="sources" hidden>
+        <h3>Sources in the course pack</h3>
+        <ul id="sources"></ul>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Knowledge Pack">
+      <h2>What BuddyAI is allowed to use</h2>
+      <p class="sub2">
+        This demo searches a curated “Knowledge Pack” of short course snippets.
+        Update <code>assets/js/knowledge-pack.js</code> to change what BuddyAI can answer.
+      </p>
+    </section>
+
+    <footer class="foot">
+      <small>Accessibility Course Development (CD) Shell • GitHub Pages Demo</small>
+    </footer>
+  </main>
+
+  <script src="assets/js/knowledge-pack.js"></script>
+  <script src="assets/js/buddyai.js"></script>
+</body>
+</html>
