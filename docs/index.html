@@ -1,54 +1,91 @@
-<!--Starter Code-->
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Brightspace Accessibility Template Library</title>
+  <title>Accessibility Course Template</title>
+
+  <!-- Optional Brightspace font -->
+  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
-  <header class="container">
-    <h1>Brightspace Accessibility Template Library</h1>
-    <p class="sub">
-      Copy/paste-ready HTML templates and widget-style content blocks for Brightspace.
-    </p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap">
+      <h1>Accessibility Course Template</h1>
+      <p class="subtitle">
+        A catalog of reusable Brightspace <strong>HTML Templates</strong> and <strong>Homepage Widgets</strong>.
+        Built for clarity, accessibility, and reduced cognitive load.
+      </p>
+
+      <nav class="tabs" aria-label="Page sections">
+        <a href="#templates">HTML Templates</a>
+        <a href="#widgets">Widgets</a>
+        <a href="#howto">How to use</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container grid">
-    <section class="card">
-      <h2>Widgets</h2>
-      <ul>
-        <li><a href="widgets/assignments.html">Assignments Widget Block</a></li>
-        <li><a href="widgets/quizzes.html">Quizzes Widget Block</a></li>
-        <li><a href="widgets/weekly-overview.html">Weekly Overview Block</a></li>
-      </ul>
+  <main id="main" class="wrap">
+    <!-- Templates -->
+    <section id="templates" class="section" aria-label="HTML Templates">
+      <div class="section-head">
+        <h2>HTML Templates</h2>
+        <p>
+          These are “free content widgets” you can add to a Brightspace course by creating an
+          <strong>HTML Document</strong> in the <strong>Content</strong> area and pasting the code.
+        </p>
+      </div>
+
+      <div class="list" id="templateList" aria-live="polite"></div>
     </section>
 
-    <section class="card">
-      <h2>Templates</h2>
-      <ul>
-        <li><a href="templates/module-page.html">Module Page Template</a></li>
-        <li><a href="templates/checklist.html">Checklist Template</a></li>
-        <li><a href="templates/syllabus.html">Syllabus Template</a></li>
-      </ul>
+    <!-- Widgets -->
+    <section id="widgets" class="section" aria-label="Widgets">
+      <div class="section-head">
+        <h2>Widgets</h2>
+        <p>
+          Previews only. These pages are designed to be copied into Brightspace as a <strong>Custom Widget</strong>.
+          The previews below show how each widget is expected to look.
+        </p>
+      </div>
+
+      <div class="list" id="widgetList" aria-live="polite"></div>
     </section>
 
-    <section class="card">
-      <h2>How to use in Brightspace</h2>
-      <ol>
-        <li>Open a template page</li>
-        <li>Click <b>Copy HTML</b></li>
-        <li>In Brightspace: Content → Create New → HTML Document</li>
-        <li>Open HTML source (“&lt;&gt;” / Source) and paste</li>
-        <li>Save and publish</li>
-      </ol>
+    <!-- How-to -->
+    <section id="howto" class="section" aria-label="How to Use in Brightspace">
+      <div class="section-head">
+        <h2>How to Use in Brightspace</h2>
+      </div>
+
+      <div class="card">
+        <h3>Use an HTML Template (Content Area)</h3>
+        <ol>
+          <li>Go to <strong>Content</strong> in your course.</li>
+          <li>Select <strong>Create New</strong> → <strong>HTML Document</strong>.</li>
+          <li>Open <strong>Source</strong> (the <code>&lt;/&gt;</code> icon).</li>
+          <li>Copy the template HTML from this site and paste it into the editor.</li>
+          <li>Replace placeholders (titles, dates, links) with your course content.</li>
+          <li>Save and preview on desktop + mobile.</li>
+        </ol>
+        <p class="note">
+          Tip: Keep headings in order (H2 → H3) and avoid relying on color alone to convey meaning.
+        </p>
+      </div>
+
     </section>
+
+    <footer class="footer">
+      <p>
+        Colors used: <code>#313131</code>, <code>#4c4a4f</code>, <code>#cb4900</code>.
+      </p>
+    </footer>
   </main>
 
-  <footer class="container foot">
-    <small>CSCI 4390 Senior Project • Accessibility Course Development (CD) Shell</small>
-  </footer>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
