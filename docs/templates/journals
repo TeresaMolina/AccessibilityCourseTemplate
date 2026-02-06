@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Template Name </title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <h1> Template Name </h1>
+    <p class="subtitle">
+      Use this page as a fun, optional morale booster in Brightspace.
+    </p>
+
+    <!-- Instructions -->
+    <section class="card">
+      <h2>How to use in Brightspace</h2>
+      <ol>
+        <li>Go to <strong>Content</strong> in your course</li>
+        <li>Select <strong>Create New → HTML Document</strong></li>
+        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
+        <li>Copy the HTML below and paste it</li>
+      </ol>
+    </section>
+
+    <!-- Preview -->
+    <section class="card">
+      <h2>Preview</h2>
+
+      <!-- PASTE THE HTML HERE -->
+    </section>
+
+    <!-- Copy section -->
+    <section class="card">
+      <h2>Copy HTML</h2>
+      <p>Copy everything below:</p>
+
+      <pre><code>
+<!-- Paste the SAME HTML here -->
+      </code></pre>
+    </section>
+
+    <p><a href="../index.html">← Back to catalog</a></p>
+  </main>
+</body>
+</html>
