@@ -12,6 +12,10 @@ window.BUDDYAI_PACK = [
       "Respondus LockDown Browser is a secure browser used for online exams. It prevents access to other applications, websites, and functions during a test.",
     sourceLabel: "COLTT KB Article: Respondus LockDown Browser",
     sourceUrl: "https://support.utrgv.edu/TDClient/1849/Portal/KB/ArticleDet?ID=163219"
+  },
+
+  {
+    id: "student-handout-resources",
   }
 
 ];
