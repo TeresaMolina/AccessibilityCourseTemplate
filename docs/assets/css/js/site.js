@@ -68,6 +68,7 @@ function buildItemCard(item, kind, preview = false) {
 
 function render() {
   const templateList = document.getElementById("templateList");
+  
   const widgetList = document.getElementById("widgetList");
 
   if (templateList) {
