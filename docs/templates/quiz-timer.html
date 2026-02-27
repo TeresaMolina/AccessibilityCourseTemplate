@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Template Name </title>
+  <title> Quiz Timer </title>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
 <body>
   <main class="wrap">
-    <h1> Template Name </h1>
+    <h1> Quiz Timer </h1>
     <p class="subtitle">
       Use this page as a fun, optional morale booster in Brightspace.
     </p>
@@ -28,7 +28,171 @@
     <section class="card">
       <h2>Preview</h2>
 
-      <!-- PASTE THE HTML HERE -->
+      <section aria-label="Timer Widget"
+  style="max-width:520px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;">
+
+  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
+    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
+      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">Exam Timer</h2>
+      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">Set to 1 hour 15 minutes</p>
+    </header>
+
+    <div style="margin-top:14px;display:flex;align-items:center;justify-content:center;">
+      <div id="timerDisplay"
+        role="timer"
+        aria-live="polite"
+        aria-label="Time remaining"
+        style="font-variant-numeric:tabular-nums;letter-spacing:1px;
+               font-size:2.4rem;font-weight:800;color:#313131;">
+        01:15:00
+      </div>
+    </div>
+
+    <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <button id="startBtn"
+        type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+               padding:10px 14px;border-radius:12px;font-weight:700;">
+        Start
+      </button>
+
+      <button id="pauseBtn"
+        type="button"
+        disabled
+        style="cursor:pointer;border:1px solid #e6e6e6;background:#f5f5f5;color:#4c4a4f;
+               padding:10px 14px;border-radius:12px;font-weight:700;">
+        Pause
+      </button>
+
+      <button id="restartBtn"
+        type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
+               padding:10px 14px;border-radius:12px;font-weight:700;">
+        Restart
+      </button>
+    </div>
+
+    <p id="timerNote" style="margin:12px 0 0 0;text-align:center;color:#4c4a4f;font-size:.9rem;">
+      Tip: Use Restart to reset back to 01:15:00.
+    </p>
+  </div>
+
+  <script>
+    (function () {
+      // 1 hour 15 minutes = 75 minutes
+      const INITIAL_MS = (1 * 60 * 60 + 15 * 60) * 1000;
+
+      const display = document.getElementById("timerDisplay");
+      const startBtn = document.getElementById("startBtn");
+      const pauseBtn = document.getElementById("pauseBtn");
+      const restartBtn = document.getElementById("restartBtn");
+      const note = document.getElementById("timerNote");
+
+      let remainingMs = INITIAL_MS;
+      let intervalId = null;
+      let running = false;
+
+      function pad2(n) { return String(n).padStart(2, "0"); }
+
+      function format(ms) {
+        const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+        const hrs = Math.floor(totalSeconds / 3600);
+        const mins = Math.floor((totalSeconds % 3600) / 60);
+        const secs = totalSeconds % 60;
+        return `${pad2(hrs)}:${pad2(mins)}:${pad2(secs)}`;
+      }
+
+      function render() {
+        display.textContent = format(remainingMs);
+      }
+
+      function setButtons() {
+        startBtn.disabled = running;
+        pauseBtn.disabled = !running;
+
+        // Visual disabled styles (inline because some platforms strip CSS)
+        if (startBtn.disabled) {
+          startBtn.style.background = "#f5f5f5";
+          startBtn.style.borderColor = "#e6e6e6";
+          startBtn.style.color = "#4c4a4f";
+          startBtn.style.cursor = "not-allowed";
+        } else {
+          startBtn.style.background = "#cb4900";
+          startBtn.style.borderColor = "#cb4900";
+          startBtn.style.color = "#fff";
+          startBtn.style.cursor = "pointer";
+        }
+
+        if (pauseBtn.disabled) {
+          pauseBtn.style.background = "#f5f5f5";
+          pauseBtn.style.borderColor = "#e6e6e6";
+          pauseBtn.style.color = "#4c4a4f";
+          pauseBtn.style.cursor = "not-allowed";
+        } else {
+          pauseBtn.style.background = "#ffffff";
+          pauseBtn.style.borderColor = "#cb4900";
+          pauseBtn.style.color = "#cb4900";
+          pauseBtn.style.cursor = "pointer";
+        }
+      }
+
+      function start() {
+        if (running) return;
+        running = true;
+        note.textContent = "Timer running…";
+        setButtons();
+
+        const tick = () => {
+          remainingMs -= 1000;
+          if (remainingMs <= 0) {
+            remainingMs = 0;
+            stopInterval();
+            running = false;
+            note.textContent = "Time’s up!";
+            setButtons();
+          }
+          render();
+        };
+
+        // Start immediately on next second
+        stopInterval();
+        intervalId = setInterval(tick, 1000);
+      }
+
+      function pause() {
+        if (!running) return;
+        running = false;
+        stopInterval();
+        note.textContent = "Paused.";
+        setButtons();
+      }
+
+      function restart() {
+        running = false;
+        stopInterval();
+        remainingMs = INITIAL_MS;
+        render();
+        note.textContent = "Reset to 01:15:00. Press Start when ready.";
+        setButtons();
+      }
+
+      function stopInterval() {
+        if (intervalId !== null) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+      }
+
+      startBtn.addEventListener("click", start);
+      pauseBtn.addEventListener("click", pause);
+      restartBtn.addEventListener("click", restart);
+
+      // Initial render
+      render();
+      setButtons();
+    })();
+  </script>
+</section>
     </section>
 
     <!-- Copy section -->
@@ -37,7 +201,171 @@
       <p>Copy everything below:</p>
 
       <pre><code>
-<!-- Paste the SAME HTML here -->
+<section aria-label="Timer Widget"
+  style="max-width:520px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;">
+
+  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
+    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
+      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">Exam Timer</h2>
+      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">Set to 1 hour 15 minutes</p>
+    </header>
+
+    <div style="margin-top:14px;display:flex;align-items:center;justify-content:center;">
+      <div id="timerDisplay"
+        role="timer"
+        aria-live="polite"
+        aria-label="Time remaining"
+        style="font-variant-numeric:tabular-nums;letter-spacing:1px;
+               font-size:2.4rem;font-weight:800;color:#313131;">
+        01:15:00
+      </div>
+    </div>
+
+    <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <button id="startBtn"
+        type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+               padding:10px 14px;border-radius:12px;font-weight:700;">
+        Start
+      </button>
+
+      <button id="pauseBtn"
+        type="button"
+        disabled
+        style="cursor:pointer;border:1px solid #e6e6e6;background:#f5f5f5;color:#4c4a4f;
+               padding:10px 14px;border-radius:12px;font-weight:700;">
+        Pause
+      </button>
+
+      <button id="restartBtn"
+        type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
+               padding:10px 14px;border-radius:12px;font-weight:700;">
+        Restart
+      </button>
+    </div>
+
+    <p id="timerNote" style="margin:12px 0 0 0;text-align:center;color:#4c4a4f;font-size:.9rem;">
+      Tip: Use Restart to reset back to 01:15:00.
+    </p>
+  </div>
+
+  <script>
+    (function () {
+      // 1 hour 15 minutes = 75 minutes
+      const INITIAL_MS = (1 * 60 * 60 + 15 * 60) * 1000;
+
+      const display = document.getElementById("timerDisplay");
+      const startBtn = document.getElementById("startBtn");
+      const pauseBtn = document.getElementById("pauseBtn");
+      const restartBtn = document.getElementById("restartBtn");
+      const note = document.getElementById("timerNote");
+
+      let remainingMs = INITIAL_MS;
+      let intervalId = null;
+      let running = false;
+
+      function pad2(n) { return String(n).padStart(2, "0"); }
+
+      function format(ms) {
+        const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+        const hrs = Math.floor(totalSeconds / 3600);
+        const mins = Math.floor((totalSeconds % 3600) / 60);
+        const secs = totalSeconds % 60;
+        return `${pad2(hrs)}:${pad2(mins)}:${pad2(secs)}`;
+      }
+
+      function render() {
+        display.textContent = format(remainingMs);
+      }
+
+      function setButtons() {
+        startBtn.disabled = running;
+        pauseBtn.disabled = !running;
+
+        // Visual disabled styles (inline because some platforms strip CSS)
+        if (startBtn.disabled) {
+          startBtn.style.background = "#f5f5f5";
+          startBtn.style.borderColor = "#e6e6e6";
+          startBtn.style.color = "#4c4a4f";
+          startBtn.style.cursor = "not-allowed";
+        } else {
+          startBtn.style.background = "#cb4900";
+          startBtn.style.borderColor = "#cb4900";
+          startBtn.style.color = "#fff";
+          startBtn.style.cursor = "pointer";
+        }
+
+        if (pauseBtn.disabled) {
+          pauseBtn.style.background = "#f5f5f5";
+          pauseBtn.style.borderColor = "#e6e6e6";
+          pauseBtn.style.color = "#4c4a4f";
+          pauseBtn.style.cursor = "not-allowed";
+        } else {
+          pauseBtn.style.background = "#ffffff";
+          pauseBtn.style.borderColor = "#cb4900";
+          pauseBtn.style.color = "#cb4900";
+          pauseBtn.style.cursor = "pointer";
+        }
+      }
+
+      function start() {
+        if (running) return;
+        running = true;
+        note.textContent = "Timer running…";
+        setButtons();
+
+        const tick = () => {
+          remainingMs -= 1000;
+          if (remainingMs <= 0) {
+            remainingMs = 0;
+            stopInterval();
+            running = false;
+            note.textContent = "Time’s up!";
+            setButtons();
+          }
+          render();
+        };
+
+        // Start immediately on next second
+        stopInterval();
+        intervalId = setInterval(tick, 1000);
+      }
+
+      function pause() {
+        if (!running) return;
+        running = false;
+        stopInterval();
+        note.textContent = "Paused.";
+        setButtons();
+      }
+
+      function restart() {
+        running = false;
+        stopInterval();
+        remainingMs = INITIAL_MS;
+        render();
+        note.textContent = "Reset to 01:15:00. Press Start when ready.";
+        setButtons();
+      }
+
+      function stopInterval() {
+        if (intervalId !== null) {
+          clearInterval(intervalId);
+          intervalId = null;
+        }
+      }
+
+      startBtn.addEventListener("click", start);
+      pauseBtn.addEventListener("click", pause);
+      restartBtn.addEventListener("click", restart);
+
+      // Initial render
+      render();
+      setButtons();
+    })();
+  </script>
+</section>
       </code></pre>
     </section>
 

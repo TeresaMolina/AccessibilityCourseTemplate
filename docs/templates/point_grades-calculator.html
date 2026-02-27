@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Grades Calculator (Point-based) </title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <h1> Grades Calculator (Point-based) </h1>
+    <p class="subtitle">
+      Use this page as a fun, optional morale booster in Brightspace.
+    </p>
+
+    <!-- Instructions -->
+    <section class="card">
+      <h2>How to use in Brightspace</h2>
+      <ol>
+        <li>Go to <strong>Content</strong> in your course</li>
+        <li>Select <strong>Create New → HTML Document</strong></li>
+        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
+        <li>Copy the HTML below and paste it</li>
+      </ol>
+    </section>
+
+    <!-- Preview -->
+    <section class="card">
+      <h2>Preview</h2>
+
+      <section aria-label="Points Grade Calculator"
+  style="max-width:860px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;">
+
+  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
+    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
+      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">Points Grade Calculator</h2>
+      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">
+        Enter earned/possible points. Blank rows are ignored. Great for 1,000+ point courses.
+      </p>
+    </header>
+
+    <!-- Quick total (optional) -->
+    <section style="margin-top:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Quick Total (Optional)</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;">
+        <label style="display:block;">
+          <span style="font-weight:800;">Total Earned Points</span>
+          <input id="totalEarned" type="number" min="0" placeholder="e.g., 742"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+
+        <label style="display:block;">
+          <span style="font-weight:800;">Total Possible Points</span>
+          <input id="totalPossible" type="number" min="0" placeholder="e.g., 900"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+      </div>
+      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        If you fill the totals above, the category table below is optional. If you fill both, totals will be used.
+      </p>
+    </section>
+
+    <!-- Category table -->
+    <section style="margin-top:16px;">
+      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Category Points (Optional)</h3>
+
+      <div style="overflow:auto;border:1px solid #e6e6e6;border-radius:14px;">
+        <table style="width:100%;border-collapse:collapse;min-width:700px;">
+          <thead>
+            <tr style="background:#f7f7f7;text-align:left;color:#4c4a4f;">
+              <th style="padding:10px 12px;">Category</th>
+              <th style="padding:10px 12px;">Earned</th>
+              <th style="padding:10px 12px;">Possible</th>
+              <th style="padding:10px 12px;">Notes (optional)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 6 default rows -->
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1name" value="Assignments" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1e" type="number" min="0" placeholder="e.g., 180" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1p" type="number" min="0" placeholder="e.g., 200" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2name" value="Quizzes" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2e" type="number" min="0" placeholder="e.g., 85" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3name" value="Labs" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3e" type="number" min="0" placeholder="e.g., 120" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3p" type="number" min="0" placeholder="e.g., 150" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4name" value="Projects" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4e" type="number" min="0" placeholder="e.g., 240" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4p" type="number" min="0" placeholder="e.g., 300" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5name" value="Midterm" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5e" type="number" min="0" placeholder="e.g., 90" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6name" value="Final" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6e" type="number" min="0" placeholder="e.g., 88" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        Leave rows blank if your course doesn’t use them.
+      </p>
+    </section>
+
+    <!-- Target grade helper -->
+    <section style="margin-top:16px;">
+      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Target Grade (Optional)</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;">
+        <label style="display:block;">
+          <span style="font-weight:800;">Target Percent</span>
+          <input id="targetPercent" type="number" min="0" max="100" placeholder="e.g., 90"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+
+        <label style="display:block;">
+          <span style="font-weight:800;">Course Total Possible Points (for target)</span>
+          <input id="courseTotalPossible" type="number" min="0" placeholder="e.g., 1000"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+      </div>
+      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        If you enter both fields, we’ll estimate how many total points you need overall.
+      </p>
+    </section>
+
+    <!-- Actions + Results -->
+    <section style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button id="calcPts" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+               padding:10px 14px;border-radius:12px;font-weight:900;">
+        Calculate
+      </button>
+
+      <button id="resetPts" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
+               padding:10px 14px;border-radius:12px;font-weight:900;">
+        Reset
+      </button>
+    </section>
+
+    <section style="margin-top:14px;">
+      <div id="ptsResult"
+        style="border:1px solid #e6e6e6;border-radius:14px;padding:12px;background:#fff;">
+        <p style="margin:0;color:#4c4a4f;">Enter points and click <strong>Calculate</strong>.</p>
+      </div>
+      <div id="ptsBreakdown" style="margin-top:10px;"></div>
+      <p style="margin-top:10px;color:#4c4a4f;font-size:.85rem;">
+        Note: This is an estimate tool for planning. Always follow your instructor’s official gradebook.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+      const calcBtn = $("calcPts");
+      const resetBtn = $("resetPts");
+      const resultBox = $("ptsResult");
+      const breakdownBox = $("ptsBreakdown");
+
+      function numOrNull(v) {
+        if (v === "" || v === null || v === undefined) return null;
+        const n = Number(v);
+        return Number.isFinite(n) ? n : null;
+      }
+      function clampMin(n, min){ return Math.max(min, n); }
+      function fmt(n){ return (Math.round(n * 100) / 100).toFixed(2); }
+
+      function getRow(i){
+        const name = ($("c"+i+"name")?.value || "").trim();
+        const earned = numOrNull($("c"+i+"e")?.value);
+        const possible = numOrNull($("c"+i+"p")?.value);
+        const note = ($("c"+i+"n")?.value || "").trim();
+        return { name, earned, possible, note };
+      }
+
+      function calculate(){
+        // Prefer quick totals if provided
+        const totalEarned = numOrNull($("totalEarned").value);
+        const totalPossible = numOrNull($("totalPossible").value);
+
+        let earnedSum = 0;
+        let possibleSum = 0;
+        let usedTotals = false;
+
+        const rows = [];
+        for(let i=1;i<=6;i++){
+          const r = getRow(i);
+          const hasPoints = (r.earned !== null) || (r.possible !== null);
+          if (!hasPoints) continue;
+
+          if (r.earned === null || r.possible === null) {
+            // ignore partial row
+            continue;
+          }
+          if (r.possible <= 0) continue;
+
+          rows.push(r);
+          earnedSum += clampMin(r.earned, 0);
+          possibleSum += clampMin(r.possible, 0);
+        }
+
+        if (totalEarned !== null && totalPossible !== null && totalPossible > 0) {
+          earnedSum = clampMin(totalEarned, 0);
+          possibleSum = clampMin(totalPossible, 0);
+          usedTotals = true;
+        }
+
+        if (possibleSum <= 0) {
+          resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Please enter earned and possible points (either totals or at least one complete category row).</p>';
+          breakdownBox.innerHTML = "";
+          return;
+        }
+
+        const percent = (earnedSum / possibleSum) * 100;
+
+        // Target helper
+        const targetPercent = numOrNull($("targetPercent").value);
+        const courseTotalPossible = numOrNull($("courseTotalPossible").value);
+
+        let targetHtml = "";
+        if (targetPercent !== null && courseTotalPossible !== null && courseTotalPossible > 0) {
+          const neededTotalPoints = (clampMin(targetPercent,0) / 100) * courseTotalPossible;
+          const pointsStillNeeded = Math.max(0, neededTotalPoints - earnedSum);
+          targetHtml = `
+            <div style="margin-top:8px;color:#4c4a4f;">
+              To reach <strong>${fmt(targetPercent)}%</strong> in a <strong>${fmt(courseTotalPossible)}</strong>-point course,
+              you need about <strong>${fmt(neededTotalPoints)}</strong> total points.
+              That’s <strong>${fmt(pointsStillNeeded)}</strong> more points from here.
+            </div>
+          `;
+        }
+
+        resultBox.innerHTML = `
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;">
+            <p style="margin:0;font-weight:900;font-size:1.2rem;color:#313131;">
+              Current Estimate: <span style="color:#cb4900;">${fmt(percent)}%</span>
+            </p>
+            <p style="margin:0;color:#4c4a4f;font-size:.9rem;">
+              ${usedTotals ? "Using totals" : "Using category sums"} · Earned ${fmt(earnedSum)} / ${fmt(possibleSum)} pts
+            </p>
+          </div>
+          ${targetHtml}
+        `;
+
+        // Breakdown
+        if (!usedTotals && rows.length > 0) {
+          const trs = rows.map(r => {
+            const rowPct = (r.earned / r.possible) * 100;
+            return `
+              <tr>
+                <td style="padding:10px;border-top:1px solid #eee;"><strong>${r.name || "Category"}</strong></td>
+                <td style="padding:10px;border-top:1px solid #eee;">${fmt(r.earned)}</td>
+                <td style="padding:10px;border-top:1px solid #eee;">${fmt(r.possible)}</td>
+                <td style="padding:10px;border-top:1px solid #eee;">${fmt(rowPct)}%</td>
+                <td style="padding:10px;border-top:1px solid #eee;color:#4c4a4f;">${r.note || ""}</td>
+              </tr>
+            `;
+          }).join("");
+
+          breakdownBox.innerHTML = `
+            <div style="border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;">
+              <div style="padding:10px 12px;background:#f7f7f7;color:#4c4a4f;font-size:.95rem;">
+                Category Breakdown
+              </div>
+              <div style="overflow:auto;">
+                <table style="width:100%;border-collapse:collapse;min-width:720px;">
+                  <thead>
+                    <tr style="text-align:left;background:#fff;">
+                      <th style="padding:10px;border-top:1px solid #eee;">Category</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Earned</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Possible</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Percent</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>${trs}</tbody>
+                </table>
+              </div>
+            </div>
+          `;
+        } else {
+          breakdownBox.innerHTML = "";
+        }
+      }
+
+      function resetAll(){
+        ["totalEarned","totalPossible","targetPercent","courseTotalPossible"].forEach(id => $(id).value = "");
+        for(let i=1;i<=6;i++){
+          $("c"+i+"e").value = "";
+          $("c"+i+"p").value = "";
+          $("c"+i+"n").value = "";
+          // leave names as default labels
+        }
+        resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Enter points and click <strong>Calculate</strong>.</p>';
+        breakdownBox.innerHTML = "";
+      }
+
+      calcBtn.addEventListener("click", calculate);
+      resetBtn.addEventListener("click", resetAll);
+    })();
+  </script>
+</section>
+    </section>
+
+    <!-- Copy section -->
+    <section class="card">
+      <h2>Copy HTML</h2>
+      <p>Copy everything below:</p>
+
+      <pre><code>
+<section aria-label="Points Grade Calculator"
+  style="max-width:860px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;">
+
+  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
+    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
+      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">Points Grade Calculator</h2>
+      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">
+        Enter earned/possible points. Blank rows are ignored. Great for 1,000+ point courses.
+      </p>
+    </header>
+
+    <!-- Quick total (optional) -->
+    <section style="margin-top:14px;">
+      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Quick Total (Optional)</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;">
+        <label style="display:block;">
+          <span style="font-weight:800;">Total Earned Points</span>
+          <input id="totalEarned" type="number" min="0" placeholder="e.g., 742"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+
+        <label style="display:block;">
+          <span style="font-weight:800;">Total Possible Points</span>
+          <input id="totalPossible" type="number" min="0" placeholder="e.g., 900"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+      </div>
+      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        If you fill the totals above, the category table below is optional. If you fill both, totals will be used.
+      </p>
+    </section>
+
+    <!-- Category table -->
+    <section style="margin-top:16px;">
+      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Category Points (Optional)</h3>
+
+      <div style="overflow:auto;border:1px solid #e6e6e6;border-radius:14px;">
+        <table style="width:100%;border-collapse:collapse;min-width:700px;">
+          <thead>
+            <tr style="background:#f7f7f7;text-align:left;color:#4c4a4f;">
+              <th style="padding:10px 12px;">Category</th>
+              <th style="padding:10px 12px;">Earned</th>
+              <th style="padding:10px 12px;">Possible</th>
+              <th style="padding:10px 12px;">Notes (optional)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 6 default rows -->
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1name" value="Assignments" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1e" type="number" min="0" placeholder="e.g., 180" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1p" type="number" min="0" placeholder="e.g., 200" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2name" value="Quizzes" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2e" type="number" min="0" placeholder="e.g., 85" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3name" value="Labs" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3e" type="number" min="0" placeholder="e.g., 120" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3p" type="number" min="0" placeholder="e.g., 150" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4name" value="Projects" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4e" type="number" min="0" placeholder="e.g., 240" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4p" type="number" min="0" placeholder="e.g., 300" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5name" value="Midterm" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5e" type="number" min="0" placeholder="e.g., 90" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+
+            <tr>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6name" value="Final" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6e" type="number" min="0" placeholder="e.g., 88" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        Leave rows blank if your course doesn’t use them.
+      </p>
+    </section>
+
+    <!-- Target grade helper -->
+    <section style="margin-top:16px;">
+      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Target Grade (Optional)</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;">
+        <label style="display:block;">
+          <span style="font-weight:800;">Target Percent</span>
+          <input id="targetPercent" type="number" min="0" max="100" placeholder="e.g., 90"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+
+        <label style="display:block;">
+          <span style="font-weight:800;">Course Total Possible Points (for target)</span>
+          <input id="courseTotalPossible" type="number" min="0" placeholder="e.g., 1000"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+        </label>
+      </div>
+      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        If you enter both fields, we’ll estimate how many total points you need overall.
+      </p>
+    </section>
+
+    <!-- Actions + Results -->
+    <section style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button id="calcPts" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+               padding:10px 14px;border-radius:12px;font-weight:900;">
+        Calculate
+      </button>
+
+      <button id="resetPts" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
+               padding:10px 14px;border-radius:12px;font-weight:900;">
+        Reset
+      </button>
+    </section>
+
+    <section style="margin-top:14px;">
+      <div id="ptsResult"
+        style="border:1px solid #e6e6e6;border-radius:14px;padding:12px;background:#fff;">
+        <p style="margin:0;color:#4c4a4f;">Enter points and click <strong>Calculate</strong>.</p>
+      </div>
+      <div id="ptsBreakdown" style="margin-top:10px;"></div>
+      <p style="margin-top:10px;color:#4c4a4f;font-size:.85rem;">
+        Note: This is an estimate tool for planning. Always follow your instructor’s official gradebook.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+      const calcBtn = $("calcPts");
+      const resetBtn = $("resetPts");
+      const resultBox = $("ptsResult");
+      const breakdownBox = $("ptsBreakdown");
+
+      function numOrNull(v) {
+        if (v === "" || v === null || v === undefined) return null;
+        const n = Number(v);
+        return Number.isFinite(n) ? n : null;
+      }
+      function clampMin(n, min){ return Math.max(min, n); }
+      function fmt(n){ return (Math.round(n * 100) / 100).toFixed(2); }
+
+      function getRow(i){
+        const name = ($("c"+i+"name")?.value || "").trim();
+        const earned = numOrNull($("c"+i+"e")?.value);
+        const possible = numOrNull($("c"+i+"p")?.value);
+        const note = ($("c"+i+"n")?.value || "").trim();
+        return { name, earned, possible, note };
+      }
+
+      function calculate(){
+        // Prefer quick totals if provided
+        const totalEarned = numOrNull($("totalEarned").value);
+        const totalPossible = numOrNull($("totalPossible").value);
+
+        let earnedSum = 0;
+        let possibleSum = 0;
+        let usedTotals = false;
+
+        const rows = [];
+        for(let i=1;i<=6;i++){
+          const r = getRow(i);
+          const hasPoints = (r.earned !== null) || (r.possible !== null);
+          if (!hasPoints) continue;
+
+          if (r.earned === null || r.possible === null) {
+            // ignore partial row
+            continue;
+          }
+          if (r.possible <= 0) continue;
+
+          rows.push(r);
+          earnedSum += clampMin(r.earned, 0);
+          possibleSum += clampMin(r.possible, 0);
+        }
+
+        if (totalEarned !== null && totalPossible !== null && totalPossible > 0) {
+          earnedSum = clampMin(totalEarned, 0);
+          possibleSum = clampMin(totalPossible, 0);
+          usedTotals = true;
+        }
+
+        if (possibleSum <= 0) {
+          resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Please enter earned and possible points (either totals or at least one complete category row).</p>';
+          breakdownBox.innerHTML = "";
+          return;
+        }
+
+        const percent = (earnedSum / possibleSum) * 100;
+
+        // Target helper
+        const targetPercent = numOrNull($("targetPercent").value);
+        const courseTotalPossible = numOrNull($("courseTotalPossible").value);
+
+        let targetHtml = "";
+        if (targetPercent !== null && courseTotalPossible !== null && courseTotalPossible > 0) {
+          const neededTotalPoints = (clampMin(targetPercent,0) / 100) * courseTotalPossible;
+          const pointsStillNeeded = Math.max(0, neededTotalPoints - earnedSum);
+          targetHtml = `
+            <div style="margin-top:8px;color:#4c4a4f;">
+              To reach <strong>${fmt(targetPercent)}%</strong> in a <strong>${fmt(courseTotalPossible)}</strong>-point course,
+              you need about <strong>${fmt(neededTotalPoints)}</strong> total points.
+              That’s <strong>${fmt(pointsStillNeeded)}</strong> more points from here.
+            </div>
+          `;
+        }
+
+        resultBox.innerHTML = `
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;">
+            <p style="margin:0;font-weight:900;font-size:1.2rem;color:#313131;">
+              Current Estimate: <span style="color:#cb4900;">${fmt(percent)}%</span>
+            </p>
+            <p style="margin:0;color:#4c4a4f;font-size:.9rem;">
+              ${usedTotals ? "Using totals" : "Using category sums"} · Earned ${fmt(earnedSum)} / ${fmt(possibleSum)} pts
+            </p>
+          </div>
+          ${targetHtml}
+        `;
+
+        // Breakdown
+        if (!usedTotals && rows.length > 0) {
+          const trs = rows.map(r => {
+            const rowPct = (r.earned / r.possible) * 100;
+            return `
+              <tr>
+                <td style="padding:10px;border-top:1px solid #eee;"><strong>${r.name || "Category"}</strong></td>
+                <td style="padding:10px;border-top:1px solid #eee;">${fmt(r.earned)}</td>
+                <td style="padding:10px;border-top:1px solid #eee;">${fmt(r.possible)}</td>
+                <td style="padding:10px;border-top:1px solid #eee;">${fmt(rowPct)}%</td>
+                <td style="padding:10px;border-top:1px solid #eee;color:#4c4a4f;">${r.note || ""}</td>
+              </tr>
+            `;
+          }).join("");
+
+          breakdownBox.innerHTML = `
+            <div style="border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;">
+              <div style="padding:10px 12px;background:#f7f7f7;color:#4c4a4f;font-size:.95rem;">
+                Category Breakdown
+              </div>
+              <div style="overflow:auto;">
+                <table style="width:100%;border-collapse:collapse;min-width:720px;">
+                  <thead>
+                    <tr style="text-align:left;background:#fff;">
+                      <th style="padding:10px;border-top:1px solid #eee;">Category</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Earned</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Possible</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Percent</th>
+                      <th style="padding:10px;border-top:1px solid #eee;">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>${trs}</tbody>
+                </table>
+              </div>
+            </div>
+          `;
+        } else {
+          breakdownBox.innerHTML = "";
+        }
+      }
+
+      function resetAll(){
+        ["totalEarned","totalPossible","targetPercent","courseTotalPossible"].forEach(id => $(id).value = "");
+        for(let i=1;i<=6;i++){
+          $("c"+i+"e").value = "";
+          $("c"+i+"p").value = "";
+          $("c"+i+"n").value = "";
+          // leave names as default labels
+        }
+        resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Enter points and click <strong>Calculate</strong>.</p>';
+        breakdownBox.innerHTML = "";
+      }
+
+      calcBtn.addEventListener("click", calculate);
+      resetBtn.addEventListener("click", resetAll);
+    })();
+  </script>
+</section>
+      </code></pre>
+    </section>
+
+    <p><a href="../index.html">← Back to catalog</a></p>
+  </main>
+</body>
+</html>
