@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Question Box </title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <h1> Question Box </h1>
+    <p class="subtitle">
+      Use this page as a fun, optional morale booster in Brightspace.
+    </p>
+
+    <!-- Instructions -->
+    <section class="card">
+      <h2>How to use in Brightspace</h2>
+      <ol>
+        <li>Go to <strong>Content</strong> in your course</li>
+        <li>Select <strong>Create New → HTML Document</strong></li>
+        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
+        <li>Copy the HTML below and paste it</li>
+      </ol>
+    </section>
+
+    <!-- Preview -->
+    <section class="card">
+      <h2>Preview</h2>
+
+      <!-- PASTE THE HTML HERE -->
+       <section aria-label="Question Email Form"
+  style="max-width:700px;margin:0 auto;font-family:Arial,sans-serif;color:#202122;line-height:1.45;">
+
+  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
+
+    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
+      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">
+        Ask Your Instructor
+      </h2>
+      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">
+        Fill in the form below to generate an email with your question.
+      </p>
+    </header>
+
+    <div style="margin-top:14px;display:grid;gap:12px;">
+
+      <label>
+        <span style="font-weight:700;">Instructor Email</span>
+        <input id="instructorEmail" type="email"
+          placeholder="example@utrgv.edu"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+      </label>
+
+      <label>
+        <span style="font-weight:700;">First Name</span>
+        <input id="firstName" type="text"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+      </label>
+
+      <label>
+        <span style="font-weight:700;">Last Name</span>
+        <input id="lastName" type="text"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+      </label>
+
+      <label>
+        <span style="font-weight:700;">Student ID</span>
+        <input id="studentID" type="text"
+          placeholder="ex. 20XXXXXX"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+      </label>
+
+      <label>
+        <span style="font-weight:700;">Course Name</span>
+        <input id="courseName" type="text"
+          placeholder="ex. HIST 1301"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
+      </label>
+
+      <label>
+        <span style="font-weight:700;">Your Question</span>
+        <textarea id="studentQuestion" rows="6"
+          placeholder="Type your question here..."
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"></textarea>
+      </label>
+
+      <button id="emailBtn" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+               padding:10px 14px;border-radius:12px;font-weight:700;width:fit-content;">
+        Open Email Draft
+      </button>
+
+      <p style="margin:0;color:#4c4a4f;font-size:.85rem;">
+        This will open your default email application (Outlook, Gmail, etc.) with the message already written.
+      </p>
+
+    </div>
+  </div>
+
+<script>
+(function(){
+
+const btn = document.getElementById("emailBtn");
+
+btn.addEventListener("click", function(){
+
+  const instructorEmail = document.getElementById("instructorEmail").value.trim();
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const studentID = document.getElementById("studentID").value.trim();
+  const courseName = document.getElementById("courseName").value.trim();
+  const question = document.getElementById("studentQuestion").value.trim();
+
+  if(!instructorEmail){
+    alert("Please enter the instructor email address.");
+    return;
+  }
+
+  const subject =
+    `${firstName} ${lastName} (${studentID}) | ${courseName} | Question`;
+
+  const body =
+`Hello Professor,
+
+I have a question regarding ${courseName}.
+
+My question:
+${question}
+
+Thank you,
+${firstName} ${lastName}
+Student ID: ${studentID}`;
+
+  const mailto =
+    `mailto:${encodeURIComponent(instructorEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailto;
+
+});
+
+})();
+</script>
+
+</section>
+    </section>
+
+    <!-- Copy section -->
+    <section class="card">
+      <h2>Copy HTML</h2>
+      <p>Copy everything below:</p>
+
+      <pre><code>
+<!-- Paste the SAME HTML here -->
+ 
+      </code></pre>
+    </section>
+
+    <p><a href="../index.html">← Back to catalog</a></p>
+  </main>
+</body>
+</html>
