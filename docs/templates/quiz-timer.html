@@ -27,10 +27,11 @@
     <!-- Preview -->
     <section class="card">
       <h2>Preview</h2>
+
       <!-- PASTE THE HTML HERE -->
 <code><pre>
-      &lt;section aria-label="Timer Widget"
-  style="max-width:520px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;"&gt;
+      <section aria-label="Timer Widget"
+  style="max-width:520px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;"&gt;>
 
   <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
     <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
@@ -194,6 +195,7 @@
     })();
   </script>
 </section>
+</code></pre>
     </section>
 
     <!-- Copy section -->
@@ -202,58 +204,62 @@
       <p>Copy everything below:</p>
 
       <pre><code>
-&lt;section aria-label="Timer Widget"
+<section class="card">
+  <h2>Copy HTML</h2>
+  <p>Copy everything below:</p>
+
+  <pre><code>
+    &lt;section aria-label="Timer Widget"
   style="max-width:520px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;"&gt;
 
-  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
-    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
-      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">Exam Timer</h2>
-      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">Set to 1 hour 15 minutes</p>
-    </header>
+  &lt;div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;"&gt;
+    &lt;header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;"&gt;
+      &lt;h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;"&gt;Exam Timer&lt;/h2&gt;
+      &lt;p style="margin:0;color:#4c4a4f;font-size:.95rem;"&gt;Set to 1 hour 15 minutes&lt;/p&gt;
+    &lt;/header&gt;
 
-    <div style="margin-top:14px;display:flex;align-items:center;justify-content:center;">
-      <div id="timerDisplay"
+    &lt;div style="margin-top:14px;display:flex;align-items:center;justify-content:center;"&gt;
+      &lt;div id="timerDisplay"
         role="timer"
         aria-live="polite"
         aria-label="Time remaining"
         style="font-variant-numeric:tabular-nums;letter-spacing:1px;
-               font-size:2.4rem;font-weight:800;color:#313131;">
+               font-size:2.4rem;font-weight:800;color:#313131;"&gt;
         01:15:00
-      </div>
-    </div>
+      &lt;/div&gt;
+    &lt;/div&gt;
 
-    <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-      <button id="startBtn"
+    &lt;div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;"&gt;
+      &lt;button id="startBtn"
         type="button"
         style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
-               padding:10px 14px;border-radius:12px;font-weight:700;">
+               padding:10px 14px;border-radius:12px;font-weight:700;"&gt;
         Start
-      </button>
+      &lt;/button&gt;
 
-      <button id="pauseBtn"
+      &lt;button id="pauseBtn"
         type="button"
         disabled
         style="cursor:pointer;border:1px solid #e6e6e6;background:#f5f5f5;color:#4c4a4f;
-               padding:10px 14px;border-radius:12px;font-weight:700;">
+               padding:10px 14px;border-radius:12px;font-weight:700;"&gt;
         Pause
-      </button>
+      &lt;/button&gt;
 
-      <button id="restartBtn"
+      &lt;button id="restartBtn"
         type="button"
         style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
-               padding:10px 14px;border-radius:12px;font-weight:700;">
+               padding:10px 14px;border-radius:12px;font-weight:700;"&gt;
         Restart
-      </button>
-    </div>
+      &lt;/button&gt;
+    &lt;/div&gt;
 
-    <p id="timerNote" style="margin:12px 0 0 0;text-align:center;color:#4c4a4f;font-size:.9rem;">
+    &lt;p id="timerNote" style="margin:12px 0 0 0;text-align:center;color:#4c4a4f;font-size:.9rem;"&gt;
       Tip: Use Restart to reset back to 01:15:00.
-    </p>
-  </div>
+    &lt;/p&gt;
+  &lt;/div&gt;
 
-  <script>
+  &lt;script&gt;
     (function () {
-      // 1 hour 15 minutes = 75 minutes
       const INITIAL_MS = (1 * 60 * 60 + 15 * 60) * 1000;
 
       const display = document.getElementById("timerDisplay");
@@ -284,7 +290,6 @@
         startBtn.disabled = running;
         pauseBtn.disabled = !running;
 
-        // Visual disabled styles (inline because some platforms strip CSS)
         if (startBtn.disabled) {
           startBtn.style.background = "#f5f5f5";
           startBtn.style.borderColor = "#e6e6e6";
@@ -318,7 +323,7 @@
 
         const tick = () => {
           remainingMs -= 1000;
-          if (remainingMs <= 0) {
+          if (remainingMs &lt;= 0) {
             remainingMs = 0;
             stopInterval();
             running = false;
@@ -328,7 +333,6 @@
           render();
         };
 
-        // Start immediately on next second
         stopInterval();
         intervalId = setInterval(tick, 1000);
       }
@@ -361,12 +365,12 @@
       pauseBtn.addEventListener("click", pause);
       restartBtn.addEventListener("click", restart);
 
-      // Initial render
       render();
       setButtons();
     })();
-  </script>
-&lt;section&gt;
+  &lt;/script&gt;
+&lt;/section&gt;</code></pre>
+</section>
       </code></pre>
     </section>
 
