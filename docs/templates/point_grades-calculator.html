@@ -327,159 +327,155 @@
 </section>
     </section>
 
+
+
+
     <!-- Copy section -->
     <section class="card">
       <h2>Copy HTML</h2>
       <p>Copy everything below:</p>
 
       <pre><code>
-<section aria-label="Points Grade Calculator"
-  style="max-width:860px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;">
+&lt;section aria-label="Points Grade Calculator"
+  style="max-width:860px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;"&gt;
 
-  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
-    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
-      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">Points Grade Calculator</h2>
-      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">
+  &lt;div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;"&gt;
+    &lt;header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;"&gt;
+      &lt;h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;"&gt;Points Grade Calculator&lt;/h2&gt;
+      &lt;p style="margin:0;color:#4c4a4f;font-size:.95rem;"&gt;
         Enter earned/possible points. Blank rows are ignored. Great for 1,000+ point courses.
-      </p>
-    </header>
+      &lt;/p&gt;
+    &lt;/header&gt;
 
     <!-- Quick total (optional) -->
-    <section style="margin-top:14px;">
-      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Quick Total (Optional)</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;">
-        <label style="display:block;">
-          <span style="font-weight:800;">Total Earned Points</span>
-          <input id="totalEarned" type="number" min="0" placeholder="e.g., 742"
-            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-        </label>
+    &lt;section style="margin-top:14px;"&gt;
+      &lt;h3 style="margin:0 0 8px 0;font-size:1.05rem;"&gt;Quick Total (Optional)&lt;/h3&gt;
+      &lt;div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;"&gt;
+        &lt;label style="display:block;"&gt;
+          &lt;span style="font-weight:800;"&gt;Total Earned Points&lt;/span&gt;
+          &lt;input id="totalEarned" type="number" min="0" placeholder="e.g., 742"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+        &lt;/label&gt;
 
-        <label style="display:block;">
-          <span style="font-weight:800;">Total Possible Points</span>
-          <input id="totalPossible" type="number" min="0" placeholder="e.g., 900"
-            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-        </label>
-      </div>
-      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        &lt;label style="display:block;"&gt;
+          &lt;span style="font-weight:800;"&gt;Total Possible Points&lt;/span&gt;
+          &lt;input id="totalPossible" type="number" min="0" placeholder="e.g., 900"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;"&gt;
         If you fill the totals above, the category table below is optional. If you fill both, totals will be used.
-      </p>
-    </section>
+      &lt;/p&gt;
+    &lt;/section&gt;
 
     <!-- Category table -->
-    <section style="margin-top:16px;">
-      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Category Points (Optional)</h3>
+    &lt;section style="margin-top:16px;"&gt;
+      &lt;h3 style="margin:0 0 8px 0;font-size:1.05rem;"&gt;Category Points (Optional)&lt;/h3&gt;
 
-      <div style="overflow:auto;border:1px solid #e6e6e6;border-radius:14px;">
-        <table style="width:100%;border-collapse:collapse;min-width:700px;">
-          <thead>
-            <tr style="background:#f7f7f7;text-align:left;color:#4c4a4f;">
-              <th style="padding:10px 12px;">Category</th>
-              <th style="padding:10px 12px;">Earned</th>
-              <th style="padding:10px 12px;">Possible</th>
-              <th style="padding:10px 12px;">Notes (optional)</th>
-            </tr>
-          </thead>
-          <tbody>
+      &lt;div style="overflow:auto;border:1px solid #e6e6e6;border-radius:14px;"&gt;
+        &lt;table style="width:100%;border-collapse:collapse;min-width:700px;"&gt;
+          &lt;thead&gt;
+            &lt;tr style="background:#f7f7f7;text-align:left;color:#4c4a4f;"&gt;
+              &lt;th style="padding:10px 12px;"&gt;Category&lt;/th&gt;
+              &lt;th style="padding:10px 12px;"&gt;Earned&lt;/th&gt;
+              &lt;th style="padding:10px 12px;"&gt;Possible&lt;/th&gt;
+              &lt;th style="padding:10px 12px;"&gt;Notes (optional)&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
             <!-- 6 default rows -->
-            <tr>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1name" value="Assignments" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1e" type="number" min="0" placeholder="e.g., 180" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1p" type="number" min="0" placeholder="e.g., 200" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c1n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-            </tr>
+            &lt;tr&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c1name" value="Assignments" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c1e" type="number" min="0" placeholder="e.g., 180" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c1p" type="number" min="0" placeholder="e.g., 200" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c1n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
 
-            <tr>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2name" value="Quizzes" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2e" type="number" min="0" placeholder="e.g., 85" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c2n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-            </tr>
+            &lt;tr&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c2name" value="Quizzes" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c2e" type="number" min="0" placeholder="e.g., 85" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c2p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c2n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
 
-            <tr>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3name" value="Labs" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3e" type="number" min="0" placeholder="e.g., 120" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3p" type="number" min="0" placeholder="e.g., 150" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c3n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-            </tr>
+            &lt;tr&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c3name" value="Labs" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c3e" type="number" min="0" placeholder="e.g., 120" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c3p" type="number" min="0" placeholder="e.g., 150" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:１０ｐｘ;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c3n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
 
-            <tr>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4name" value="Projects" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4e" type="number" min="0" placeholder="e.g., 240" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4p" type="number" min="0" placeholder="e.g., 300" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c4n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-            </tr>
+            &lt;tr&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c5name" value="Midterm" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c5e" type="number" min="0" placeholder="e.g., 90" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c5p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c5n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
 
-            <tr>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5name" value="Midterm" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5e" type="number" min="0" placeholder="e.g., 90" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c5n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-            </tr>
+            &lt;tr&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c6name" value="Final" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c6e" type="number" min="0" placeholder="e.g., 88" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c6p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:１０ｐｘ;"&gt;&lt;/td&gt;
+              &lt;td style="padding:10px 12px;border-top:1px solid #eee;"&gt;&lt;input id="c6n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
 
-            <tr>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6name" value="Final" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6e" type="number" min="0" placeholder="e.g., 88" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6p" type="number" min="0" placeholder="e.g., 100" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-              <td style="padding:10px 12px;border-top:1px solid #eee;"><input id="c6n" placeholder="Optional" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:10px;"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+      &lt;p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;"&gt;
         Leave rows blank if your course doesn’t use them.
-      </p>
-    </section>
+      &lt;/p&gt;
+    &lt;/section&gt;
 
     <!-- Target grade helper -->
-    <section style="margin-top:16px;">
-      <h3 style="margin:0 0 8px 0;font-size:1.05rem;">Target Grade (Optional)</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;">
-        <label style="display:block;">
-          <span style="font-weight:800;">Target Percent</span>
-          <input id="targetPercent" type="number" min="0" max="100" placeholder="e.g., 90"
-            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-        </label>
+    &lt;section style="margin-top:16px;"&gt;
+      &lt;h3 style="margin:0 0 8px 0;font-size:1.05rem;"&gt;Target Grade (Optional)&lt;/h3&gt;
+      &lt;div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;"&gt;
+        &lt;label style="display:block;"&gt;
+          &lt;span style="font-weight:800;"&gt;Target Percent&lt;/span&gt;
+          &lt;input id="targetPercent" type="number" min="0" max="100" placeholder="e.g., 90"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+        &lt;/label&gt;
 
-        <label style="display:block;">
-          <span style="font-weight:800;">Course Total Possible Points (for target)</span>
-          <input id="courseTotalPossible" type="number" min="0" placeholder="e.g., 1000"
-            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-        </label>
-      </div>
-      <p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;">
+        &lt;label style="display:block;"&gt;
+          &lt;span style="font-weight:800;"&gt;Course Total Possible Points (for target)&lt;/span&gt;
+          &lt;input id="courseTotalPossible" type="number" min="0" placeholder="e.g., 1000"
+            style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;p style="margin:10px 0 0 0;color:#4c4a4f;font-size:.9rem;"&gt;
         If you enter both fields, we’ll estimate how many total points you need overall.
-      </p>
-    </section>
+      &lt;/p&gt;
+    &lt;/section&gt;
 
     <!-- Actions + Results -->
-    <section style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-      <button id="calcPts" type="button"
+    &lt;section style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;"&gt;
+      &lt;button id="calcPts" type="button"
         style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
-               padding:10px 14px;border-radius:12px;font-weight:900;">
+               padding:10px 14px;border-radius:12px;font-weight:900;"&gt;
         Calculate
-      </button>
+      &lt;/button&gt;
 
-      <button id="resetPts" type="button"
+      &lt;button id="resetPts" type="button"
         style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
-               padding:10px 14px;border-radius:12px;font-weight:900;">
+               padding:10px 14px;border-radius:12px;font-weight:900;"&gt;
         Reset
-      </button>
-    </section>
+      &lt;/button&gt;
+    &lt;/section&gt;
 
-    <section style="margin-top:14px;">
-      <div id="ptsResult"
-        style="border:1px solid #e6e6e6;border-radius:14px;padding:12px;background:#fff;">
-        <p style="margin:0;color:#4c4a4f;">Enter points and click <strong>Calculate</strong>.</p>
-      </div>
-      <div id="ptsBreakdown" style="margin-top:10px;"></div>
-      <p style="margin-top:10px;color:#4c4a4f;font-size:.85rem;">
+    &lt;section style="margin-top:14px;"&gt;
+      &lt;div id="ptsResult"
+        style="border:1px solid #e6e6e6;border-radius:14px;padding:12px;background:#fff;"&gt;
+        &lt;p style="margin:0;color:#4c4a4f;"&gt;Enter points and click &lt;strong&gt;Calculate&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div id="ptsBreakdown" style="margin-top:10px;"&gt;&lt;/div&gt;
+      &lt;p style="margin-top:10px;color:#4c4a4f;font-size:.85rem;"&gt;
         Note: This is an estimate tool for planning. Always follow your instructor’s official gradebook.
-      </p>
-    </section>
-  </div>
+      &lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
 
-  <script>
+  &lt;script&gt;
     (function () {
       const $ = (id) => document.getElementById(id);
       const calcBtn = $("calcPts");
@@ -552,23 +548,23 @@
           const neededTotalPoints = (clampMin(targetPercent,0) / 100) * courseTotalPossible;
           const pointsStillNeeded = Math.max(0, neededTotalPoints - earnedSum);
           targetHtml = `
-            <div style="margin-top:8px;color:#4c4a4f;">
-              To reach <strong>${fmt(targetPercent)}%</strong> in a <strong>${fmt(courseTotalPossible)}</strong>-point course,
-              you need about <strong>${fmt(neededTotalPoints)}</strong> total points.
-              That’s <strong>${fmt(pointsStillNeeded)}</strong> more points from here.
-            </div>
+            &lt;div style="margin-top:8px;color:#4c4a4f;"&gt;
+              To reach &lt;strong&gt;${fmt(targetPercent)}%&lt;/strong&gt; in a &lt;strong&gt;${fmt(courseTotalPossible)}&lt;/strong&gt;-point course,
+              you need about &lt;strong&gt;${fmt(neededTotalPoints)}&lt;/strong&gt; total points.
+              That’s &lt;strong&gt;${fmt(pointsStillNeeded)}&lt;/strong&gt; more points from here.
+            &lt;/div&gt;
           `;
         }
 
         resultBox.innerHTML = `
-          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;">
-            <p style="margin:0;font-weight:900;font-size:1.2rem;color:#313131;">
-              Current Estimate: <span style="color:#cb4900;">${fmt(percent)}%</span>
-            </p>
-            <p style="margin:0;color:#4c4a4f;font-size:.9rem;">
+          &lt;div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;"&gt;
+            &lt;p style="margin:0;font-weight:900;font-size:1.2rem;color:#313131;"&gt;
+              Current Estimate: &lt;span style="color:#cb4900;"&gt;${fmt(percent)}%&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p style="margin:0;color:#4c4a4f;font-size:.9rem;"&gt;
               ${usedTotals ? "Using totals" : "Using category sums"} · Earned ${fmt(earnedSum)} / ${fmt(possibleSum)} pts
-            </p>
-          </div>
+            &lt;/p&gt;
+          &lt;/div&gt;
           ${targetHtml}
         `;
 
@@ -577,36 +573,36 @@
           const trs = rows.map(r => {
             const rowPct = (r.earned / r.possible) * 100;
             return `
-              <tr>
-                <td style="padding:10px;border-top:1px solid #eee;"><strong>${r.name || "Category"}</strong></td>
-                <td style="padding:10px;border-top:1px solid #eee;">${fmt(r.earned)}</td>
-                <td style="padding:10px;border-top:1px solid #eee;">${fmt(r.possible)}</td>
-                <td style="padding:10px;border-top:1px solid #eee;">${fmt(rowPct)}%</td>
-                <td style="padding:10px;border-top:1px solid #eee;color:#4c4a4f;">${r.note || ""}</td>
-              </tr>
+              &lt;tr&gt;
+                &lt;td style="padding:10px;border-top:1px solid #eee;"&gt;&lt;strong&gt;${r.name || "Category"}&lt;/strong&gt;&lt;/td&gt;
+                &lt;td style="padding:10px;border-top:1px solid #eee;"&gt;${fmt(r.earned)}&lt;/td&gt;
+                &lt;td style="padding:10px;border-top:1px solid #eee;"&gt;${fmt(r.possible)}&lt;/td&gt;
+                &lt;td style="padding:10px;border-top:1px solid #eee;"&gt;${fmt(rowPct)}%&lt;/td&gt;
+                &lt;td style="padding:10px;border-top:1px solid #eee;color:#4c4a4f;"&gt;${r.note || ""}&lt;/td&gt;
+              &lt;/tr&gt;
             `;
           }).join("");
 
           breakdownBox.innerHTML = `
-            <div style="border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;">
-              <div style="padding:10px 12px;background:#f7f7f7;color:#4c4a4f;font-size:.95rem;">
+            &lt;div style="border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;"&gt;
+              &lt;div style="padding:10px 12px;background:#f7f7f7;color:#4c4a4f;font-size:.95rem;"&gt;
                 Category Breakdown
-              </div>
-              <div style="overflow:auto;">
-                <table style="width:100%;border-collapse:collapse;min-width:720px;">
-                  <thead>
-                    <tr style="text-align:left;background:#fff;">
-                      <th style="padding:10px;border-top:1px solid #eee;">Category</th>
-                      <th style="padding:10px;border-top:1px solid #eee;">Earned</th>
-                      <th style="padding:10px;border-top:1px solid #eee;">Possible</th>
-                      <th style="padding:10px;border-top:1px solid #eee;">Percent</th>
-                      <th style="padding:10px;border-top:1px solid #eee;">Notes</th>
-                    </tr>
-                  </thead>
-                  <tbody>${trs}</tbody>
-                </table>
-              </div>
-            </div>
+              &lt;/div&gt;
+              &lt;div style="overflow:auto;"&gt;
+                &lt;table style="width:100%;border-collapse:collapse;min-width:720px;"&gt;
+                  &lt;thead&gt;
+                    &lt;tr style="text-align:left;background:#fff;"&gt;
+                      &lt;th style="padding:10px;border-top:1px solid #eee;"&gt;Category&lt;/th&gt;
+                      &lt;th style="padding:10px;border-top:1px solid #eee;"&gt;Earned&lt;/th&gt;
+                      &lt;th style="padding:10px;border-top:1px solid #eee;"&gt;Possible&lt;/th&gt;
+                      &lt;th style="padding:10px;border-top:1px solid #eee;"&gt;Percent&lt;/th&gt;
+                      &lt;th style="padding:10px;border-top:1px solid #eee;"&gt;Notes&lt;/th&gt;
+                    &lt;/tr&gt;
+                  &lt;/thead&gt;
+                  &lt;tbody&gt;${trs}&lt;/tbody&gt;
+                &lt;/table&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
           `;
         } else {
           breakdownBox.innerHTML = "";
@@ -628,8 +624,8 @@
       calcBtn.addEventListener("click", calculate);
       resetBtn.addEventListener("click", resetAll);
     })();
-  </script>
-</section>
+  &lt;/script&gt;
+&lt;/section&gt;
       </code></pre>
     </section>
 
