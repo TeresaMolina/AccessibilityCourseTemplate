@@ -26,11 +26,229 @@
 
     <!-- Preview -->
    
+<section aria-label="Birthday Celebration"
+  style="max-width:800px;margin:0 auto;font-family:Arial,sans-serif;color:#202122;line-height:1.45;">
 
+  <div style="border-left:8px solid #cb4900;background:#fff7f0;
+              padding:12px 14px;border-radius:12px;margin-bottom:14px;">
+    <h2 style="margin:0 0 4px 0;font-size:1.2rem;color:#cb4900;">
+      🎉 Happy Birthday!
+    </h2>
+    <p style="margin:0;opacity:.9;">
+      Wishing you a sweet and successful week.
+    </p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;overflow:hidden;min-height:300px;">
+
+    <!-- Cake -->
+    <svg width="200" height="200" viewBox="0 0 200 200"
+      role="img" aria-label="Birthday cake" style="z-index:2;">
+      <g>
+        <animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0; 0 -8; 0 0"
+          dur="3s"
+          repeatCount="indefinite"/>
+
+        <ellipse cx="100" cy="170" rx="70" ry="10" fill="#e7e7e7" opacity=".6"/>
+        <rect x="50" y="110" width="100" height="45" rx="12"
+          fill="#ffd6c2" stroke="rgba(203,73,0,0.25)" stroke-width="2"/>
+        <rect x="60" y="80" width="80" height="35" rx="10"
+          fill="#ffe7dc" stroke="rgba(203,73,0,0.2)" stroke-width="2"/>
+
+        <path d="M60 80
+                 C70 90, 75 90, 80 80
+                 C90 92, 95 92, 100 80
+                 C110 92, 115 92, 120 80
+                 C130 90, 135 90, 140 80
+                 L140 90
+                 L60 90 Z"
+              fill="#ffffff"/>
+
+        <rect x="95" y="48" width="10" height="32" rx="4" fill="#cb4900"/>
+        <rect x="97" y="48" width="2" height="32" fill="#ffb98d"/>
+        <rect x="101" y="48" width="2" height="32" fill="#ffb98d"/>
+
+        <ellipse cx="100" cy="40" rx="7" ry="10" fill="#ff9a3c">
+          <animate attributeName="ry" values="10;7;10" dur="1s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;.7;1" dur="1s" repeatCount="indefinite"/>
+        </ellipse>
+
+        <ellipse cx="100" cy="38" rx="3" ry="5" fill="#fff7b5">
+          <animate attributeName="ry" values="5;3.5;5" dur="1s" repeatCount="indefinite"/>
+        </ellipse>
+
+        <rect x="75" y="95" width="10" height="3" rx="2" fill="#6aa9ff" transform="rotate(10 75 95)"/>
+        <rect x="105" y="100" width="10" height="3" rx="2" fill="#6bd48c" transform="rotate(-12 105 100)"/>
+        <rect x="120" y="95" width="10" height="3" rx="2" fill="#f5c34d" transform="rotate(15 120 95)"/>
+      </g>
+    </svg>
+
+    <button id="confettiBtn" type="button"
+      style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+             padding:10px 14px;border-radius:12px;font-weight:700;z-index:2;">
+      Throw Confetti
+    </button>
+
+    <p style="max-width:60ch;text-align:center;opacity:.9;margin:0;z-index:2;">
+      If today’s your birthday, you’ve unlocked
+      <strong>+10 motivation</strong> and
+      <strong>+5 patience</strong> for assignments 🎈
+    </p>
+
+    <!-- Confetti container -->
+    <div id="confettiArea"
+      aria-hidden="true"
+      style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1;"></div>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.getElementById("confettiBtn");
+      const area = document.getElementById("confettiArea");
+
+      function makeConfettiPiece(left, delay, duration, color, rotate) {
+        const piece = document.createElement("div");
+        piece.style.position = "absolute";
+        piece.style.top = "-20px";
+        piece.style.left = left + "%";
+        piece.style.width = "10px";
+        piece.style.height = "14px";
+        piece.style.background = color;
+        piece.style.opacity = "0.95";
+        piece.style.transform = "rotate(" + rotate + "deg)";
+        piece.style.borderRadius = "2px";
+        piece.style.transition = "transform " + duration + "ms linear, top " + duration + "ms linear, opacity " + duration + "ms ease-out";
+        piece.style.transitionDelay = delay + "ms";
+        area.appendChild(piece);
+
+        requestAnimationFrame(() => {
+          piece.style.top = "280px";
+          piece.style.transform = "translateX(" + ((Math.random() * 80) - 40) + "px) rotate(" + (rotate + 360) + "deg)";
+          piece.style.opacity = "0.2";
+        });
+
+        setTimeout(() => piece.remove(), duration + delay + 100);
+      }
+
+      btn.addEventListener("click", function () {
+        const colors = ["#cb4900", "#6aa9ff", "#6bd48c", "#f5c34d", "#ff7aa2", "#a78bfa"];
+        for (let i = 0; i < 45; i++) {
+          makeConfettiPiece(
+            Math.random() * 100,
+            Math.random() * 250,
+            1800 + Math.random() * 1200,
+            colors[Math.floor(Math.random() * colors.length)],
+            Math.random() * 180
+          );
+        }
+      });
+    })();
+  </script>
+</section>
 
 <!--Paste HTML here-->
-     <code> <pre>
+     <code><pre>
       
+      &lt;section aria-label="Birthday Celebration"
+  style="max-width:800px;margin:0 auto;font-family:Arial,sans-serif;color:#202122;line-height:1.45;"&gt;
+
+  &lt;div style="border-left:8px solid #cb4900;background:#fff7f0;
+              padding:12px 14px;border-radius:12px;margin-bottom:14px;"&gt;
+    &lt;h2 style="margin:0 0 4px 0;font-size:1.2rem;color:#cb4900;"&gt;
+      Happy Birthday!
+    &lt;/h2&gt;
+    &lt;p style="margin:0;opacity:.9;"&gt;
+[Enter Birthday Message]
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div style="display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;overflow:hidden;min-height:300px;"&gt;
+
+    &lt;svg width="200" height="200" viewBox="0 0 200 200"
+      role="img" aria-label="Birthday cake" style="z-index:2;"&gt;
+      &lt;g&gt;
+
+        &lt;animateTransform
+          attributeName="transform"
+          type="translate"
+          values="0 0; 0 -8; 0 0"
+          dur="3s"
+          repeatCount="indefinite"/&gt;
+
+        &lt;ellipse cx="100" cy="170" rx="70" ry="10" fill="#e7e7e7" opacity=".6"/&gt;
+
+        &lt;rect x="50" y="110" width="100" height="45" rx="12"
+          fill="#ffd6c2" stroke="rgba(203,73,0,0.25)" stroke-width="2"/&gt;
+
+        &lt;rect x="60" y="80" width="80" height="35" rx="10"
+          fill="#ffe7dc" stroke="rgba(203,73,0,0.2)" stroke-width="2"/&gt;
+
+      &lt;/g&gt;
+    &lt;/svg&gt;
+
+     &lt;button id="confettiBtn" type="button"
+      style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+             padding:10px 14px;border-radius:12px;font-weight:700;z-index:2;"&gt;
+      Throw Confetti
+    &lt;/button&gt;
+
+    &lt;p style="max-width:60ch;text-align:center;opacity:.9;margin:0;z-index:2;"&gt;
+       [Enter Birthday Message]
+    &lt;/p&gt;
+
+    <!-- Confetti container -->
+    &lt;div id="confettiArea"
+      aria-hidden="true"
+      style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1;"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    (function () {
+      const btn = document.getElementById("confettiBtn");
+      const area = document.getElementById("confettiArea");
+
+      function makeConfettiPiece(left, delay, duration, color, rotate) {
+        const piece = document.createElement("div");
+        piece.style.position = "absolute";
+        piece.style.top = "-20px";
+        piece.style.left = left + "%";
+        piece.style.width = "10px";
+        piece.style.height = "14px";
+        piece.style.background = color;
+        piece.style.opacity = "0.95";
+        piece.style.transform = "rotate(" + rotate + "deg)";
+        piece.style.borderRadius = "2px";
+        piece.style.transition = "transform " + duration + "ms linear, top " + duration + "ms linear, opacity " + duration + "ms ease-out";
+        piece.style.transitionDelay = delay + "ms";
+        area.appendChild(piece);
+
+        requestAnimationFrame(() => {
+          piece.style.top = "280px";
+          piece.style.transform = "translateX(" + ((Math.random() * 80) - 40) + "px) rotate(" + (rotate + 360) + "deg)";
+          piece.style.opacity = "0.2";
+        });
+
+        setTimeout(() => piece.remove(), duration + delay + 100);
+      }
+
+      btn.addEventListener("click", function () {
+        const colors = ["#cb4900", "#6aa9ff", "#6bd48c", "#f5c34d", "#ff7aa2", "#a78bfa"];
+        for (let i = 0; i < 45; i++) {
+          makeConfettiPiece(
+            Math.random() * 100,
+            Math.random() * 250,
+            1800 + Math.random() * 1200,
+            colors[Math.floor(Math.random() * colors.length)],
+            Math.random() * 180
+          );
+        }
+      });
+    })();
+  &lt;/script&gt;
+&lt;/section&gt;
       
       </code></pre>
     </section>
