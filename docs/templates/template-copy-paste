@@ -9,7 +9,6 @@
 <body>
   <main class="wrap">
         <p><a href="../index.html">← Back to catalog</a></p>
-
     <h1> Template Name </h1>
     <p class="subtitle">
       Use this page as a fun, optional morale booster in Brightspace.
@@ -30,6 +29,7 @@
     <section class="card">
       <h2>Preview</h2>
       <!-- PASTE THE HTML HERE -->
+
     </section>
 
     <!-- Copy section -->
@@ -38,7 +38,11 @@
       <p>Copy everything below:</p>
 
       <pre><code>
-<!-- Paste the SAME HTML here -->
+<!-- 
+        Paste the SAME HTML here
+ Here use &lt; and &gt; to replace < and > 
+-->
+
       </code></pre>
     </section>
 

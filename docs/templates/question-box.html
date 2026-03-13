@@ -8,6 +8,8 @@
 
 <body>
   <main class="wrap">
+        <p><a href="../index.html">← Back to catalog</a></p>
+
     <h1> Question Box </h1>
     <p class="subtitle">
       Use this page as a fun, optional morale booster in Brightspace.
@@ -165,11 +167,137 @@ btn.addEventListener("click", function(){
 
       <pre><code>
 <!-- Paste the SAME HTML here -->
+        &lt;section aria-label="Question Email Form"
+  style="max-width:700px;margin:0 auto;font-family:Arial,sans-serif;color:#202122;line-height:1.45;"&gt;
+
+  &lt;div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;"&gt;
+
+    &lt;header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;"&gt;
+      &lt;h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;"&gt;
+        Ask Your Instructor
+      &lt;/h2&gt;
+      &lt;p style="margin:0;color:#4c4a4f;font-size:.95rem;"&gt;
+        Fill in the form below to generate an email with your question.
+      &lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;div style="margin-top:14px;display:grid;gap:12px;"&gt;
+
+      &lt;label&gt;
+        &lt;span style="font-weight:700;"&gt;Instructor Email&lt;/span&gt;
+        &lt;input id="instructorEmail" type="email"
+          placeholder="vaquero.instructor@utrgv.edu"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;span style="font-weight:700;"&gt;First Name&lt;/span&gt;
+        &lt;input id="firstName" type="text" value="{FirstName}"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;span style="font-weight:700;"&gt;Last Name&lt;/span&gt;
+        &lt;input id="lastName" type="text" value="{LastName}"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;span style="font-weight:700;"&gt;Student ID&lt;/span&gt;
+        &lt;input id="studentID" type="text"
+          placeholder="ex. 20123456"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;span style="font-weight:700;"&gt;Course Name&lt;/span&gt;
+        &lt;input id="courseName" type="text" value="{OrgUnitName}"
+          placeholder="ex. UTRGV-1301-01-Spring-2024"
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;span style="font-weight:700;"&gt;Your Question&lt;/span&gt;
+        &lt;textarea id="studentQuestion" rows="6"
+          placeholder="Type your question here..."
+          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;&lt;/textarea&gt;
+      &lt;/label&gt;
+
+      &lt;button id="emailBtn" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
+               padding:10px 14px;border-radius:12px;font-weight:700;width:fit-content;">
+        Open Email Draft
+      &lt;/button&gt;
+
+      &lt;p style="margin:0;color:#4c4a4f;font-size:.85rem;"&gt;
+        Please note: Be sure to have your professor's email address on file, 
+          and that your browser is configured to open mailto links with your email client (Outlook).
+      &lt;/p&gt;
+
+      &lt;a href="https://support.microsoft.com/en-us/office/make-outlook-the-default-program-for-email-contacts-and-calendar-ff7990c4-54c4-4390-8fe3-c0285226f021"
+        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
+        Set up Outlook as default email client on Windows
+      &lt;/a&gt;
+
+      &lt;a href="https://youtu.be/SLWQ2Ed3nyY?si=RA6Z8B-oqrAg1VBK"
+        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
+        Set up Outlook as default email client on Mac
+      &lt;/a&gt;
+
+      &lt;a href="https://youtu.be/RCZwmx7-jWs?si=9PDcumi9GGmIcHTr"
+        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
+        Set up Outlook as default email client on ChromeOS
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;script&gt;
+(function(){
+
+const btn = document.getElementById("emailBtn");
+
+btn.addEventListener("click", function(){
+
+  const instructorEmail = document.getElementById("instructorEmail").value.trim();
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const studentID = document.getElementById("studentID").value.trim();
+  const courseName = document.getElementById("courseName").value.trim();
+  const question = document.getElementById("studentQuestion").value.trim();
+
+  if(!instructorEmail){
+    alert("Please enter the instructor email address.");
+    return;
+  }
+
+         const subject =
+          firstName + " " + lastName + " | " + courseName + " | Question";
+
+        const body =
+          "Hello Professor,\n\n" +
+          "I have a question regarding " + courseName + ".\n\n" +
+          "My question:\n" +
+          question + "\n\n" +
+          "Thank you,\n" +
+          firstName + " " + lastName
+           + "\nStudent ID#: " + studentID;
+
+        const mailto =
+          "mailto:" + instructorEmail +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+
+        window.location.href = mailto; 
+});
+
+})();
+&lt;/script&gt;
+
+&lt;/section&gt;
 
       </code></pre>
     </section>
 
-    <p><a href="../index.html">← Back to catalog</a></p>
   </main>
 </body>
 </html>

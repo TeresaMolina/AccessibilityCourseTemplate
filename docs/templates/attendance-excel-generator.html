@@ -8,6 +8,8 @@
 
 <body>
   <main class="wrap">
+        <p><a href="../index.html">← Back to catalog</a></p>
+
     <h1> Template Name </h1>
     <p class="subtitle">
       Use this page as a fun, optional morale booster in Brightspace.
@@ -27,8 +29,109 @@
     <!-- Preview -->
     <section class="card">
       <h2>Preview</h2>
-
       <!-- PASTE THE HTML HERE -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Student Journal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @media print {
+      #downloadPdfBtn,
+      #printNote {
+        display: none !important;
+      }
+
+      body {
+        margin: 0.5in;
+        background: #ffffff !important;
+      }
+
+      textarea,
+      input,
+      select {
+        border: 1px solid #999 !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:24px;background:#f7f7f7;font-family:Arial,sans-serif;color:#313131;line-height:1.5;">
+
+  <section aria-label="Student Journal" style="max-width:820px;margin:0 auto;">
+    <div style="border:1px solid #d9d9d9;border-radius:18px;padding:22px;background:#ffffff;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+
+      <!-- Header -->
+      <header style="border-left:8px solid #4c4a4f;background:#f2f2f2;padding:14px 16px;border-radius:12px;">
+        <h1 style="margin:0 0 6px 0;font-size:1.45rem;color:#313131;">Student Journal</h1>
+        <p style="margin:0;color:#4c4a4f;font-size:.95rem;">
+          <em>This journal does not save. But you have an option to download.</em>
+        </p>
+      </header>
+
+      <!-- Meta row -->
+      <section style="margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+        <label style="display:block;">
+          <span style="display:block;font-weight:700;margin-bottom:6px;">Date</span>
+          <input type="date"
+            style="width:100%;padding:10px;border:1px solid #cfcfcf;border-radius:12px;background:#fafafa;color:#313131;box-sizing:border-box;">
+        </label>
+
+        <label style="display:block;">
+          <span style="display:block;font-weight:700;margin-bottom:6px;">Mood</span>
+          <select
+            style="width:100%;padding:10px;border:1px solid #cfcfcf;border-radius:12px;background:#fafafa;color:#313131;box-sizing:border-box;">
+            <option value="">Select a mood</option>
+            <option>Calm</option>
+            <option>Tired</option>
+            <option>Motivated</option>
+            <option>Overwhelmed</option>
+            <option>Happy</option>
+            <option>Stressed</option>
+            <option>Reflective</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </section>
+
+      <!-- Writing area -->
+      <section style="margin-top:18px;">
+        <label for="journalEntry" style="display:block;font-weight:700;color:#313131;margin-bottom:8px;">
+          Add your thoughts, rants, or poetry:
+        </label>
+
+        <textarea id="journalEntry" rows="16"
+          placeholder="Write here..."
+          style="width:100%;padding:14px;border:1px solid #cfcfcf;border-radius:14px;background:#fafafa;color:#313131;font-size:1rem;line-height:1.6;resize:vertical;box-sizing:border-box;"></textarea>
+      </section>
+
+      <!-- Buttons -->
+      <section style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button id="downloadPdfBtn" type="button"
+          style="cursor:pointer;border:1px solid #4c4a4f;background:#4c4a4f;color:#ffffff;padding:10px 16px;border-radius:12px;font-weight:700;">
+          Download PDF
+        </button>
+      </section>
+
+      <p id="printNote" style="margin-top:12px;color:#4c4a4f;font-size:.85rem;">
+        Tip: After clicking <strong>Download PDF</strong>, choose <strong>Save as PDF</strong> in the print window.
+      </p>
+
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const btn = document.getElementById("downloadPdfBtn");
+      btn.addEventListener("click", function () {
+        window.print();
+      });
+    })();
+  </script>
+</body>
+</html>
     </section>
 
     <!-- Copy section -->
@@ -41,7 +144,6 @@
       </code></pre>
     </section>
 
-    <p><a href="../index.html">← Back to catalog</a></p>
   </main>
 </body>
 </html>
