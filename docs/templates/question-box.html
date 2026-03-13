@@ -48,33 +48,33 @@
       <label>
         <span style="font-weight:700;">Instructor Email</span>
         <input id="instructorEmail" type="email"
-          placeholder="example@utrgv.edu"
+          placeholder="vaquero.instructor@utrgv.edu"
           style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
       </label>
 
       <label>
         <span style="font-weight:700;">First Name</span>
-        <input id="firstName" type="text"
+        <input id="firstName" type="text" value="{FirstName}"
           style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
       </label>
 
       <label>
         <span style="font-weight:700;">Last Name</span>
-        <input id="lastName" type="text"
+        <input id="lastName" type="text" value="{LastName}"
           style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
       </label>
 
       <label>
         <span style="font-weight:700;">Student ID</span>
         <input id="studentID" type="text"
-          placeholder="ex. 20XXXXXX"
+          placeholder="ex. 20123456"
           style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
       </label>
 
       <label>
         <span style="font-weight:700;">Course Name</span>
-        <input id="courseName" type="text"
-          placeholder="ex. HIST 1301"
+        <input id="courseName" type="text" value="{OrgUnitName}"
+          placeholder="ex. UTRGV-1301-01-Spring-2024"
           style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
       </label>
 
@@ -117,26 +117,23 @@ btn.addEventListener("click", function(){
     return;
   }
 
-  const subject =
-    `${firstName} ${lastName} | ${courseName} | Question`;
+         const subject =
+          firstName + " " + lastName + " | " + courseName + " | Question";
 
-  const body =
-`Hello Professor,
+        const body =
+          "Hello Professor,\n\n" +
+          "I have a question regarding " + courseName + ".\n\n" +
+          "My question:\n" +
+          question + "\n\n" +
+          "Thank you,\n" +
+          firstName + " " + lastName;
 
-I have a question regarding ${courseName}.
+        const mailto =
+          "mailto:" + instructorEmail +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
 
-My question:
-${question}
-
-Thank you,
-${firstName} ${lastName}
-Student ID: ${studentID}`;
-
-  const mailto =
-    `mailto:${encodeURIComponent(instructorEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  window.location.href = mailto;
-
+        window.location.href = mailto; 
 });
 
 })();
