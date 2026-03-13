@@ -92,9 +92,24 @@
       </button>
 
       <p style="margin:0;color:#4c4a4f;font-size:.85rem;">
-        This will open your default email application (Outlook, Gmail, etc.) with the message already written.
+        Please note: Be sure to have your professor's email address on file, 
+          and that your browser is configured to open mailto links with your email client (Outlook).
       </p>
 
+      <a href="https://support.microsoft.com/en-us/office/make-outlook-the-default-program-for-email-contacts-and-calendar-ff7990c4-54c4-4390-8fe3-c0285226f021"
+        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
+        Set up Outlook as default email client on Windows
+      </a>
+
+      <a href="https://youtu.be/SLWQ2Ed3nyY?si=RA6Z8B-oqrAg1VBK"
+        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
+        Set up Outlook as default email client on Mac
+      </a>
+
+      <a href="https://youtu.be/RCZwmx7-jWs?si=9PDcumi9GGmIcHTr"
+        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
+        Set up Outlook as default email client on ChromeOS
+      </a>
     </div>
   </div>
 
@@ -126,7 +141,8 @@ btn.addEventListener("click", function(){
           "My question:\n" +
           question + "\n\n" +
           "Thank you,\n" +
-          firstName + " " + lastName;
+          firstName + " " + lastName
+           + "\nStudent ID#: " + studentID;
 
         const mailto =
           "mailto:" + instructorEmail +
