@@ -1,11 +1,11 @@
 const templates = [
-  { title: "Module Page", file: "templates/module-page.html", desc: "Reusable unit/lesson intro layout with clear sections and headings.", tags: ["Template"] },
   { title: "Quiz Timer", file: "templates/quiz-timer.html", desc: "A simple timing/support page for quizzes/exams (non-automated).", tags: ["Template"] },
   { title: "Birthday Widget Page", file: "templates/birthday.html", desc: "Fun morale booster page (HTML/CSS only).", tags: ["Template"] },
-  { title: "Grades Calculator", file: "templates/grades-calculator", desc: "Calculator page (folder-based). Link points to its index if present.", tags: ["Tool"] },
-  { title: "Graphing Calculator", file: "templates/graphing-calculator", desc: "Graphing helper page (folder-based).", tags: ["Tool"] },
-  { title: "Journals", file: "templates/journals", desc: "Reflection/journaling layouts (folder-based).", tags: ["Template"] },
-  { title: "Attendance Excel Generator", file: "templates/attendance-excel-generator", desc: "Utility template (folder-based).", tags: ["Tool"] },
+  { title: "Grades Calculator", file: "templates/grades-calculator.html", desc: "Calculator page (folder-based). Link points to its index if present.", tags: ["Tool"] },
+  { title: "Graphing Calculator", file: "templates/point_grades-calculator.html", desc: "Graphing helper page (folder-based).", tags: ["Tool"] },
+  { title: "Journals", file: "templates/journal.html", desc: "Reflection/journaling layouts (folder-based).", tags: ["Template"] },
+  { title: "Question Box", file: "templates/question-box.html", desc: "A simple question box template for student reflection or feedback.", tags: ["Template"] },
+  { title: "Study Room", file: "templates/study-room.html", desc: "A cozy study room template to create a focused learning environment.", tags: ["Template"] }
 ];
 
 const widgets = [
