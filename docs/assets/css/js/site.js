@@ -5,14 +5,15 @@ const templates = [
   { title: "Graphing Calculator", file: "templates/point_grades-calculator.html", desc: "Graphing helper page (folder-based).", tags: ["Tool"] },
   { title: "Journals", file: "templates/journal.html", desc: "Reflection/journaling layouts (folder-based).", tags: ["Template"] },
   { title: "Question Box", file: "templates/question-box.html", desc: "A simple question box template for student reflection or feedback.", tags: ["Template"] },
-  { title: "Study Room", file: "templates/study-room.html", desc: "A cozy study room template to create a focused learning environment.", tags: ["Template"] }
+  { title: "FAQ", file: "widgets/faq.html", desc: "Homepage FAQ using accessible details/summary components.", tags: ["Home"] },
+  { title: "Study Room", file: "templates/study-room.html", desc: "A cozy study room template to create a focused learning environment.", tags: ["Template"] },
+  { title: "Work-To-Do", file: "widgets/work-to-do.html", desc: "A simplified, student-friendly task overview widget.", tags: ["Home"] }
 ];
 
 const widgets = [
-  { title: "BuddyAI", file: "widgets/ai-buddy.html", desc: "BuddyAI help panel concept for student navigation and support.", tags: ["Home"] },
-  { title: "FAQ", file: "widgets/faq.html", desc: "Homepage FAQ using accessible details/summary components.", tags: ["Home"] },
-  { title: "Work-To-Do", file: "widgets/work-to-do.html", desc: "A simplified, student-friendly task overview widget.", tags: ["Home"] },
+  { title: "Quick Tools", file: "widgets/quick-tools.html", desc: "BuddyAI help panel concept for student navigation and support.", tags: ["Home"] },
   { title: "Course Info", file: "widgets/course-info.html", desc: "Course info widget folder (link to index if present).", tags: ["Home"] },
+  { title: "Troubleshooting Guide", file: "widgets/troubleshoot-guide.html", desc: "A guide for troubleshooting common technical issues.", tags: ["Home"] }
 ];
 
 // Helpers

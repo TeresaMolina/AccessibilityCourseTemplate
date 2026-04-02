@@ -11,7 +11,12 @@
 
     <h1> Quiz Timer </h1>
     <p class="subtitle">
-      Use this page as a fun, optional morale booster in Brightspace.
+      Instead of having to google "online timer 1 hour 15 minutes" and hope for an accessible one, you can use this simple quiz timer template right 
+        in Brightspace.
+      It has Start, Pause, and Restart buttons, and is set to 1 hour 15 minutes by default (a common quiz/exam length). 
+      You can adjust the time by changing the INITIAL_MS value in the script. 
+      This is a non-automated timer, meaning it won't submit quizzes or interact with Brightspace quiz settings. 
+      It's just a visual timer to help students manage their time during quizzes or exams. 
     </p>
 
     <!-- Instructions -->
@@ -195,6 +200,21 @@
       setButtons();
     })();
   </script>
+
+<h3> To change the time:</h3>
+<p>
+  Find code line: <code>const INITIAL_MS = (1 * 60 * 60 + 15 * 60 ) * 1000;</code>
+</p>
+
+<p>
+  <strong>Adjust the numbers for hours and minutes as needed, using the formula:</strong>
+<ul>
+  <li>(# * 60 ) = minutes</li>
+  <li>(# * 60 * 60) = hours</li>
+  <li>(# * 60 * 60 + # * 60) = hours & minutes</li>
+</ul>
+</p>
+
 </section>
 </code></pre>
     </section>
@@ -364,6 +384,22 @@
       setButtons();
     })();
   &lt;/script&gt;
+
+&lt;h3&gt; To change the time:&lt;/h3&gt;
+&lt;p&gt;
+  Find code line: &lt;code&gt;const INITIAL_MS = (1 * 60 * 60 + 15 * 60 ) * 1000;&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Adjust the numbers for hours and minutes as needed, using the formula:&lt;/strong&gt;
+&lt;ul&gt;
+  &lt;li&gt;(# * 60 ) = minutes&lt;/li&gt;
+  &lt;li&gt;(# * 60 * 60) = hours&lt;/li&gt;
+  &lt;li&gt;(# * 60 * 60 + # * 60) = hours & minutes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+
 &lt;/section&gt;</code></pre>
 </section>
       </code></pre>
