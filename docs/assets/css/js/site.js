@@ -12,7 +12,7 @@ const widgets = [
   { title: "BuddyAI", file: "widgets/ai-buddy.html", desc: "BuddyAI help panel concept for student navigation and support.", tags: ["Home"] },
   { title: "FAQ", file: "widgets/faq.html", desc: "Homepage FAQ using accessible details/summary components.", tags: ["Home"] },
   { title: "Work-To-Do", file: "widgets/work-to-do.html", desc: "A simplified, student-friendly task overview widget.", tags: ["Home"] },
-  { title: "Course Info", file: "widgets/course-info", desc: "Course info widget folder (link to index if present).", tags: ["Home"] },
+  { title: "Course Info", file: "widgets/course-info.html", desc: "Course info widget folder (link to index if present).", tags: ["Home"] },
 ];
 
 // Helpers
