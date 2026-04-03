@@ -7,7 +7,9 @@ const templates = [
   { title: "Question Box", file: "templates/question-box.html", desc: "A simple question box template for student reflection or feedback.", tags: ["Template"] },
   { title: "FAQ", file: "widgets/faq.html", desc: "Homepage FAQ using accessible details/summary components.", tags: ["Home"] },
   { title: "Study Room", file: "templates/study-room.html", desc: "A cozy study room template to create a focused learning environment.", tags: ["Template"] },
-  { title: "Work-To-Do", file: "widgets/work-to-do.html", desc: "A simplified, student-friendly task overview widget.", tags: ["Home"] }
+  { title: "Work-To-Do", file: "widgets/work-to-do.html", desc: "A simplified, student-friendly task overview widget.", tags: ["Home"] },
+  { title: "Lecture Board", file: "templates/lecture-board.html", desc: "A template for organizing lecture materials, videos, and resources.", tags: ["Template"] },
+  { title: "Music Board", file: "templates/music-board.html", desc: "A template for sharing music resources, playlists, and related content.", tags: ["Template"] }
 ];
 
 const widgets = [

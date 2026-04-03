@@ -57,6 +57,8 @@
             <p><strong>Instructions:</strong> Add video via "Insert Stuff" to upload from the Media Library, Panopto Video Embed 1.3, My Computer, YouTube, or Enter Embed Code.</p>
         </div>
 
+        <p>[Add Video Here]</p>
+
         <p style="margin:10px 0 0 0;">
           <strong>Direct Link:</strong>
           <a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener" style="color:#cb4900;text-decoration:underline;">
@@ -166,6 +168,134 @@
         Paste the SAME HTML here
  Here use &lt; and &gt; to replace < and > 
 -->
+&lt;section aria-label="Video Module Page"
+  style="max-width:950px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.5;"&gt;
+
+  &lt;div style="border:1px solid #d9d9d9;border-radius:16px;padding:18px;background:#ffffff;"&gt;
+
+    <!-- Header -->
+    &lt;header style="border-left:8px solid #cb4900;background:#f7f7f7;padding:14px 16px;border-radius:12px;margin-bottom:16px;"&gt;
+      &lt;h2 style="margin:0 0 4px 0;font-size:1.35rem;color:#313131;"&gt;Module Videos&lt;/h2&gt;
+      &lt;p style="margin:0;color:#4c4a4f;"&gt;
+        Use this page to organize lecture videos, demonstrations, and supporting media for this module.
+      &lt;/p&gt;
+    &lt;/header&gt;
+
+    <!-- Featured Video -->
+    &lt;section style="margin-bottom:20px;"&gt;
+      &lt;h3 style="margin:0 0 8px 0;color:#313131;"&gt;Featured Lecture&lt;/h3&gt;
+
+      &lt;div style="border:1px solid #e5e7eb;border-radius:14px;padding:14px;background:#fafafa;"&gt;
+        &lt;p style="margin:0 0 10px 0;"&gt;&lt;strong&gt;Video Title:&lt;/strong&gt; Introduction to Module 1&lt;/p&gt;
+        &lt;p style="margin:0 0 10px 0;color:#4c4a4f;"&gt;
+          Add a brief summary of what students should focus on while watching this lecture.
+        &lt;/p&gt;
+
+        <!-- Embedded video area -->
+        &lt;div style="margin:12px 0;"&gt;
+<!-- Replace the iframe below with your video embed code -->
+            &lt;p&gt;&lt;strong&gt;Instructions:&lt;/strong&gt; Add video via "Insert Stuff" to upload from the Media Library, Panopto Video Embed 1.3, My Computer, YouTube, or Enter Embed Code.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;p&gt;[Add Video Here]&lt;/p&gt;
+
+        &lt;p style="margin:10px 0 0 0;"&gt;
+          &lt;strong&gt;Direct Link:&lt;/strong&gt;
+          &lt;a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener" style="color:#cb4900;text-decoration:underline;"&gt;
+            Open video in a new tab
+          &lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;KB Article:&lt;/strong&gt; &lt;a href="https://support.utrgv.edu/TDClient/1849/Portal/KB/?CategoryID=26711" target="_blank" rel="noopener" style="color:#cb4900;text-decoration:underline;"&gt;
+            Center for Online Learning and Teaching Technology (COLTT)
+    &lt;/a&gt;&lt;/p&gt;
+       &lt;/div&gt;
+    &lt;/section&gt;
+
+    <!-- Additional Videos -->
+    &lt;section style="margin-bottom:20px;"&gt;
+      &lt;h3 style="margin:0 0 8px 0;color:#313131;"&gt;Additional Videos&lt;/h3&gt;
+
+      &lt;div style="display:grid;gap:12px;"&gt;
+
+        &lt;div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;"&gt;
+          &lt;p style="margin:0 0 6px 0;"&gt;&lt;strong&gt;Supplemental Video 1&lt;/strong&gt;&lt;/p&gt;
+          &lt;p style="margin:0 0 8px 0;color:#4c4a4f;"&gt;
+            Add a short note about why this video is helpful.
+          &lt;/p&gt;
+          &lt;a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener"
+             style="color:#cb4900;text-decoration:underline;"&gt;
+            Watch Video
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;"&gt;
+          &lt;p style="margin:0 0 6px 0;"&gt;&lt;strong&gt;Supplemental Video 2&lt;/strong&gt;&lt;/p&gt;
+          &lt;p style="margin:0 0 8px 0;color:#4c4a4f;"&gt;
+            Add a short note about the topic covered in this video.
+          &lt;/p&gt;
+          &lt;a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener"
+             style="color:#cb4900;text-decoration:underline;"&gt;
+            Watch Video
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+        <!--___________________AAAAAHHHHH______________________-->
+        <!--Oh, there you are! Hey Professor or COLTT! Paste that <div> </div? block here !!!-->
+
+
+
+        <!--_________________Not down here, up there!_____________________________-->
+
+        &lt;p&gt;&lt;i&gt;To add more supplemental videos, copy the HTML code below and paste it after the second-to-last &lt;/div&gt; tag:&lt;/i&gt;&lt;/p&gt;
+
+             &lt;p&gt;&lt;code&gt;
+
+&lt;div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;"&gt;
+  &lt;p style="margin:0 0 6px 0;"&gt;&lt;strong&gt;Supplemental Video 3&lt;/strong&gt;&lt;/p&gt;
+  &lt;p style="margin:0 0 8px 0;color:#4c4a4f;"&gt;
+    Add a short note about the topic covered in this video.
+  &lt;/p&gt;
+  &lt;a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener"
+     style="color:#cb4900;text-decoration:underline;"&gt;
+    Watch Video
+  &lt;/a&gt;
+&lt;/div&gt;
+            &lt;/code&gt;&lt;/p&gt;
+
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    <!-- Notes / Resources -->
+    &lt;section style="margin-bottom:18px;"&gt;
+      &lt;h3 style="margin:0 0 8px 0;color:#313131;"&gt;Notes and Resources&lt;/h3&gt;
+      &lt;div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#fafafa;"&gt;
+        &lt;ul style="margin:0;padding-left:18px;color:#4c4a4f;"&gt;
+          &lt;li&gt;Add lecture slides here&lt;/li&gt;
+          &lt;li&gt;Add reading links here&lt;/li&gt;
+          &lt;li&gt;Add practice resources here&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    <!-- Accessibility reminder -->
+    &lt;section&gt;
+      &lt;h3 style="margin:0 0 8px 0;color:#313131;"&gt;Accessibility Reminder&lt;/h3&gt;
+      &lt;div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;"&gt;
+        &lt;p style="margin:0;color:#4c4a4f;"&gt;
+          Make sure videos include captions or transcripts whenever possible, and provide a direct link
+          in case the embedded version does not load for some students.
+        &lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+            &lt;strong&gt;KB Article:&lt;/strong&gt; &lt;a href="https://support.utrgv.edu/TDClient/1849/Portal/KB/?CategoryID=27134" target="_blank" rel="noopener" style="color:#cb4900;text-decoration:underline;"&gt;
+            Accessibility in Brightspace.
+            &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
 
       </code></pre>
     </section>
