@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Template Name </title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <h1> Template Name </h1>
+    <p class="subtitle">
+      Use this page as a fun, optional morale booster in Brightspace.
+    </p>
+
+    <!-- Instructions -->
+    <section class="card">
+      <h2>How to use in Brightspace</h2>
+      <ol>
+        <li>Go to <strong>Content</strong> in your course</li>
+        <li>Select <strong>Create New → HTML Document</strong></li>
+        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
+        <li>Copy the HTML below and paste it</li>
+      </ol>
+    </section>
+
+    <!-- Preview -->
+    <section class="card">
+      <h2>Preview</h2>
+      <!-- PASTE THE HTML HERE -->
+<section aria-label="Video Module Page"
+  style="max-width:950px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.5;">
+
+  <div style="border:1px solid #d9d9d9;border-radius:16px;padding:18px;background:#ffffff;">
+
+    <!-- Header -->
+    <header style="border-left:8px solid #cb4900;background:#f7f7f7;padding:14px 16px;border-radius:12px;margin-bottom:16px;">
+      <h2 style="margin:0 0 4px 0;font-size:1.35rem;color:#313131;">Module Videos</h2>
+      <p style="margin:0;color:#4c4a4f;">
+        Use this page to organize lecture videos, demonstrations, and supporting media for this module.
+      </p>
+    </header>
+
+    <!-- Featured Video -->
+    <section style="margin-bottom:20px;">
+      <h3 style="margin:0 0 8px 0;color:#313131;">Featured Lecture</h3>
+
+      <div style="border:1px solid #e5e7eb;border-radius:14px;padding:14px;background:#fafafa;">
+        <p style="margin:0 0 10px 0;"><strong>Video Title:</strong> Introduction to Module 1</p>
+        <p style="margin:0 0 10px 0;color:#4c4a4f;">
+          Add a brief summary of what students should focus on while watching this lecture.
+        </p>
+
+        <!-- Embedded video area -->
+        <div style="margin:12px 0;">
+<!-- Replace the iframe below with your video embed code -->
+            <p><strong>Instructions:</strong> Add video via "Insert Stuff" to upload from the Media Library, Panopto Video Embed 1.3, My Computer, YouTube, or Enter Embed Code.</p>
+        </div>
+
+        <p style="margin:10px 0 0 0;">
+          <strong>Direct Link:</strong>
+          <a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener" style="color:#cb4900;text-decoration:underline;">
+            Open video in a new tab
+          </a>
+        </p>
+        <p><strong>KB Article:</strong> <a href="https://support.utrgv.edu/TDClient/1849/Portal/KB/?CategoryID=26711" target="_blank" rel="noopener" style="color:#cb4900;text-decoration:underline;">
+            Center for Online Learning and Teaching Technology (COLTT)
+</a></p>
+      </div>
+    </section>
+
+    <!-- Additional Videos -->
+    <section style="margin-bottom:20px;">
+      <h3 style="margin:0 0 8px 0;color:#313131;">Additional Videos</h3>
+
+      <div style="display:grid;gap:12px;">
+
+        <div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;">
+          <p style="margin:0 0 6px 0;"><strong>Supplemental Video 1</strong></p>
+          <p style="margin:0 0 8px 0;color:#4c4a4f;">
+            Add a short note about why this video is helpful.
+          </p>
+          <a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener"
+             style="color:#cb4900;text-decoration:underline;">
+            Watch Video
+          </a>
+        </div>
+
+        <div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;">
+          <p style="margin:0 0 6px 0;"><strong>Supplemental Video 2</strong></p>
+          <p style="margin:0 0 8px 0;color:#4c4a4f;">
+            Add a short note about the topic covered in this video.
+          </p>
+          <a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener"
+             style="color:#cb4900;text-decoration:underline;">
+            Watch Video
+          </a>
+        </div>
+
+        <!--___________________AAAAAHHHHH______________________-->
+        <!--Oh, there you are! Hey Professor or COLTT! Paste that <div> </div? block here !!!-->
+
+
+
+        <!--_________________Not down here, up there!_____________________________-->
+
+        <p><i>To add more supplemental videos, copy the HTML code below and paste it after the second-to-last &lt;/div&gt; tag:</i></p>
+
+            <p><code>
+&lt;div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;"&gt;
+  &lt;p style="margin:0 0 6px 0;"&gt;&lt;strong&gt;Supplemental Video 3&lt;/strong&gt;&lt;/p&gt;
+  &lt;p style="margin:0 0 8px 0;color:#4c4a4f;"&gt;
+    Add a short note about the topic covered in this video.
+  &lt;/p&gt;
+  &lt;a href="PASTE-VIDEO-LINK-HERE" target="_blank" rel="noopener"
+     style="color:#cb4900;text-decoration:underline;"&gt;
+    Watch Video
+  &lt;/a&gt;
+&lt;/div&gt;
+            </code></p>
+
+      </div>
+    </section>
+
+    <!-- Notes / Resources -->
+    <section style="margin-bottom:18px;">
+      <h3 style="margin:0 0 8px 0;color:#313131;">Notes and Resources</h3>
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#fafafa;">
+        <ul style="margin:0;padding-left:18px;color:#4c4a4f;">
+          <li>Add lecture slides here</li>
+          <li>Add reading links here</li>
+          <li>Add practice resources here</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Accessibility reminder -->
+    <section>
+      <h3 style="margin:0 0 8px 0;color:#313131;">Accessibility Reminder</h3>
+      <div style="border:1px solid #e5e7eb;border-radius:12px;padding:14px;background:#ffffff;">
+        <p style="margin:0;color:#4c4a4f;">
+          Make sure videos include captions or transcripts whenever possible, and provide a direct link
+          in case the embedded version does not load for some students.
+        </p>
+        <ul>
+            <li>
+            <strong>KB Article:</strong> <a href="https://support.utrgv.edu/TDClient/1849/Portal/KB/?CategoryID=27134" target="_blank" rel="noopener" style="color:#cb4900;text-decoration:underline;">
+            Accessibility in Brightspace.
+            </li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+    </section>
+
+    <!-- Copy section -->
+    <section class="card">
+      <h2>Copy HTML</h2>
+      <p>Copy everything below:</p>
+
+      <pre><code>
+<!-- 
+        Paste the SAME HTML here
+ Here use &lt; and &gt; to replace < and > 
+-->
+
+      </code></pre>
+    </section>
+        <p><a href="../index.html">← Back to catalog</a></p>
+  </main>
+</body>
+</html>
