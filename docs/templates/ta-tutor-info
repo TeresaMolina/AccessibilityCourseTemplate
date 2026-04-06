@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Template Name </title>
+  <title> TA and Tutor Information </title>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
 <body>
   <main class="wrap">
-    <h1> Template Name </h1>
+    <h1> TA and Tutor Information </h1>
     <p class="subtitle">
-      Use this page as a fun, optional morale booster in Brightspace.
+      Use this page to learn more about your Teaching Assistants and Tutors. You can customize the sections and content as needed.
     </p>
 
     <!-- Instructions -->
