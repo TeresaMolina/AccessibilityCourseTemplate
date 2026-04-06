@@ -9,7 +9,9 @@ const templates = [
   { title: "Study Room", file: "templates/study-room.html", desc: "A cozy study room template to create a focused learning environment.", tags: ["Template"] },
   { title: "Work-To-Do", file: "widgets/work-to-do.html", desc: "A simplified, student-friendly task overview widget.", tags: ["Home"] },
   { title: "Lecture Board", file: "templates/lecture-board.html", desc: "A template for organizing lecture materials, videos, and resources.", tags: ["Template"] },
-  { title: "Music Board", file: "templates/music-board.html", desc: "A template for sharing music resources, playlists, and related content.", tags: ["Template"] }
+  { title: "Music Board", file: "templates/music-board.html", desc: "A template for sharing music resources, playlists, and related content.", tags: ["Template"] },
+  { title: "Study Guide", file: "templates/study-guide.html", desc: "A template for creating comprehensive study guides with sections for notes, resources, and practice questions.", tags: ["Template"] },
+  { title: "TA or Tutor Info", file: "widgets/ta-tutor-info.html", desc: "A widget for displaying TA or tutor contact information and office hours.", tags: ["Home"] }
 ];
 
 const widgets = [
