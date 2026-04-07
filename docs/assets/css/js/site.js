@@ -1,3 +1,6 @@
+
+// Data for templates and widgets.
+
 const templates = [
   { title: "Quiz Timer", file: "templates/quiz-timer.html", desc: "A simple timing/support page for quizzes/exams (non-automated).", tags: ["Template"] },
   { title: "Birthday Widget Page", file: "templates/birthday.html", desc: "Fun morale booster page (HTML/CSS only).", tags: ["Template"] },
@@ -22,7 +25,7 @@ const widgets = [
   { title: "Third-party Tools Support", file: "widgets/third-party-tools.html", desc: "A widget that offers support and resources for third-party tools used in the course.", tags: ["Home"] }
 ];
 
-// Helpers
+// Helpers 
 function isFolderPath(p) {
   return !p.endsWith(".html");
 }
