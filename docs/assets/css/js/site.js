@@ -17,7 +17,9 @@ const templates = [
 const widgets = [
   { title: "Quick Tools", file: "widgets/quick-tools.html", desc: "BuddyAI help panel concept for student navigation and support.", tags: ["Home"] },
   { title: "Course Info", file: "widgets/course-info.html", desc: "Course info widget folder (link to index if present).", tags: ["Home"] },
-  { title: "Troubleshooting Guide", file: "widgets/troubleshoot-guide.html", desc: "A guide for troubleshooting common technical issues.", tags: ["Home"] }
+  { title: "Troubleshooting Guide", file: "widgets/troubleshoot-guide.html", desc: "A guide for troubleshooting common technical issues.", tags: ["Home"] },
+  { title: "Accessibility Checker", file: "widgets/accessibility.html", desc: "A widget that provides accessibility tips and checks for course content.", tags: ["Home"] },
+  { title: "Third-party Tools Support", file: "widgets/third-party-tools.html", desc: "A widget that offers support and resources for third-party tools used in the course.", tags: ["Home"] }
 ];
 
 // Helpers
