@@ -2,115 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Template Name </title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Weighted Grade Calculator</title>
+  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
 </head>
 
-<body>
-  <main class="wrap">
-    <h1> Template Name </h1>
-    <p class="subtitle">
-      Use this page as a fun, optional morale booster in Brightspace.
-    </p>
+<body style="font-family:Lato,Arial,sans-serif;background:#f7f7f7;margin:0;padding:24px;color:#313131;">
 
-    <!-- Instructions -->
-    <section class="card">
-      <h2>How to use in Brightspace</h2>
-      <ol>
-        <li>Go to <strong>Content</strong> in your course</li>
-        <li>Select <strong>Create New → HTML Document</strong></li>
-        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
-        <li>Copy the HTML below and paste it</li>
-      </ol>
-    </section>
+<main style="max-width:950px;margin:0 auto;">
 
-    <!-- Preview -->
-    <section class="card">
-      <h2>Preview</h2>
-      <!-- PASTE THE HTML HERE -->
-              <!DOCTYPE html>
-              <html><head><link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css"><link rel="stylesheet" href="https://templates.lcs.brightspace.com/lib/assets/css/styles.min.css"></head><body style="color: rgb(32, 33, 34); font-family: Lato, sans-serif; font-size: 12px;"><div style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 14px; background: #ffffff;">
-              <div style="font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: #6b7280;">Need-to-Know</div>
-              <h2 style="margin: 6px 0 8px 0;">This Week’s Focus</h2>
-              <table border="1" style="border-collapse: collapse; width: 100.032%; margin-left: auto; margin-right: auto; border: 1px solid rgb(0, 0, 0); height: 134.824px;"><caption>Below is a table separating "This Week's Focus" for an accessible view of multiple links.</caption><colgroup><col style="width: 50.0868%;"><col style="width: 49.9457%;"></colgroup>
-              <tbody>
-              <tr style="height: 44.9414px;">
-              <th style="border-color: #000000; text-align: center;" scope="row"><strong>Read:</strong></th>
-              <td style="border-color: #000000; text-align: center;"><strong><a href="https://blank" target="_blank" rel="noopener">Insert Quicklink</a></strong></td>
-              </tr>
-              <tr style="height: 44.9414px;">
-              <th style="border-color: #000000; text-align: center;" scope="row"><strong>Do:</strong></th>
-              <td style="border-color: #000000; text-align: center;"><strong><a href="https://blank" target="_blank" rel="noopener">Insert Quicklink</a><br></strong></td>
-              </tr>
-              <tr style="height: 44.9414px;">
-              <th style="border-color: #000000; text-align: center;" scope="row"><strong>Submit:</strong></th>
-              <td style="border-color: #000000; text-align: center;"><strong><a href="https://blank" target="_blank" rel="noopener">Insert Quicklink</a><br></strong></td>
-              </tr>
-              </tbody>
-              </table>
-              <p><em>Note: Add Quicklinks for direct access to Assignments, Quizzes, Discussions, Chapters, Lectures, etc.</em></p>
-              <p><em></em></p>
-              <h3>How to add quicklinks.</h3>
-              <p>Step 1: Click on the Quicklink icon on the toolbar.</p>
-              <ul>
-              <li>Looks like a chain.</li>
-              </ul>
-              <p><em></em>Step 2: Add any materials you would like from your course content.</p>
-              <ul>
-              <li>Hint: Click on the table and add columns for more links. Do not add links in the same column next to each other after a comma.</li>
-              </ul>
-              </div></body></html>
+  <section style="border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff;">
+    <h1 style="margin-top:0;color:#ae3f00;">Weighted Grade Calculator</h1>
+    <p>Preview the calculator below, then copy or download the Brightspace-ready HTML.</p>
 
+    <h2>Preview</h2>
 
-    </section>
+    <!-- PREVIEW AREA -->
+    <div style="border:1px solid #e6e6e6;border-radius:16px;padding:18px;background:#fafafa;">
 
-    <!-- Copy section -->
-    <section class="card">
-      <h2>Copy HTML</h2>
-      <p>Copy everything below:</p>
+      <!-- 
+        PASTE ONLY THE INNER CALCULATOR HERE:
+        Start from:
+        <section aria-label="Weighted Grade Calculator">
+        ...
+        </section>
+        <script>...</script>
 
-      <pre><code>
+        Do NOT paste <!DOCTYPE html>, <html>, <head>, or <body> here.
+      -->
+
+    </div>
+
+    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button onclick="copyCode('weightedCode')" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Copy HTML
+      </button>
+
+      <button onclick="downloadCode('weightedCode','weighted-grade-calculator.html')" type="button"
+        style="cursor:pointer;border:1px solid #4c4a4f;background:#4c4a4f;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Download HTML
+      </button>
+    </div>
+
+    <h2>Copy HTML</h2>
+
+    <textarea id="weightedCode" readonly
+      style="width:100%;height:360px;padding:12px;border:1px solid #ddd;border-radius:12px;font-family:monospace;box-sizing:border-box;">
 <!-- 
-        Paste the SAME HTML here
- Here use &lt; and &gt; to replace < and > 
+PASTE THE FULL BRIGHTSPACE CALCULATOR HERE:
+You CAN include <!DOCTYPE html>, <html>, <head>, and <body> in this textarea.
 -->
+    </textarea>
 
-              &lt;!DOCTYPE html&gt;
-              &lt;html&gt;&lt;head&gt;&lt;link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css"&gt;&lt;link rel="stylesheet" href="https://templates.lcs.brightspace.com/lib/assets/css/styles.min.css"&gt;&lt;/head&gt;&lt;body style="color: rgb(32, 33, 34); font-family: Lato, sans-serif; font-size: 12px;"&gt;&lt;div style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 14px; background: #ffffff;"&gt;
-              &lt;div style="font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: #6b7280;"&gt;Need-to-Know&lt;/div&gt;
-              &lt;h2 style="margin: 6px 0 8px 0;"&gt;This Week’s Focus&lt;/h2&gt;
-              &lt;table border="1" style="border-collapse: collapse; width: 100.032%; margin-left: auto; margin-right: auto; border: 1px solid rgb(0, 0, 0); height: 134.824px;"&gt;&lt;caption&gt;Below is a table separating "This Week's Focus" for an accessible view of multiple links.&lt;/caption&gt;&lt;colgroup&gt;&lt;col style="width: 50.0868%;"&gt;&lt;col style="width: 49.9457%;"&gt;&lt;/colgroup&gt;
-              &lt;tbody&gt;
-                &lt;tr style="height: 44.9414px;"&gt;
-                  &lt;th style="border-color: #000000; text-align: center;" scope="row"&gt;&lt;strong&gt;Read:&lt;/strong&gt;&lt;/th&gt;
-                    &lt;td style="border-color: #000000; text-align: center;"&gt;&lt;strong&gt;&lt;a href="https://blank" target="_blank" rel="noopener"&gt;Insert Quicklink&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr style="height: 44.9414px;"&gt;
-                  &lt;th style="border-color: #000000; text-align: center;" scope="row"&gt;&lt;strong&gt;Do:&lt;/strong&gt;&lt;/th&gt;
-                    &lt;td style="border-color: #000000; text-align: center;"&gt;&lt;strong&gt;&lt;a href="https://blank" target="_blank" rel="noopener"&gt;Insert Quicklink&lt;/a&gt;&lt;br&gt;&lt;/strong&gt;&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr style="height: 44.9414px;"&gt;
-                &lt;th style="border-color: #000000; text-align: center;" scope="row"&gt;&lt;strong&gt;Submit:&lt;/strong&gt;&lt;/th&gt;
-                  &lt;td style="border-color: #000000; text-align: center;"&gt;&lt;strong&gt;&lt;a href="https://blank" target="_blank" rel="noopener"&gt;Insert Quicklink&lt;/a&gt;&lt;br&gt;&lt;/strong&gt;&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;/tbody&gt;
-              &lt;/table&gt;
-              &lt;p&gt;&lt;em&gt;Note: Add Quicklinks for direct access to Assignments, Quizzes, Discussions, Chapters, Lectures, etc.&lt;/em&gt;&lt;/p&gt;
-              &lt;p&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
-              &lt;h3&gt;How to add quicklinks.&lt;/h3&gt;
-              &lt;p&gt;Step 1: Click on the Quicklink icon on the toolbar.&lt;/p&gt;
-              &lt;ul&gt;
-                &lt;li&gt;Looks like a chain.&lt;/li&gt;
-              &lt;/ul&gt;
-              &lt;p&gt;&lt;em&gt;&lt;/em&gt;Step 2: Add any materials you would like from your course content.&lt;/p&gt;
-              &lt;ul&gt;
-                &lt;li&gt;Hint: Click on the table and add columns for more links. Do not add links in the same column next to each other after a comma.&lt;/li&gt;
-              &lt;/ul&gt;
-              &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+    <p><a href="../index.html">← Back to catalog</a></p>
+  </section>
 
-      </code></pre>
-    </section>
-        <p><a href="../index.html">← Back to catalog</a></p>
-  </main>
+</main>
+
+<script>
+  function copyCode(id) {
+    const el = document.getElementById(id);
+    el.select();
+    el.setSelectionRange(0, 999999);
+    document.execCommand("copy");
+    alert("Copied!");
+  }
+
+  function downloadCode(id, filename) {
+    const content = document.getElementById(id).value;
+    const blob = new Blob([content], {type:"text/html"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+  }
+</script>
+
 </body>
 </html>

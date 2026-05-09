@@ -2,410 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Quiz Timer </title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Weighted Grade Calculator</title>
+  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
 </head>
 
-<body>
-  <main class="wrap">
+<body style="font-family:Lato,Arial,sans-serif;background:#f7f7f7;margin:0;padding:24px;color:#313131;">
 
-    <h1> Quiz Timer </h1>
-    <p class="subtitle">
-      Instead of having to google "online timer 1 hour 15 minutes" and hope for an accessible one, you can use this simple quiz timer template right 
-        in Brightspace.
-      It has Start, Pause, and Restart buttons, and is set to 1 hour 15 minutes by default (a common quiz/exam length). 
-      You can adjust the time by changing the INITIAL_MS value in the script. 
-      This is a non-automated timer, meaning it won't submit quizzes or interact with Brightspace quiz settings. 
-      It's just a visual timer to help students manage their time during quizzes or exams. 
-    </p>
+<main style="max-width:950px;margin:0 auto;">
 
-    <!-- Instructions -->
-    <section class="card">
-      <h2>How to use in Brightspace</h2>
-      <ol>
-        <li>Go to <strong>Content</strong> in your course</li>
-        <li>Select <strong>Create New → HTML Document</strong></li>
-        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
-        <li>Copy the HTML below and paste it</li>
-      </ol>
-    </section>
+  <section style="border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff;">
+    <h1 style="margin-top:0;color:#ae3f00;">Weighted Grade Calculator</h1>
+    <p>Preview the calculator below, then copy or download the Brightspace-ready HTML.</p>
 
-    <!-- Preview -->
-    <section class="card">
-      <h2>Preview</h2>
+    <h2>Preview</h2>
 
-      <!-- PASTE THE HTML HERE -->
-<code><pre>
-      <section aria-label="Timer Widget"
-  style="max-width:520px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;"&gt;>
+    <!-- PREVIEW AREA -->
+    <div style="border:1px solid #e6e6e6;border-radius:16px;padding:18px;background:#fafafa;">
 
-  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
-    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
-      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">Exam Timer</h2>
-      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">Set to 1 hour 15 minutes</p>
-    </header>
+      <!-- 
+        PASTE ONLY THE INNER CALCULATOR HERE:
+        Start from:
+        <section aria-label="Weighted Grade Calculator">
+        ...
+        </section>
+        <script>...</script>
 
-    <div style="margin-top:14px;display:flex;align-items:center;justify-content:center;">
-      <div id="timerDisplay"
-        role="timer"
-        aria-live="polite"
-        aria-label="Time remaining"
-        style="font-variant-numeric:tabular-nums;letter-spacing:1px;
-               font-size:2.4rem;font-weight:800;color:#313131;">
-        01:15:00
-      </div>
+        Do NOT paste <!DOCTYPE html>, <html>, <head>, or <body> here.
+      -->
+
     </div>
 
-    <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-      <button id="startBtn"
-        type="button"
-        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
-               padding:10px 14px;border-radius:12px;font-weight:700;">
-        Start
+    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button onclick="copyCode('weightedCode')" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Copy HTML
       </button>
 
-      <button id="pauseBtn"
-        type="button"
-        disabled
-        style="cursor:pointer;border:1px solid #e6e6e6;background:#f5f5f5;color:#4c4a4f;
-               padding:10px 14px;border-radius:12px;font-weight:700;">
-        Pause
-      </button>
-
-      <button id="restartBtn"
-        type="button"
-        style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
-               padding:10px 14px;border-radius:12px;font-weight:700;">
-        Restart
+      <button onclick="downloadCode('weightedCode','weighted-grade-calculator.html')" type="button"
+        style="cursor:pointer;border:1px solid #4c4a4f;background:#4c4a4f;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Download HTML
       </button>
     </div>
 
-    <p id="timerNote" style="margin:12px 0 0 0;text-align:center;color:#4c4a4f;font-size:.9rem;">
-      Tip: Use Restart to reset back to 01:15:00.
-    </p>
-  </div>
+    <h2>Copy HTML</h2>
 
-  <script>
-    (function () {
-      // 1 hour 15 minutes = 75 minutes
-      const INITIAL_MS = (1 * 60 * 60 + 15 * 60) * 1000;
+    <textarea id="weightedCode" readonly
+      style="width:100%;height:360px;padding:12px;border:1px solid #ddd;border-radius:12px;font-family:monospace;box-sizing:border-box;">
+<!-- 
+PASTE THE FULL BRIGHTSPACE CALCULATOR HERE:
+You CAN include <!DOCTYPE html>, <html>, <head>, and <body> in this textarea.
+-->
+    </textarea>
 
-      const display = document.getElementById("timerDisplay");
-      const startBtn = document.getElementById("startBtn");
-      const pauseBtn = document.getElementById("pauseBtn");
-      const restartBtn = document.getElementById("restartBtn");
-      const note = document.getElementById("timerNote");
+    <p><a href="../index.html">← Back to catalog</a></p>
+  </section>
 
-      let remainingMs = INITIAL_MS;
-      let intervalId = null;
-      let running = false;
+</main>
 
-      function pad2(n) { return String(n).padStart(2, "0"); }
+<script>
+  function copyCode(id) {
+    const el = document.getElementById(id);
+    el.select();
+    el.setSelectionRange(0, 999999);
+    document.execCommand("copy");
+    alert("Copied!");
+  }
 
-      function format(ms) {
-        const totalSeconds = Math.max(0, Math.floor(ms / 1000));
-        const hrs = Math.floor(totalSeconds / 3600);
-        const mins = Math.floor((totalSeconds % 3600) / 60);
-        const secs = totalSeconds % 60;
-        return `${pad2(hrs)}:${pad2(mins)}:${pad2(secs)}`;
-      }
+  function downloadCode(id, filename) {
+    const content = document.getElementById(id).value;
+    const blob = new Blob([content], {type:"text/html"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+  }
+</script>
 
-      function render() {
-        display.textContent = format(remainingMs);
-      }
-
-      function setButtons() {
-        startBtn.disabled = running;
-        pauseBtn.disabled = !running;
-
-        // Visual disabled styles (inline because some platforms strip CSS)
-        if (startBtn.disabled) {
-          startBtn.style.background = "#f5f5f5";
-          startBtn.style.borderColor = "#e6e6e6";
-          startBtn.style.color = "#4c4a4f";
-          startBtn.style.cursor = "not-allowed";
-        } else {
-          startBtn.style.background = "#cb4900";
-          startBtn.style.borderColor = "#cb4900";
-          startBtn.style.color = "#fff";
-          startBtn.style.cursor = "pointer";
-        }
-
-        if (pauseBtn.disabled) {
-          pauseBtn.style.background = "#f5f5f5";
-          pauseBtn.style.borderColor = "#e6e6e6";
-          pauseBtn.style.color = "#4c4a4f";
-          pauseBtn.style.cursor = "not-allowed";
-        } else {
-          pauseBtn.style.background = "#ffffff";
-          pauseBtn.style.borderColor = "#cb4900";
-          pauseBtn.style.color = "#cb4900";
-          pauseBtn.style.cursor = "pointer";
-        }
-      }
-
-      function start() {
-        if (running) return;
-        running = true;
-        note.textContent = "Timer running…";
-        setButtons();
-
-        const tick = () => {
-          remainingMs -= 1000;
-          if (remainingMs <= 0) {
-            remainingMs = 0;
-            stopInterval();
-            running = false;
-            note.textContent = "Time’s up!";
-            setButtons();
-          }
-          render();
-        };
-
-        // Start immediately on next second
-        stopInterval();
-        intervalId = setInterval(tick, 1000);
-      }
-
-      function pause() {
-        if (!running) return;
-        running = false;
-        stopInterval();
-        note.textContent = "Paused.";
-        setButtons();
-      }
-
-      function restart() {
-        running = false;
-        stopInterval();
-        remainingMs = INITIAL_MS;
-        render();
-        note.textContent = "Reset to 01:15:00. Press Start when ready.";
-        setButtons();
-      }
-
-      function stopInterval() {
-        if (intervalId !== null) {
-          clearInterval(intervalId);
-          intervalId = null;
-        }
-      }
-
-      startBtn.addEventListener("click", start);
-      pauseBtn.addEventListener("click", pause);
-      restartBtn.addEventListener("click", restart);
-
-      // Initial render
-      render();
-      setButtons();
-    })();
-  </script>
-
-<h3> To change the time:</h3>
-<p>
-  Find code line: <code>const INITIAL_MS = (1 * 60 * 60 + 15 * 60 ) * 1000;</code>
-</p>
-
-<p>
-  <strong>Adjust the numbers for hours and minutes as needed, using the formula:</strong>
-<ul>
-  <li>(# * 60 ) = minutes</li>
-  <li>(# * 60 * 60) = hours</li>
-  <li>(# * 60 * 60 + # * 60) = hours & minutes</li>
-</ul>
-</p>
-
-</section>
-</code></pre>
-    </section>
-
-    <!-- Copy section -->
-    <section class="card">
-      <h2>Copy HTML</h2>
-      <p>Copy everything below:</p>
-  <pre><code>
-    &lt;section aria-label="Timer Widget"
-  style="max-width:520px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;"&gt;
-
-  &lt;div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;"&gt;
-    &lt;header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;"&gt;
-      &lt;h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;"&gt;Exam Timer&lt;/h2&gt;
-      &lt;p style="margin:0;color:#4c4a4f;font-size:.95rem;"&gt;Set to 1 hour 15 minutes&lt;/p&gt;
-    &lt;/header&gt;
-
-    &lt;div style="margin-top:14px;display:flex;align-items:center;justify-content:center;"&gt;
-      &lt;div id="timerDisplay"
-        role="timer"
-        aria-live="polite"
-        aria-label="Time remaining"
-        style="font-variant-numeric:tabular-nums;letter-spacing:1px;
-               font-size:2.4rem;font-weight:800;color:#313131;"&gt;
-        01:15:00
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;"&gt;
-      &lt;button id="startBtn"
-        type="button"
-        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
-               padding:10px 14px;border-radius:12px;font-weight:700;"&gt;
-        Start
-      &lt;/button&gt;
-
-      &lt;button id="pauseBtn"
-        type="button"
-        disabled
-        style="cursor:pointer;border:1px solid #e6e6e6;background:#f5f5f5;color:#4c4a4f;
-               padding:10px 14px;border-radius:12px;font-weight:700;"&gt;
-        Pause
-      &lt;/button&gt;
-
-      &lt;button id="restartBtn"
-        type="button"
-        style="cursor:pointer;border:1px solid #cb4900;background:#fff;color:#cb4900;
-               padding:10px 14px;border-radius:12px;font-weight:700;"&gt;
-        Restart
-      &lt;/button&gt;
-    &lt;/div&gt;
-
-    &lt;p id="timerNote" style="margin:12px 0 0 0;text-align:center;color:#4c4a4f;font-size:.9rem;"&gt;
-      Tip: Use Restart to reset back to 01:15:00.
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;script&gt;
-    (function () {
-      const INITIAL_MS = (1 * 60 * 60 + 15 * 60) * 1000;
-
-      const display = document.getElementById("timerDisplay");
-      const startBtn = document.getElementById("startBtn");
-      const pauseBtn = document.getElementById("pauseBtn");
-      const restartBtn = document.getElementById("restartBtn");
-      const note = document.getElementById("timerNote");
-
-      let remainingMs = INITIAL_MS;
-      let intervalId = null;
-      let running = false;
-
-      function pad2(n) { return String(n).padStart(2, "0"); }
-
-      function format(ms) {
-        const totalSeconds = Math.max(0, Math.floor(ms / 1000));
-        const hrs = Math.floor(totalSeconds / 3600);
-        const mins = Math.floor((totalSeconds % 3600) / 60);
-        const secs = totalSeconds % 60;
-        return `${pad2(hrs)}:${pad2(mins)}:${pad2(secs)}`;
-      }
-
-      function render() {
-        display.textContent = format(remainingMs);
-      }
-
-      function setButtons() {
-        startBtn.disabled = running;
-        pauseBtn.disabled = !running;
-
-        if (startBtn.disabled) {
-          startBtn.style.background = "#f5f5f5";
-          startBtn.style.borderColor = "#e6e6e6";
-          startBtn.style.color = "#4c4a4f";
-          startBtn.style.cursor = "not-allowed";
-        } else {
-          startBtn.style.background = "#cb4900";
-          startBtn.style.borderColor = "#cb4900";
-          startBtn.style.color = "#fff";
-          startBtn.style.cursor = "pointer";
-        }
-
-        if (pauseBtn.disabled) {
-          pauseBtn.style.background = "#f5f5f5";
-          pauseBtn.style.borderColor = "#e6e6e6";
-          pauseBtn.style.color = "#4c4a4f";
-          pauseBtn.style.cursor = "not-allowed";
-        } else {
-          pauseBtn.style.background = "#ffffff";
-          pauseBtn.style.borderColor = "#cb4900";
-          pauseBtn.style.color = "#cb4900";
-          pauseBtn.style.cursor = "pointer";
-        }
-      }
-
-      function start() {
-        if (running) return;
-        running = true;
-        note.textContent = "Timer running…";
-        setButtons();
-
-        const tick = () => {
-          remainingMs -= 1000;
-          if (remainingMs &lt;= 0) {
-            remainingMs = 0;
-            stopInterval();
-            running = false;
-            note.textContent = "Time’s up!";
-            setButtons();
-          }
-          render();
-        };
-
-        stopInterval();
-        intervalId = setInterval(tick, 1000);
-      }
-
-      function pause() {
-        if (!running) return;
-        running = false;
-        stopInterval();
-        note.textContent = "Paused.";
-        setButtons();
-      }
-
-      function restart() {
-        running = false;
-        stopInterval();
-        remainingMs = INITIAL_MS;
-        render();
-        note.textContent = "Reset to 01:15:00. Press Start when ready.";
-        setButtons();
-      }
-
-      function stopInterval() {
-        if (intervalId !== null) {
-          clearInterval(intervalId);
-          intervalId = null;
-        }
-      }
-
-      startBtn.addEventListener("click", start);
-      pauseBtn.addEventListener("click", pause);
-      restartBtn.addEventListener("click", restart);
-
-      render();
-      setButtons();
-    })();
-  &lt;/script&gt;
-
-&lt;h3&gt; To change the time:&lt;/h3&gt;
-&lt;p&gt;
-  Find code line: &lt;code&gt;const INITIAL_MS = (1 * 60 * 60 + 15 * 60 ) * 1000;&lt;/code&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-  &lt;strong&gt;Adjust the numbers for hours and minutes as needed, using the formula:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;(# * 60 ) = minutes&lt;/li&gt;
-  &lt;li&gt;(# * 60 * 60) = hours&lt;/li&gt;
-  &lt;li&gt;(# * 60 * 60 + # * 60) = hours & minutes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-
-
-&lt;/section&gt;</code></pre>
-</section>
-      </code></pre>
-    </section>
-        <p><a href="../index.html">← Back to catalog</a></p>
-
-  </main>
 </body>
 </html>

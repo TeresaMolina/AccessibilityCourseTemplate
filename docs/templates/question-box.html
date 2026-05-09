@@ -2,305 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Question Box </title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Weighted Grade Calculator</title>
+  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
 </head>
 
-<body>
-  <main class="wrap">
+<body style="font-family:Lato,Arial,sans-serif;background:#f7f7f7;margin:0;padding:24px;color:#313131;">
 
-    <h1> Question Box </h1>
-    <p class="subtitle">
-      This is a simple question box template that generates an email draft to the instructor with the student's question.
-      Students fill in their information and question, then click the button to open an email draft in their default email client (Outlook).
-      Be sure to have your professor's email address on file, and that your browser is configured to 
-      open mailto links with your email client for this to work properly. 
-    </p>
+<main style="max-width:950px;margin:0 auto;">
 
-    <!-- Instructions -->
-    <section class="card">
-      <h2>How to use in Brightspace</h2>
-      <ol>
-        <li>Go to <strong>Content</strong> in your course</li>
-        <li>Select <strong>Create New → HTML Document</strong></li>
-        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
-        <li>Copy the HTML below and paste it</li>
-      </ol>
-    </section>
+  <section style="border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff;">
+    <h1 style="margin-top:0;color:#ae3f00;">Weighted Grade Calculator</h1>
+    <p>Preview the calculator below, then copy or download the Brightspace-ready HTML.</p>
 
-    <!-- Preview -->
-    <section class="card">
-      <h2>Preview</h2>
+    <h2>Preview</h2>
 
-      <!-- PASTE THE HTML HERE -->
-       <section aria-label="Question Email Form"
-  style="max-width:700px;margin:0 auto;font-family:Arial,sans-serif;color:#202122;line-height:1.45;">
+    <!-- PREVIEW AREA -->
+    <div style="border:1px solid #e6e6e6;border-radius:16px;padding:18px;background:#fafafa;">
 
-  <div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;">
+      <!-- 
+        PASTE ONLY THE INNER CALCULATOR HERE:
+        Start from:
+        <section aria-label="Weighted Grade Calculator">
+        ...
+        </section>
+        <script>...</script>
 
-    <header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;">
-      <h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;">
-        Ask Your Instructor
-      </h2>
-      <p style="margin:0;color:#4c4a4f;font-size:.95rem;">
-        Fill in the form below to generate an email with your question.
-      </p>
-    </header>
+        Do NOT paste <!DOCTYPE html>, <html>, <head>, or <body> here.
+      -->
 
-    <div style="margin-top:14px;display:grid;gap:12px;">
+    </div>
 
-      <label>
-        <span style="font-weight:700;">Instructor Email</span>
-        <input id="instructorEmail" type="email"
-          placeholder="vaquero.instructor@utrgv.edu"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-      </label>
-
-      <label>
-        <span style="font-weight:700;">First Name</span>
-        <input id="firstName" type="text" value="{FirstName}"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-      </label>
-
-      <label>
-        <span style="font-weight:700;">Last Name</span>
-        <input id="lastName" type="text" value="{LastName}"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-      </label>
-
-      <label>
-        <span style="font-weight:700;">Student ID</span>
-        <input id="studentID" type="text"
-          placeholder="ex. 20123456"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-      </label>
-
-      <label>
-        <span style="font-weight:700;">Course Name</span>
-        <input id="courseName" type="text" value="{OrgUnitName}"
-          placeholder="ex. UTRGV-1301-01-Spring-2024"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;">
-      </label>
-
-      <label>
-        <span style="font-weight:700;">Your Question</span>
-        <textarea id="studentQuestion" rows="6"
-          placeholder="Type your question here..."
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"></textarea>
-      </label>
-
-      <button id="emailBtn" type="button"
-        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
-               padding:10px 14px;border-radius:12px;font-weight:700;width:fit-content;">
-        Open Email Draft
+    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button onclick="copyCode('weightedCode')" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Copy HTML
       </button>
 
-      <p style="margin:0;color:#4c4a4f;font-size:.85rem;">
-        Please note: Be sure to have your professor's email address on file, 
-          and that your browser is configured to open mailto links with your email client (Outlook).
-      </p>
-
-      <a href="https://support.microsoft.com/en-us/office/make-outlook-the-default-program-for-email-contacts-and-calendar-ff7990c4-54c4-4390-8fe3-c0285226f021"
-        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
-        Set up Outlook as default email client on Windows
-      </a>
-
-      <a href="https://youtu.be/SLWQ2Ed3nyY?si=RA6Z8B-oqrAg1VBK"
-        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
-        Set up Outlook as default email client on Mac
-      </a>
-
-      <a href="https://youtu.be/RCZwmx7-jWs?si=9PDcumi9GGmIcHTr"
-        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
-        Set up Outlook as default email client on ChromeOS
-      </a>
+      <button onclick="downloadCode('weightedCode','weighted-grade-calculator.html')" type="button"
+        style="cursor:pointer;border:1px solid #4c4a4f;background:#4c4a4f;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Download HTML
+      </button>
     </div>
-  </div>
+
+    <h2>Copy HTML</h2>
+
+    <textarea id="weightedCode" readonly
+      style="width:100%;height:360px;padding:12px;border:1px solid #ddd;border-radius:12px;font-family:monospace;box-sizing:border-box;">
+<!-- 
+PASTE THE FULL BRIGHTSPACE CALCULATOR HERE:
+You CAN include <!DOCTYPE html>, <html>, <head>, and <body> in this textarea.
+-->
+    </textarea>
+
+    <p><a href="../index.html">← Back to catalog</a></p>
+  </section>
+
+</main>
 
 <script>
-(function(){
-
-const btn = document.getElementById("emailBtn");
-
-btn.addEventListener("click", function(){
-
-  const instructorEmail = document.getElementById("instructorEmail").value.trim();
-  const firstName = document.getElementById("firstName").value.trim();
-  const lastName = document.getElementById("lastName").value.trim();
-  const studentID = document.getElementById("studentID").value.trim();
-  const courseName = document.getElementById("courseName").value.trim();
-  const question = document.getElementById("studentQuestion").value.trim();
-
-  if(!instructorEmail){
-    alert("Please enter the instructor email address.");
-    return;
+  function copyCode(id) {
+    const el = document.getElementById(id);
+    el.select();
+    el.setSelectionRange(0, 999999);
+    document.execCommand("copy");
+    alert("Copied!");
   }
 
-         const subject =
-          firstName + " " + lastName + " | " + courseName + " | Question";
-
-        const body =
-          "Hello Professor,\n\n" +
-          "I have a question regarding " + courseName + ".\n\n" +
-          "My question:\n" +
-          question + "\n\n" +
-          "Thank you,\n" +
-          firstName + " " + lastName
-           + "\nStudent ID#: " + studentID;
-
-        const mailto =
-          "mailto:" + instructorEmail +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
-
-        window.location.href = mailto; 
-});
-
-})();
+  function downloadCode(id, filename) {
+    const content = document.getElementById(id).value;
+    const blob = new Blob([content], {type:"text/html"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+  }
 </script>
 
-</section>
-    </section>
-
-    <!-- Copy section -->
-    <section class="card">
-      <h2>Copy HTML</h2>
-      <p>Copy everything below:</p>
-
-      <pre><code>
-<!-- Paste the SAME HTML here -->
-        &lt;section aria-label="Question Email Form"
-  style="max-width:700px;margin:0 auto;font-family:Arial,sans-serif;color:#202122;line-height:1.45;"&gt;
-
-  &lt;div style="border:1px solid #e6e6e6;border-radius:16px;padding:16px;background:#fff;"&gt;
-
-    &lt;header style="border-left:8px solid #cb4900;background:#fff7f0;padding:12px 14px;border-radius:12px;"&gt;
-      &lt;h2 style="margin:0 0 4px 0;color:#cb4900;font-size:1.15rem;"&gt;
-        Ask Your Instructor
-      &lt;/h2&gt;
-      &lt;p style="margin:0;color:#4c4a4f;font-size:.95rem;"&gt;
-        Fill in the form below to generate an email with your question.
-      &lt;/p&gt;
-    &lt;/header&gt;
-
-    &lt;div style="margin-top:14px;display:grid;gap:12px;"&gt;
-
-      &lt;label&gt;
-        &lt;span style="font-weight:700;"&gt;Instructor Email&lt;/span&gt;
-        &lt;input id="instructorEmail" type="email"
-          placeholder="vaquero.instructor@utrgv.edu"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
-      &lt;/label&gt;
-
-      &lt;label&gt;
-        &lt;span style="font-weight:700;"&gt;First Name&lt;/span&gt;
-        &lt;input id="firstName" type="text" value="{FirstName}"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
-      &lt;/label&gt;
-
-      &lt;label&gt;
-        &lt;span style="font-weight:700;"&gt;Last Name&lt;/span&gt;
-        &lt;input id="lastName" type="text" value="{LastName}"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
-      &lt;/label&gt;
-
-      &lt;label&gt;
-        &lt;span style="font-weight:700;"&gt;Student ID&lt;/span&gt;
-        &lt;input id="studentID" type="text"
-          placeholder="ex. 20123456"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
-      &lt;/label&gt;
-
-      &lt;label&gt;
-        &lt;span style="font-weight:700;"&gt;Course Name&lt;/span&gt;
-        &lt;input id="courseName" type="text" value="{OrgUnitName}"
-          placeholder="ex. UTRGV-1301-01-Spring-2024"
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;
-      &lt;/label&gt;
-
-      &lt;label&gt;
-        &lt;span style="font-weight:700;"&gt;Your Question&lt;/span&gt;
-        &lt;textarea id="studentQuestion" rows="6"
-          placeholder="Type your question here..."
-          style="width:100%;margin-top:6px;padding:10px;border:1px solid #ddd;border-radius:12px;"&gt;&lt;/textarea&gt;
-      &lt;/label&gt;
-
-      &lt;button id="emailBtn" type="button"
-        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;
-               padding:10px 14px;border-radius:12px;font-weight:700;width:fit-content;">
-        Open Email Draft
-      &lt;/button&gt;
-
-      &lt;p style="margin:0;color:#4c4a4f;font-size:.85rem;"&gt;
-        Please note: Be sure to have your professor's email address on file, 
-          and that your browser is configured to open mailto links with your email client (Outlook).
-      &lt;/p&gt;
-
-      &lt;a href="https://support.microsoft.com/en-us/office/make-outlook-the-default-program-for-email-contacts-and-calendar-ff7990c4-54c4-4390-8fe3-c0285226f021"
-        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
-        Set up Outlook as default email client on Windows
-      &lt;/a&gt;
-
-      &lt;a href="https://youtu.be/SLWQ2Ed3nyY?si=RA6Z8B-oqrAg1VBK"
-        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
-        Set up Outlook as default email client on Mac
-      &lt;/a&gt;
-
-      &lt;a href="https://youtu.be/RCZwmx7-jWs?si=9PDcumi9GGmIcHTr"
-        target="_blank" style="color:#cb4900;font-weight:700;text-decoration:none;">
-        Set up Outlook as default email client on ChromeOS
-      &lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;script&gt;
-(function(){
-
-const btn = document.getElementById("emailBtn");
-
-btn.addEventListener("click", function(){
-
-  const instructorEmail = document.getElementById("instructorEmail").value.trim();
-  const firstName = document.getElementById("firstName").value.trim();
-  const lastName = document.getElementById("lastName").value.trim();
-  const studentID = document.getElementById("studentID").value.trim();
-  const courseName = document.getElementById("courseName").value.trim();
-  const question = document.getElementById("studentQuestion").value.trim();
-
-  if(!instructorEmail){
-    alert("Please enter the instructor email address.");
-    return;
-  }
-
-         const subject =
-          firstName + " " + lastName + " | " + courseName + " | Question";
-
-        const body =
-          "Hello Professor,\n\n" +
-          "I have a question regarding " + courseName + ".\n\n" +
-          "My question:\n" +
-          question + "\n\n" +
-          "Thank you,\n" +
-          firstName + " " + lastName
-           + "\nStudent ID#: " + studentID;
-
-        const mailto =
-          "mailto:" + instructorEmail +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
-
-        window.location.href = mailto; 
-});
-
-})();
-&lt;/script&gt;
-
-&lt;/section&gt;
-
-      </code></pre>
-    </section>
-        <p><a href="../index.html">← Back to catalog</a></p>
-
-  </main>
 </body>
 </html>

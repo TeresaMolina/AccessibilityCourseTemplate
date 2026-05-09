@@ -2,215 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> TA and Tutor Information </title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Weighted Grade Calculator</title>
+  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
 </head>
 
-<body>
-  <main class="wrap">
-    <h1> TA and Tutor Information </h1>
-    <p class="subtitle">
-      Use this page to learn more about your Teaching Assistants and Tutors. You can customize the sections and content as needed.
-    </p>
+<body style="font-family:Lato,Arial,sans-serif;background:#f7f7f7;margin:0;padding:24px;color:#313131;">
 
-    <!-- Instructions -->
-    <section class="card">
-      <h2>How to use in Brightspace</h2>
-      <ol>
-        <li>Go to <strong>Content</strong> in your course</li>
-        <li>Select <strong>Create New → HTML Document</strong></li>
-        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
-        <li>Copy the HTML below and paste it</li>
-      </ol>
-    </section>
+<main style="max-width:950px;margin:0 auto;">
 
-    <!-- Preview -->
-    <section class="card">
-      <h2>Preview</h2>
-      <!-- PASTE THE HTML HERE -->
+  <section style="border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff;">
+    <h1 style="margin-top:0;color:#ae3f00;">Weighted Grade Calculator</h1>
+    <p>Preview the calculator below, then copy or download the Brightspace-ready HTML.</p>
 
-<section aria-label="TA and Tutor Information"
-  style="max-width:900px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.5;">
+    <h2>Preview</h2>
 
-  <!-- ================= TA CARD ================= -->
-  <div style="border:1px solid #e5e7eb;border-radius:16px;padding:18px;margin-bottom:16px;background:#ffffff;">
+    <!-- PREVIEW AREA -->
+    <div style="border:1px solid #e6e6e6;border-radius:16px;padding:18px;background:#fafafa;">
 
-    <h2 style="margin:0 0 12px 0;color:#cb4900;">TA — NAME 1</h2>
+      <!-- 
+        PASTE ONLY THE INNER CALCULATOR HERE:
+        Start from:
+        <section aria-label="Weighted Grade Calculator">
+        ...
+        </section>
+        <script>...</script>
 
-    <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start;">
+        Do NOT paste <!DOCTYPE html>, <html>, <head>, or <body> here.
+      -->
 
-      <!-- Image -->
-      <div>
-        <img src="PASTE-IMAGE-LINK"
-             alt="Photo of TA NAME 1"
-             style="width:100%;border-radius:12px;border:1px solid #ddd;">
-      </div>
-
-      <!-- Info -->
-      <div>
-
-        <p><strong>Department:</strong> [Department Name]</p>
-
-        <p><strong>Bio:</strong><br>
-        Enter a short description about yourself.</p>
-
-        <p><strong>UTRGV Email:</strong> your.email@utrgv.edu<br>
-        <strong>Discord:</strong> username#0000<br>
-        <strong>WhatsApp:</strong> [optional]<br>
-        <strong>Other:</strong> [optional]</p>
-
-        <p><strong>Major:</strong> [Your Major]<br>
-        <strong>Other Education:</strong> [Certifications, degrees]</p>
-
-        <p><strong>How I ended up being a TA for {OrgUnitName}:</strong><br>
-        Short description here.</p>
-
-        <p><strong>Hobbies / Fun Fact:</strong><br>
-        Something fun about you.</p>
-
-      </div>
     </div>
-  </div>
 
+    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button onclick="copyCode('weightedCode')" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Copy HTML
+      </button>
 
-  <!-- ================= TUTOR CARD ================= -->
-  <div style="border:1px solid #e5e7eb;border-radius:16px;padding:18px;background:#ffffff;">
-
-    <h2 style="margin:0 0 12px 0;color:#cb4900;">Tutor — NAME 1</h2>
-
-    <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start;">
-
-      <!-- Image -->
-      <div>
-        <img src="PASTE-IMAGE-LINK"
-             alt="Photo of Tutor NAME 1"
-             style="width:100%;border-radius:12px;border:1px solid #ddd;">
-      </div>
-
-      <!-- Info -->
-      <div>
-
-        <p><strong>Department:</strong> [Department Name]</p>
-
-        <p><strong>Bio:</strong><br>
-        Enter a short description about yourself.</p>
-
-        <p><strong>UTRGV Email:</strong> your.email@utrgv.edu<br>
-        <strong>Discord:</strong> username#0000<br>
-        <strong>WhatsApp:</strong> [optional]<br>
-        <strong>Other:</strong> [optional]</p>
-
-        <p><strong>Major:</strong> [Your Major]<br>
-        <strong>Other Education:</strong> [Certifications, degrees]</p>
-
-        <p><strong>Why did I choose to tutor?</strong><br>
-        Short description here.</p>
-
-      </div>
+      <button onclick="downloadCode('weightedCode','weighted-grade-calculator.html')" type="button"
+        style="cursor:pointer;border:1px solid #4c4a4f;background:#4c4a4f;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Download HTML
+      </button>
     </div>
-  </div>
 
-</section>
+    <h2>Copy HTML</h2>
 
-
-    </section>
-
-    <!-- Copy section -->
-    <section class="card">
-      <h2>Copy HTML</h2>
-      <p>Copy everything below:</p>
-
-      <pre><code>
+    <textarea id="weightedCode" readonly
+      style="width:100%;height:360px;padding:12px;border:1px solid #ddd;border-radius:12px;font-family:monospace;box-sizing:border-box;">
 <!-- 
-        Paste the SAME HTML here
- Here use &lt; and &gt; to replace < and > 
+PASTE THE FULL BRIGHTSPACE CALCULATOR HERE:
+You CAN include <!DOCTYPE html>, <html>, <head>, and <body> in this textarea.
 -->
-&lt;section aria-label="TA and Tutor Information"
-  style="max-width:900px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.5;"&gt;
+    </textarea>
 
-  <!-- ================= TA CARD ================= -->
-  &lt;div style="border:1px solid #e5e7eb;border-radius:16px;padding:18px;margin-bottom:16px;background:#ffffff;"&gt;
+    <p><a href="../index.html">← Back to catalog</a></p>
+  </section>
 
-    &lt;h2 style="margin:0 0 12px 0;color:#cb4900;"&gt;TA — NAME 1&lt;/h2&gt;
+</main>
 
-    &lt;div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start;"&gt;
+<script>
+  function copyCode(id) {
+    const el = document.getElementById(id);
+    el.select();
+    el.setSelectionRange(0, 999999);
+    document.execCommand("copy");
+    alert("Copied!");
+  }
 
-      <!-- Image -->
-      &lt;div&gt;
-        &lt;img src="PASTE-IMAGE-LINK"
-             alt="Photo of TA NAME 1"
-             style="width:100%;border-radius:12px;border:1px solid #ddd;"&gt;
-      &lt;/div&gt;
+  function downloadCode(id, filename) {
+    const content = document.getElementById(id).value;
+    const blob = new Blob([content], {type:"text/html"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+  }
+</script>
 
-      <!-- Info -->
-      &lt;div&gt;
-
-        &lt;p&gt;&lt;strong&gt;Department:&lt;/strong&gt; [Department Name]&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;Bio:&lt;/strong&gt;&lt;br&gt;
-        Enter a short description about yourself.&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;UTRGV Email:&lt;/strong&gt; your.email@utrgv.edu&lt;br&gt;
-        &lt;strong&gt;Discord:&lt;/strong&gt; username#0000&lt;br&gt;
-        &lt;strong&gt;WhatsApp:&lt;/strong&gt; [optional]&lt;br&gt;
-        &lt;strong&gt;Other:&lt;/strong&gt; [optional]&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;Major:&lt;/strong&gt; [Your Major]&lt;br&gt;
-        &lt;strong&gt;Other Education:&lt;/strong&gt; [Certifications, degrees]&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;How I ended up being a TA for {OrgUnitName}:&lt;/strong&gt;&lt;br&gt;
-        Short description here.&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;Hobbies / Fun Fact:&lt;/strong&gt;&lt;br&gt;
-        Something fun about you.&lt;/p&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-
-  <!-- ================= TUTOR CARD ================= -->
-  &lt;div style="border:1px solid #e5e7eb;border-radius:16px;padding:18px;background:#ffffff;"&gt;
-
-    &lt;h2 style="margin:0 0 12px 0;color:#cb4900;"&gt;Tutor — NAME 1&lt;/h2&gt;
-
-    &lt;div style="display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start;"&gt;
-
-      <!-- Image -->
-      &lt;div&gt;
-        &lt;img src="PASTE-IMAGE-LINK"
-             alt="Photo of Tutor NAME 1"
-             style="width:100%;border-radius:12px;border:1px solid #ddd;"&gt;
-      &lt;/div&gt;
-
-      <!-- Info -->
-      &lt;div&gt;
-
-        &lt;p&gt;&lt;strong&gt;Department:&lt;/strong&gt; [Department Name]&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;Bio:&lt;/strong&gt;&lt;br&gt;
-        Enter a short description about yourself.&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;UTRGV Email:&lt;/strong&gt; your.email@utrgv.edu&lt;br&gt;
-        &lt;strong&gt;Discord:&lt;/strong&gt; username#0000&lt;br&gt;
-        &lt;strong&gt;WhatsApp:&lt;/strong&gt; [optional]&lt;br&gt;
-        &lt;strong&gt;Other:&lt;/strong&gt; [optional]&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;Major:&lt;/strong&gt; [Your Major]&lt;br&gt;
-        &lt;strong&gt;Other Education:&lt;/strong&gt; [Certifications, degrees]&lt;/p&gt;
-
-        &lt;p&gt;&lt;strong&gt;Why did I choose to tutor?&lt;/strong&gt;&lt;br&gt;
-        Short description here.&lt;/p&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;/section&gt;
-
-      </code></pre>
-    </section>
-        <p><a href="../index.html">← Back to catalog</a></p>
-  </main>
 </body>
 </html>
