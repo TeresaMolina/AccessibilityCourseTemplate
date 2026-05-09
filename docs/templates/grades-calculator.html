@@ -2,474 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> Grades Calculator (Weighted) </title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Weighted Grade Calculator</title>
+
+  <link rel="stylesheet"
+    href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
 </head>
 
-<body>
-  <main class="wrap">
+<body style="font-family:Lato,Arial,sans-serif;
+             background:#f7f7f7;
+             margin:0;
+             padding:24px;
+             color:#313131;">
 
-    <h1> Grades Calculator (Weighted) </h1>
-    <p class="subtitle">
-This is a weighted grade calculator for your course. Enter estimated grades (0–100) for each category. Blank fields are ignored. 
-You can also adjust category weights based on your syllabus. 
-The calculator can normalize weights if some categories are left blank. 
-Use this tool for planning and estimation, but always refer to your instructor’s official gradebook and syllabus rules for accurate grading information.
+<main style="max-width:1000px;margin:0 auto;">
+
+  <!-- MAIN CARD -->
+  <section style="border:1px solid #ddd;
+                  border-radius:18px;
+                  background:#fff;
+                  padding:20px;">
+
+    <h1 style="margin-top:0;color:#ae3f00;">
+      Weighted Grade Calculator
+    </h1>
+
+    <p>
+      Preview the calculator below. You may copy or download
+      the Brightspace-ready HTML.
     </p>
 
-    <!-- Instructions -->
-    <section class="card">
-      <h2>How to use in Brightspace</h2>
-      <ol>
-        <li>Go to <strong>Content</strong> in your course</li>
-        <li>Select <strong>Create New → HTML Document</strong></li>
-        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
-        <li>Copy the HTML below and paste it</li>
-      </ol>
-    </section>
+    <!-- ================================= -->
+    <!-- PREVIEW -->
+    <!-- ================================= -->
 
-    <!-- Preview -->
-    <section class="card">
-      <h2>Preview</h2>
+    <h2>Preview</h2>
 
-      <!-- PASTE THE HTML HERE -->
-      <section aria-label="Grade Calculator" style="max-width:820px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;">
-        <div style="border: 1px solid #e6e6e6; border-radius: 16px; padding: 16px; background: #fff;">
-          <header style="border-left: 8px solid #cb4900; background: #fff7f0; padding: 12px 14px; border-radius: 12px;">
-            <h1 style="margin: 0 0 4px 0; color: #ae3f00; font-size: 1.6rem; border: none; padding: 0;">Grade Calculator</h1>
-            <p style="margin: 0; color: #4c4a4f; font-size: 1rem;">Enter estimated grades from 0–100. Blank grade fields are ignored.</p>
-          </header>
+    <div style="border:1px solid #e6e6e6;
+                border-radius:16px;
+                padding:18px;
+                background:#fafafa;">
 
-          <section style="margin-top: 14px;">
-            <h2 style="margin: 0 0 8px 0; font-size: 1.2rem;">Syllabus Weights (%)</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 10px;">
-              <div><label for="wAssignments"><strong>Assignments Weight</strong></label> <input id="wAssignments" type="number" min="0" max="100" value="20" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="wQuizzes"><strong>Quizzes Weight</strong></label> <input id="wQuizzes" type="number" min="0" max="100" value="15" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="wExams"><strong>Exams Weight</strong></label> <input id="wExams" type="number" min="0" max="100" value="25" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="wMidterm"><strong>Midterm Weight</strong></label> <input id="wMidterm" type="number" min="0" max="100" value="15" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="wFinal"><strong>Final Weight</strong></label> <input id="wFinal" type="number" min="0" max="100" value="15" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="wProjects"><strong>Projects Weight</strong></label> <input id="wProjects" type="number" min="0" max="100" value="10" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-            </div>
-            <p id="weightNote" style="margin: 10px 0 0 0; color: #4c4a4f; font-size: .9rem;">Tip: Weights can sum to 100%. If some categories are blank, the calculator can normalize them automatically.</p>
-          </section>
+      <!-- PASTE LIVE CALCULATOR HERE -->
+      <!-- REAL WORKING WIDGET -->
+    </div>
 
-          <section style="margin-top: 16px;">
-            <h2 style="margin: 0 0 8px 0; font-size: 1.2rem;">Your Estimated Grades (0–100)</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 10px;">
-              <div><label for="gAssignments"><strong>Assignments Grade</strong></label> <input id="gAssignments" type="number" min="0" max="100" placeholder="e.g., 92" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="gQuizzes"><strong>Quizzes Grade</strong></label> <input id="gQuizzes" type="number" min="0" max="100" placeholder="e.g., 85" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="gExams"><strong>Exams Grade</strong></label> <input id="gExams" type="number" min="0" max="100" placeholder="e.g., 78" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="gMidterm"><strong>Midterm Grade</strong></label> <input id="gMidterm" type="number" min="0" max="100" placeholder="e.g., 88" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="gFinal"><strong>Final Grade</strong></label> <input id="gFinal" type="number" min="0" max="100" placeholder="e.g., 90" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-              <div><label for="gProjects"><strong>Projects Grade</strong></label> <input id="gProjects" type="number" min="0" max="100" placeholder="e.g., 95" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-            </div>
-            <div style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;"><button id="calcBtn" type="button" style="cursor: pointer; border: 1px solid #cb4900; background: #cb4900; color: #fff; padding: 10px 14px; border-radius: 12px; font-weight: 800;"> Calculate </button> <button id="resetBtn" type="button" style="cursor: pointer; border: 1px solid #cb4900; background: #fff; color: #cb4900; padding: 10px 14px; border-radius: 12px; font-weight: 800;"> Reset </button> <label for="normalizeToggle" style="display: flex; align-items: center; gap: 8px; color: #4c4a4f; font-size: .95rem;"> <input id="normalizeToggle" type="checkbox" checked="checked"> Normalize weights when some grades are blank </label></div>
-          </section>
+    <!-- ================================= -->
+    <!-- ACTION BUTTONS -->
+    <!-- ================================= -->
 
-          <section style="margin-top: 16px;">
-            <h2 style="margin: 0 0 8px 0; font-size: 1.2rem;">Results</h2>
-            <div id="resultBox" aria-live="polite" style="border: 1px solid #e6e6e6; border-radius: 14px; padding: 12px; background: #fff;">
-              <p style="margin: 0; color: #4c4a4f;">Enter grades and click <strong>Calculate</strong>.</p>
-            </div>
-            <div id="breakdownBox" style="margin-top: 10px;"></div>
-            <p style="margin-top: 10px; color: #4c4a4f; font-size: .85rem;"><span style="font-size: 20px;">Note: This is an estimate tool for planning. Always follow your instructor’s official gradebook and syllabus rules.</span></p>
-          </section>
-        </div>
+    <div style="margin-top:18px;
+                display:flex;
+                gap:10px;
+                flex-wrap:wrap;">
 
-        <script>
-          (function () {
-            const ids = {
-              weights: {
-                assignments: "wAssignments",
-                quizzes: "wQuizzes",
-                exams: "wExams",
-                midterm: "wMidterm",
-                final: "wFinal",
-                projects: "wProjects"
-              },
-              grades: {
-                assignments: "gAssignments",
-                quizzes: "gQuizzes",
-                exams: "gExams",
-                midterm: "gMidterm",
-                final: "gFinal",
-                projects: "gProjects"
-              }
-            };
+      <button onclick="copyCode()"
+        type="button"
+        style="cursor:pointer;
+               border:1px solid #cb4900;
+               background:#cb4900;
+               color:#fff;
+               padding:10px 14px;
+               border-radius:12px;
+               font-weight:bold;">
 
-            const calcBtn = document.getElementById("calcBtn");
-            const resetBtn = document.getElementById("resetBtn");
-            const normalizeToggle = document.getElementById("normalizeToggle");
-            const resultBox = document.getElementById("resultBox");
-            const breakdownBox = document.getElementById("breakdownBox");
+        Copy HTML
+      </button>
 
-            function numOrNull(v) {
-              if (v === "" || v === null || v === undefined) return null;
-              const n = Number(v);
-              return Number.isFinite(n) ? n : null;
-            }
+      <button onclick="downloadCode()"
+        type="button"
+        style="cursor:pointer;
+               border:1px solid #4c4a4f;
+               background:#4c4a4f;
+               color:#fff;
+               padding:10px 14px;
+               border-radius:12px;
+               font-weight:bold;">
 
-            function clamp(n, min, max) {
-              return Math.max(min, Math.min(max, n));
-            }
+        Download HTML
+      </button>
 
-            function getValues(map) {
-              const out = {};
-              for (const [k, id] of Object.entries(map)) {
-                out[k] = numOrNull(document.getElementById(id).value);
-              }
-              return out;
-            }
+    </div>
 
-            function sum(obj) {
-              return Object.values(obj).reduce((a, b) => a + (b ?? 0), 0);
-            }
+    <!-- ================================= -->
+    <!-- HIDDEN TEXTAREA -->
+    <!-- ================================= -->
 
-            function fmt(n) {
-              return (Math.round(n * 100) / 100).toFixed(2);
-            }
+    <textarea id="widgetCode"
+      readonly
+      style="position:absolute;
+             left:-9999px;
+             width:1px;
+             height:1px;
+             opacity:0;">
 
-            function calculate() {
-              const weights = getValues(ids.weights);
-              const grades = getValues(ids.grades);
+<!-- FULL BRIGHTSPACE HTML HERE -->
+<!-- escaped with &lt; and &gt; -->
 
-              for (const k of Object.keys(weights)) {
-                if (weights[k] !== null) weights[k] = clamp(weights[k], 0, 100);
-              }
+    </textarea>
 
-              for (const k of Object.keys(grades)) {
-                if (grades[k] !== null) grades[k] = clamp(grades[k], 0, 100);
-              }
+  </section>
 
-              const included = {};
-              for (const k of Object.keys(grades)) {
-                if (grades[k] !== null) included[k] = true;
-              }
+</main>
 
-              const includedKeys = Object.keys(included);
-
-              if (includedKeys.length === 0) {
-                resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Please enter at least one grade to calculate.</p>';
-                breakdownBox.innerHTML = "";
-                return;
-              }
-
-              const effWeights = {};
-              includedKeys.forEach(k => effWeights[k] = weights[k] ?? 0);
-
-              const weightSum = sum(effWeights);
-
-              let denom = 100;
-              let usingNormalized = false;
-
-              if (normalizeToggle.checked) {
-                denom = weightSum;
-                usingNormalized = true;
-              }
-
-              if (denom <= 0) {
-                resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Weights for entered categories sum to 0. Set at least one weight above 0.</p>';
-                breakdownBox.innerHTML = "";
-                return;
-              }
-
-              let total = 0;
-              const rows = [];
-
-              includedKeys.forEach(k => {
-                const w = effWeights[k];
-                const g = grades[k];
-                const contrib = g * (w / denom);
-                total += contrib;
-
-                rows.push({
-                  name: k,
-                  grade: g,
-                  weight: w,
-                  normalizedWeight: (w / denom) * 100,
-                  contribution: contrib
-                });
-              });
-
-              const label = {
-                assignments: "Assignments",
-                quizzes: "Quizzes",
-                exams: "Exams",
-                midterm: "Midterm",
-                final: "Final",
-                projects: "Projects"
-              };
-
-              resultBox.innerHTML =
-                '<p style="margin:0;font-weight:900;font-size:1.2rem;color:#313131;">Estimated Current Grade: ' +
-                '<span style="color:#cb4900;">' + fmt(total) + '%</span></p>' +
-                '<p style="margin:6px 0 0 0;color:#4c4a4f;font-size:.9rem;">Included categories: ' +
-                includedKeys.length + ' ' + (usingNormalized ? '(normalized)' : '') + '</p>';
-
-              const tableRows = rows.map(r =>
-                '<tr>' +
-                '<td style="padding:10px;border-top:1px solid #eee;"><strong>' + label[r.name] + '</strong></td>' +
-                '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.grade) + '%</td>' +
-                '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.weight) + '%</td>' +
-                '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.normalizedWeight) + '%</td>' +
-                '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.contribution) + '%</td>' +
-                '</tr>'
-              ).join("");
-
-              breakdownBox.innerHTML =
-                '<div style="border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;">' +
-                '<div style="padding:10px 12px;background:#f7f7f7;color:#4c4a4f;font-size:.95rem;">Weighted Breakdown</div>' +
-                '<div style="overflow:auto;">' +
-                '<table style="width:100%;border-collapse:collapse;min-width:620px;">' +
-                '<caption style="text-align:left;padding:8px 10px;">Weighted grade breakdown by category</caption>' +
-                '<thead><tr style="text-align:left;background:#fff;">' +
-                '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Category</th>' +
-                '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Grade</th>' +
-                '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Weight</th>' +
-                '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Used Weight</th>' +
-                '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Contribution</th>' +
-                '</tr></thead><tbody>' + tableRows + '</tbody></table></div></div>';
-            }
-
-            function resetAll() {
-              Object.values(ids.grades).forEach(id => document.getElementById(id).value = "");
-              resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Enter grades and click <strong>Calculate</strong>.</p>';
-              breakdownBox.innerHTML = "";
-            }
-
-            calcBtn.addEventListener("click", calculate);
-            resetBtn.addEventListener("click", resetAll);
-          })();
-        </script>
-      </section>
-    <!-- Copy section -->
-    <section class="card">
-      <h2>Copy HTML</h2>
-      <p>Copy everything below:</p>
-
-      <!-- Paste the SAME HTML here -->
-       
-      <pre><code>
-        <!-- 
-        Paste the SAME HTML here
- Here use &lt; and &gt; to replace < and > 
--->
-<section aria-label="Grade Calculator"
-  style="max-width:820px;margin:0 auto;font-family:Arial,sans-serif;color:#313131;line-height:1.45;">
-
-
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <title>Grade Calculator - Weighted</title>
-  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
-</head><body style="color:#202122;font-family:Lato,Arial,sans-serif;font-size:16px;"><section aria-label="Weighted Grade Calculator" style="max-width: 820px; margin: 0 auto; color: #313131; line-height: 1.45;">
-<div style="border: 1px solid #e6e6e6; border-radius: 16px; padding: 16px; background: #fff;"><header style="border-left: 8px solid #cb4900; background: #fff7f0; padding: 12px 14px; border-radius: 12px;">
-<h1 style="margin: 0 0 4px 0; color: #ae3f00; font-size: 1.6rem; border: none; padding: 0;">Grade Calculator</h1>
-<p style="margin: 0; color: #4c4a4f; font-size: 1rem;">Enter estimated grades from 0–100. Blank grade fields are ignored.</p>
-</header>
-<section style="margin-top: 14px;">
-<h2 style="margin: 0 0 8px 0; font-size: 1.2rem;">Syllabus Weights (%)</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 10px;">
-<div><label for="wAssignments"><strong>Assignments Weight</strong></label> <input id="wAssignments" type="number" min="0" max="100" value="20" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="wQuizzes"><strong>Quizzes Weight</strong></label> <input id="wQuizzes" type="number" min="0" max="100" value="15" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="wExams"><strong>Exams Weight</strong></label> <input id="wExams" type="number" min="0" max="100" value="25" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="wMidterm"><strong>Midterm Weight</strong></label> <input id="wMidterm" type="number" min="0" max="100" value="15" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="wFinal"><strong>Final Weight</strong></label> <input id="wFinal" type="number" min="0" max="100" value="15" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="wProjects"><strong>Projects Weight</strong></label> <input id="wProjects" type="number" min="0" max="100" value="10" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-</div>
-<p id="weightNote" style="margin: 10px 0 0 0; color: #4c4a4f; font-size: .9rem;">Tip: Weights can sum to 100%. If some categories are blank, the calculator can normalize them automatically.</p>
-</section>
-<section style="margin-top: 16px;">
-<h2 style="margin: 0 0 8px 0; font-size: 1.2rem;">Your Estimated Grades (0–100)</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 10px;">
-<div><label for="gAssignments"><strong>Assignments Grade</strong></label> <input id="gAssignments" type="number" min="0" max="100" placeholder="e.g., 92" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="gQuizzes"><strong>Quizzes Grade</strong></label> <input id="gQuizzes" type="number" min="0" max="100" placeholder="e.g., 85" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="gExams"><strong>Exams Grade</strong></label> <input id="gExams" type="number" min="0" max="100" placeholder="e.g., 78" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="gMidterm"><strong>Midterm Grade</strong></label> <input id="gMidterm" type="number" min="0" max="100" placeholder="e.g., 88" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="gFinal"><strong>Final Grade</strong></label> <input id="gFinal" type="number" min="0" max="100" placeholder="e.g., 90" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-<div><label for="gProjects"><strong>Projects Grade</strong></label> <input id="gProjects" type="number" min="0" max="100" placeholder="e.g., 95" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></div>
-</div>
-<div style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;"><button id="calcBtn" type="button" style="cursor: pointer; border: 1px solid #cb4900; background: #cb4900; color: #fff; padding: 10px 14px; border-radius: 12px; font-weight: 800;"> Calculate </button> <button id="resetBtn" type="button" style="cursor: pointer; border: 1px solid #cb4900; background: #fff; color: #cb4900; padding: 10px 14px; border-radius: 12px; font-weight: 800;"> Reset </button> <label for="normalizeToggle" style="display: flex; align-items: center; gap: 8px; color: #4c4a4f; font-size: .95rem;"> <input id="normalizeToggle" type="checkbox" checked="checked"> Normalize weights when some grades are blank </label></div>
-</section>
-<section style="margin-top: 16px;">
-<h2 style="margin: 0 0 8px 0; font-size: 1.2rem;">Results</h2>
-<div id="resultBox" aria-live="polite" style="border: 1px solid #e6e6e6; border-radius: 14px; padding: 12px; background: #fff;">
-<p style="margin: 0; color: #4c4a4f;">Enter grades and click <strong>Calculate</strong>.</p>
-</div>
-<div id="breakdownBox" style="margin-top: 10px;"></div>
-<p style="margin-top: 10px; color: #4c4a4f; font-size: .85rem;"><span style="font-size: 20px;">Note: This is an estimate tool for planning. Always follow your instructor’s official gradebook and syllabus rules.</span></p>
-</section>
-</div>
 <script>
-    (function () {
-      const ids = {
-        weights: {
-          assignments: "wAssignments",
-          quizzes: "wQuizzes",
-          exams: "wExams",
-          midterm: "wMidterm",
-          final: "wFinal",
-          projects: "wProjects"
-        },
-        grades: {
-          assignments: "gAssignments",
-          quizzes: "gQuizzes",
-          exams: "gExams",
-          midterm: "gMidterm",
-          final: "gFinal",
-          projects: "gProjects"
-        }
-      };
+function copyCode() {
+  const el = document.getElementById("widgetCode");
 
-      const calcBtn = document.getElementById("calcBtn");
-      const resetBtn = document.getElementById("resetBtn");
-      const normalizeToggle = document.getElementById("normalizeToggle");
-      const resultBox = document.getElementById("resultBox");
-      const breakdownBox = document.getElementById("breakdownBox");
+  el.style.display = "block";
+  el.select();
+  document.execCommand("copy");
+  el.style.display = "none";
 
-      function numOrNull(v) {
-        if (v === "" || v === null || v === undefined) return null;
-        const n = Number(v);
-        return Number.isFinite(n) ? n : null;
-      }
+  alert("HTML copied!");
+}
 
-      function clamp(n, min, max) {
-        return Math.max(min, Math.min(max, n));
-      }
+function downloadCode() {
+  const content =
+    document.getElementById("widgetCode").value;
 
-      function getValues(map) {
-        const out = {};
-        for (const [k, id] of Object.entries(map)) {
-          out[k] = numOrNull(document.getElementById(id).value);
-        }
-        return out;
-      }
+  const blob = new Blob(
+    [content],
+    { type: "text/html" }
+  );
 
-      function sum(obj) {
-        return Object.values(obj).reduce((a, b) => a + (b ?? 0), 0);
-      }
+  const a = document.createElement("a");
 
-      function fmt(n) {
-        return (Math.round(n * 100) / 100).toFixed(2);
-      }
+  a.href = URL.createObjectURL(blob);
+  a.download = "weighted-grade-calculator.html";
 
-      function calculate() {
-        const weights = getValues(ids.weights);
-        const grades = getValues(ids.grades);
+  a.click();
+}
+</script>
 
-        for (const k of Object.keys(weights)) {
-          if (weights[k] !== null) weights[k] = clamp(weights[k], 0, 100);
-        }
-
-        for (const k of Object.keys(grades)) {
-          if (grades[k] !== null) grades[k] = clamp(grades[k], 0, 100);
-        }
-
-        const included = {};
-        for (const k of Object.keys(grades)) {
-          if (grades[k] !== null) included[k] = true;
-        }
-
-        const includedKeys = Object.keys(included);
-
-        if (includedKeys.length === 0) {
-          resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Please enter at least one grade to calculate.</p>';
-          breakdownBox.innerHTML = "";
-          return;
-        }
-
-        const effWeights = {};
-        includedKeys.forEach(k => effWeights[k] = weights[k] ?? 0);
-
-        const weightSum = sum(effWeights);
-
-        let denom = 100;
-        let usingNormalized = false;
-
-        if (normalizeToggle.checked) {
-          denom = weightSum;
-          usingNormalized = true;
-        }
-
-        if (denom <= 0) {
-          resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Weights for entered categories sum to 0. Set at least one weight above 0.</p>';
-          breakdownBox.innerHTML = "";
-          return;
-        }
-
-        let total = 0;
-        const rows = [];
-
-        includedKeys.forEach(k => {
-          const w = effWeights[k];
-          const g = grades[k];
-          const contrib = g * (w / denom);
-          total += contrib;
-
-          rows.push({
-            name: k,
-            grade: g,
-            weight: w,
-            normalizedWeight: (w / denom) * 100,
-            contribution: contrib
-          });
-        });
-
-        const label = {
-          assignments: "Assignments",
-          quizzes: "Quizzes",
-          exams: "Exams",
-          midterm: "Midterm",
-          final: "Final",
-          projects: "Projects"
-        };
-
-        resultBox.innerHTML =
-          '<p style="margin:0;font-weight:900;font-size:1.2rem;color:#313131;">Estimated Current Grade: ' +
-          '<span style="color:#cb4900;">' + fmt(total) + '%</span></p>' +
-          '<p style="margin:6px 0 0 0;color:#4c4a4f;font-size:.9rem;">Included categories: ' +
-          includedKeys.length + ' ' + (usingNormalized ? '(normalized)' : '') + '</p>';
-
-        const tableRows = rows.map(r =>
-          '<tr>' +
-          '<td style="padding:10px;border-top:1px solid #eee;"><strong>' + label[r.name] + '</strong></td>' +
-          '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.grade) + '%</td>' +
-          '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.weight) + '%</td>' +
-          '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.normalizedWeight) + '%</td>' +
-          '<td style="padding:10px;border-top:1px solid #eee;">' + fmt(r.contribution) + '%</td>' +
-          '</tr>'
-        ).join("");
-
-        breakdownBox.innerHTML =
-          '<div style="border:1px solid #e6e6e6;border-radius:14px;overflow:hidden;">' +
-          '<div style="padding:10px 12px;background:#f7f7f7;color:#4c4a4f;font-size:.95rem;">Weighted Breakdown</div>' +
-          '<div style="overflow:auto;">' +
-          '<table style="width:100%;border-collapse:collapse;min-width:620px;">' +
-          '<caption style="text-align:left;padding:8px 10px;">Weighted grade breakdown by category</caption>' +
-          '<thead><tr style="text-align:left;background:#fff;">' +
-          '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Category</th>' +
-          '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Grade</th>' +
-          '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Weight</th>' +
-          '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Used Weight</th>' +
-          '<th scope="col" style="padding:10px;border-top:1px solid #eee;">Contribution</th>' +
-          '</tr></thead><tbody>' + tableRows + '</tbody></table></div></div>';
-      }
-
-      function resetAll() {
-        Object.values(ids.grades).forEach(id => document.getElementById(id).value = "");
-        resultBox.innerHTML = '<p style="margin:0;color:#4c4a4f;">Enter grades and click <strong>Calculate</strong>.</p>';
-        breakdownBox.innerHTML = "";
-      }
-
-      calcBtn.addEventListener("click", calculate);
-      resetBtn.addEventListener("click", resetAll);
-    })();
-  </script></section></body></html>
-
-      </code></pre>
-    </section>
-        <p><a href="../index.html">← Back to catalog</a></p>
-  </main>
 </body>
 </html>

@@ -2,97 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> FAQ Box </title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>FAQ Boxes</title>
+  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
 </head>
 
-<body>
-  <main class="wrap">
-    <h1> FAQ Box </h1>
-    <p class="subtitle">
-      This is an interactive FAQ section for your course. You may change the questions and answers as needed.
+<body style="font-family:Lato,Arial,sans-serif;color:#313131;background:#f7f7f7;margin:0;padding:24px;">
+
+<main style="max-width:950px;margin:0 auto;">
+
+  <section style="border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff;">
+    <h1 style="margin-top:0;color:#ae3f00;">FAQ Boxes</h1>
+    <p>Preview the FAQ widget below, then copy or download the Brightspace-ready HTML.</p>
+
+    <h2>Preview</h2>
+
+    <!-- PREVIEW: inner widget only -->
+    <section aria-label="Course FAQ" style="font-family:Lato,Arial,sans-serif;">
+      <h2 style="color:#cb4900;font-size:1.6rem;margin-top:0;">Course FAQ</h2>
+
+      <details style="border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-bottom:10px;">
+        <summary style="cursor:pointer;font-weight:600;font-size:1.1rem;">Where do I submit assignments?</summary>
+        <p style="margin-top:10px;color:#313131;font-size:1rem;">
+          Submissions are located in <strong>Assignments</strong>. If you don’t see it yet, check the module release conditions.
+        </p>
+      </details>
+
+      <details style="border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-bottom:10px;">
+        <summary style="cursor:pointer;font-weight:600;font-size:1.1rem;">How do I contact the instructor?</summary>
+        <p style="margin-top:10px;color:#313131;font-size:1rem;">
+          Use <strong>Tools → Classlist</strong> from the navigation bar to find instructor contact options.
+        </p>
+      </details>
+
+      <details style="border:1px solid #e5e7eb;border-radius:14px;padding:12px;">
+        <summary style="cursor:pointer;font-weight:600;font-size:1.1rem;">Why don’t I see future content?</summary>
+        <p style="margin-top:10px;color:#313131;font-size:1rem;">
+          Some items are released by date or completion requirements, unless hidden by the instructor.
+        </p>
+      </details>
+    </section>
+
+    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button onclick="copyCode('faqCode')" type="button"
+        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Copy HTML
+      </button>
+
+      <button onclick="downloadCode('faqCode','faq-widget.html')" type="button"
+        style="cursor:pointer;border:1px solid #4c4a4f;background:#4c4a4f;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
+        Download HTML
+      </button>
+    </div>
+
+    <h2>Copy HTML</h2>
+
+    <textarea id="faqCode" readonly
+      style="width:100%;height:360px;padding:12px;border:1px solid #ddd;border-radius:12px;font-family:monospace;box-sizing:border-box;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FAQ Boxes</title>
+  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
+</head>
+
+<body style="color:rgb(32,33,34);font-family:Lato,Arial,sans-serif;font-size:16px;">
+
+<section aria-label="Course FAQ" style="max-width:800px;margin:0 auto;font-family:Lato,Arial,sans-serif;color:#313131;line-height:1.45;">
+
+  <h1 style="margin:0 0 14px 0;color:#ae3f00;font-size:1.6rem;border:none;padding:0;">
+    Course FAQ
+  </h1>
+
+  <details style="border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-bottom:10px;background:#fff;">
+    <summary style="cursor:pointer;font-weight:600;font-size:1.1rem;">
+      Where do I submit assignments?
+    </summary>
+    <p style="margin-top:10px;color:#313131;font-size:1rem;">
+      Submissions are located in <strong>Assignments</strong>. If you don’t see it yet, check the module release conditions.
+    </p>
+  </details>
+
+  <details style="border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-bottom:10px;background:#fff;">
+    <summary style="cursor:pointer;font-weight:600;font-size:1.1rem;">
+      How do I contact the instructor?
+    </summary>
+    <p style="margin-top:10px;color:#313131;font-size:1rem;">
+      Use <strong>Tools → Classlist</strong> from the navigation bar to find instructor contact options.
+    </p>
+  </details>
+
+  <details style="border:1px solid #e5e7eb;border-radius:14px;padding:12px;background:#fff;">
+    <summary style="cursor:pointer;font-weight:600;font-size:1.1rem;">
+      Why don’t I see future content?
+    </summary>
+    <p style="margin-top:10px;color:#313131;font-size:1rem;">
+      Some items are released by date or completion requirements, unless hidden by the instructor.
+    </p>
+  </details>
+
+  <section aria-label="How to add another FAQ item" style="margin-top:18px;border-left:6px solid #4c4a4f;background:#f7f7f7;padding:12px 14px;border-radius:12px;">
+    <h2 style="font-size:1.1rem;margin:0 0 8px 0;color:#313131;">Add Another FAQ Item</h2>
+    <p style="margin:0 0 8px 0;color:#4c4a4f;">
+      Copy and paste this block after the last <strong>&lt;/details&gt;</strong> and before the closing <strong>&lt;/section&gt;</strong>.
     </p>
 
-    <!-- Instructions -->
-    <section class="card">
-      <h2>How to use in Brightspace</h2>
-      <ol>
-        <li>Go to <strong>Content</strong> in your course</li>
-        <li>Select <strong>Create New → HTML Document</strong></li>
-        <li>Open <strong>Source</strong> (<code>&lt;/&gt;</code>)</li>
-        <li>Copy the HTML below and paste it</li>
-      </ol>
-    </section>
+    <pre style="white-space:pre-wrap;background:#fff;border:1px solid #ddd;border-radius:10px;padding:10px;overflow:auto;"><code>&lt;details style=&quot;border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-bottom:10px;background:#fff;&quot;&gt;
+  &lt;summary style=&quot;cursor:pointer;font-weight:600;font-size:1.1rem;&quot;&gt;
+    [Question goes here]
+  &lt;/summary&gt;
+  &lt;p style=&quot;margin-top:10px;color:#313131;font-size:1rem;&quot;&gt;
+    [Answer goes here]
+  &lt;/p&gt;
+&lt;/details&gt;</code></pre>
+  </section>
 
-    <!-- Preview -->
-    <section class="card">
-      <h2>Preview</h2>
-      <!-- PASTE THE HTML HERE -->
-      <section aria-label="Course FAQ" style="font-family: Arial, sans-serif;">
-        <h2 style="color: #cb4900;">Course FAQ</h2>
-        <details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px; margin-bottom: 10px;">
-          <summary style="cursor: pointer; font-weight: 600;">Where do I submit assignments?</summary>
-          <p style="margin-top: 10px; color: #313131;">Submissions are located in <strong>Assignments</strong>. If you don’t see it yet, check the module release conditions.</p>
-        </details>
-        <details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px; margin-bottom: 10px;">
-          <summary style="cursor: pointer; font-weight: 600;">How do I contact the instructor?</summary>
-          <p style="margin-top: 10px; color: #313131;">Use the <strong>Email Instructor</strong> button found in <strong>Tools</strong> and <strong>Classlist</strong> from the navigation bar.</p>
-        </details>
-        <details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px;">
-          <summary style="cursor: pointer; font-weight: 600;">Why don’t I see future content?</summary>
-          <p style="margin-top: 10px; color: #313131;">Some items are released by date or completion requirements. Unless hidden by the instructor.</p>
-        </details>
+</section>
 
-        <h3>Instructions to add more drop-down boxes:</h3>
-        <p>Copy and paste this after the <strong>&lt;/details&gt;</strong> and before the <strong>&lt;/section&gt;</strong> commands inside the Source Code editor "&lt; &gt;"</p>
-        <p><code>
-&lt;details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px;"&gt;
-&lt;summary style="cursor: pointer; font-weight: 600;"&gt;Why don’t I see future content?&lt;/summary&gt;
-&lt;p style="margin-top: 10px; color: #313131;"&gt;Some items are released by date or completion requirements.&lt;/p&gt;
-&lt;/details&gt;
-        </code></p>
-      </section>
+</body>
+</html>
+    </textarea>
 
-    <!-- Copy section -->
-    <section class="card">
-      <h2>Copy HTML</h2>
-      <p>Copy everything below:</p>
-
-      <pre><code>
-<!-- 
-  Paste the SAME HTML here
-  Here use &lt; and &gt; to replace < and > 
--->
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;&lt;head&gt;&lt;link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css"&gt;&lt;/head&gt;&lt;body style="color: rgb(32, 33, 34); font-family: Lato, sans-serif; font-size: 12px;"&gt;
-  &lt;section aria-label="Course FAQ" style="font-family: Arial, sans-serif;"&gt;
-  &lt;h2 style="color: #cb4900;"&gt;Course FAQ&lt;/h2&gt;
-  &lt;details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px; margin-bottom: 10px;"&gt;
-    &lt;summary style="cursor: pointer; font-weight: 600;"&gt;Where do I submit assignments?&lt;/summary&gt;
-    &lt;p style="margin-top: 10px; color: #313131;"&gt;Submissions are located in &lt;strong&gt;Assignments&lt;/strong&gt;. If you don’t see it yet, check the module release conditions.&lt;/p&gt;
-  &lt;/details&gt;
-  &lt;details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px; margin-bottom: 10px;"&gt;
-    &lt;summary style="cursor: pointer; font-weight: 600;"&gt;How do I contact the instructor?&lt;/summary&gt;
-    &lt;p style="margin-top: 10px; color: #313131;"&gt;Use the &lt;strong&gt;Email Instructor&lt;/strong&gt; button found in &lt;strong&gt;Tools&lt;/strong&gt; and &lt;strong&gt;Classlist&lt;/strong&gt; from the navigation bar.&lt;/p&gt;
-  &lt;/details&gt;
-  &lt;details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px;"&gt;
-    &lt;summary style="cursor: pointer; font-weight: 600;"&gt;Why don’t I see future content?&lt;/summary&gt;
-    &lt;p style="margin-top: 10px; color: #313131;"&gt;Some items are released by date or completion requirements. Unless hidden by the instructor.&lt;/p&gt;
-  &lt;/details&gt;
-  &lt;h3&gt;Instructions to add more drop-down boxes:&lt;/h3&gt;
-  &lt;p&gt;Copy and paste this after the &lt;strong&gt;&amp;lt;/details&amp;gt; &lt;/strong&gt; and before the &lt;strong&gt;&amp;lt;/section&amp;gt;&lt;/strong&gt; commands inside the Source Code editor "&amp;lt; &amp;gt;"&lt;/p&gt;
-  &lt;p&gt;&lt;code&gt;
-  &lt;details style="border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px;"&gt;
-    &lt;summary style="cursor: pointer; font-weight: 600;"&gt;Why don’t I see future content?&lt;/summary&gt;
-    &lt;p style="margin-top: 10px; color: #313131;"&gt;Some items are released by date or completion requirements.&lt;/p&gt;
-  &lt;/details&gt;
-  &lt;/code&gt;&lt;/p&gt;
-&lt;/section&gt;&lt;/body&gt;&lt;/html&gt;
-      </code></pre>
-    </section>
-
-    
     <p><a href="../index.html">← Back to catalog</a></p>
-  </main>
+  </section>
+
+</main>
+
+<script>
+  function copyCode(id) {
+    const el = document.getElementById(id);
+    el.select();
+    document.execCommand("copy");
+    alert("Copied!");
+  }
+
+  function downloadCode(id, filename) {
+    const content = document.getElementById(id).value;
+    const blob = new Blob([content], {type:"text/html"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+  }
+</script>
+
 </body>
 </html>
