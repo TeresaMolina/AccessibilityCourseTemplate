@@ -1,78 +1,33 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Reflection Journal</title>
-  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
-</head>
+<section class="card">
+  <h2>Copy HTML</h2>
+  <p>Copy everything below:</p>
 
-<body style="font-family:Lato,Arial,sans-serif;background:#f7f7f7;margin:0;padding:24px;color:#313131;">
+  <textarea
+    id="journalCode"
+    readonly
+    aria-label="Student Journal HTML Code"
+    style="
+      width:100%;
+      min-height:500px;
+      padding:14px;
+      border:1px solid #d9d9d9;
+      border-radius:12px;
+      background:#f7f7f7;
+      font-family:Consolas,monospace;
+      font-size:.9rem;
+      line-height:1.45;
+      resize:vertical;
+      white-space:pre;
+      overflow:auto;
+    "
+>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Student Journal&lt;/title&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
 
-<main style="max-width:950px;margin:0 auto;">
-
-  <section style="border:1px solid #ddd;border-radius:16px;padding:18px;background:#fff;">
-    <h1 style="margin-top:0;color:#ae3f00;">Reflection Journal</h1>
-    <p>Preview the journal below, then copy or download the Brightspace-ready HTML.</p>
-
-    <h2>Preview</h2>
-
-    <!-- PREVIEW AREA -->
-    <div style="border:1px solid #e6e6e6;border-radius:16px;padding:18px;background:#fafafa;">
-
-<section aria-label="Psychology Reflection Journal" style="max-width: 820px; margin: 0 auto; color: #313131; line-height: 1.5;">
-<div style="border: 1px solid #d9d9d9; border-radius: 18px; padding: 22px; background: #ffffff;"><header style="border-left: 8px solid #4c4a4f; background: #f2f2f2; padding: 14px 16px; border-radius: 12px;">
-<h1 style="margin: 0 0 6px 0; font-size: 1.6rem; border: none; padding: 0;">Psychology Reflection Journal</h1>
-<p style="margin: 0; color: #4c4a4f; font-size: .95rem;"><em>This journal does not save. You may download it as a PDF.</em></p>
-</header>
-<section style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px;">
-<div><label for="journalDate"><strong>Date</strong></label> <input id="journalDate" name="journalDate" type="date" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></div>
-<div><label for="journalMood"><strong>Mood</strong></label><select id="journalMood" name="journalMood" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;">
-<option value="">Select mood</option>
-<option value="Calm">Calm</option>
-<option value="Anxious">Anxious</option>
-<option value="Happy">Happy</option>
-<option value="Overwhelmed">Overwhelmed</option>
-<option value="Tired">Tired</option>
-<option value="Motivated">Motivated</option>
-</select></div>
-</section>
-<section style="margin-top: 16px;"><label for="journalSituation"><strong>Situation / What happened?</strong></label> <textarea id="journalSituation" name="journalSituation" rows="3" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalThoughts"><strong>Thoughts</strong></label> <textarea id="journalThoughts" name="journalThoughts" rows="3" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalEmotions"><strong>Emotions</strong></label> <textarea id="journalEmotions" name="journalEmotions" rows="3" placeholder="For example: anxious, excited, frustrated" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalBody"><strong>Body Sensations (optional)</strong></label> <textarea id="journalBody" name="journalBody" rows="2" placeholder="For example: tension, fatigue, restlessness" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalReflection"><strong>Reflection / Interpretation</strong></label> <textarea id="journalReflection" name="journalReflection" rows="4" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalCoping"><strong>Coping / Next Steps</strong></label> <textarea id="journalCoping" name="journalCoping" rows="3" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 16px;"><button id="downloadPdfBtn" type="button" style="cursor: pointer; border: 1px solid #4c4a4f; background: #4c4a4f; color: #fff; padding: 10px 16px; border-radius: 12px; font-weight: bold;" onclick="window.print()"> Download PDF </button>
-<p id="printNote" style="margin-top: 10px; color: #4c4a4f; font-size: .85rem;">Tip: After clicking <strong>Download PDF</strong>, choose <strong>Save as PDF</strong> in the print window.</p>
-</section>
-</div>
-</section>
-    </div>
-
-    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
-      <button onclick="copyCode('journalCode')" type="button"
-        style="cursor:pointer;border:1px solid #cb4900;background:#cb4900;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
-        Copy HTML
-      </button>
-
-      <button onclick="downloadCode('journalCode','journal.html')" type="button"
-        style="cursor:pointer;border:1px solid #4c4a4f;background:#4c4a4f;color:#fff;padding:10px 14px;border-radius:12px;font-weight:bold;">
-        Download HTML
-      </button>
-    </div>
-
-    <h2>Copy HTML</h2>
-
-    <textarea id="journalCode" readonly
-      style="width:100%;height:360px;padding:12px;border:1px solid #ddd;border-radius:12px;font-family:monospace;box-sizing:border-box;">
-
-  <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <title>Student Journal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
+  &lt;style&gt;
     @media print {
       #downloadPdfBtn,
       #printNote {
@@ -92,62 +47,269 @@
         color: #000000 !important;
       }
     }
-  </style>
+  &lt;/style&gt;
 
-  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css">
-</head><body style="margin:0;padding:24px;background:#f7f7f7;font-family:Lato,Arial,sans-serif;color:#313131;line-height:1.5;"><section aria-label="Psychology Reflection Journal" style="max-width: 820px; margin: 0 auto; color: #313131; line-height: 1.5;">
-<div style="border: 1px solid #d9d9d9; border-radius: 18px; padding: 22px; background: #ffffff;"><header style="border-left: 8px solid #4c4a4f; background: #f2f2f2; padding: 14px 16px; border-radius: 12px;">
-<h1 style="margin: 0 0 6px 0; font-size: 1.6rem; border: none; padding: 0;">Psychology Reflection Journal</h1>
-<p style="margin: 0; color: #4c4a4f; font-size: .95rem;"><em>This journal does not save. You may download it as a PDF.</em></p>
-</header>
-<section style="margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px;">
-<div><label for="journalDate"><strong>Date</strong></label> <input id="journalDate" name="journalDate" type="date" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></div>
-<div><label for="journalMood"><strong>Mood</strong></label><select id="journalMood" name="journalMood" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;">
-<option value="">Select mood</option>
-<option value="Calm">Calm</option>
-<option value="Anxious">Anxious</option>
-<option value="Happy">Happy</option>
-<option value="Overwhelmed">Overwhelmed</option>
-<option value="Tired">Tired</option>
-<option value="Motivated">Motivated</option>
-</select></div>
+  &lt;link rel="stylesheet"
+    href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css"&gt;
+&lt;/head&gt;
+
+&lt;body style="margin:0;padding:24px;background:#f7f7f7;
+font-family:Arial,sans-serif;color:#313131;line-height:1.5;"&gt;
+
+&lt;section aria-label="Psychology Journal"
+  style="max-width:820px;margin:0 auto;"&gt;
+
+  &lt;div style="
+    border:1px solid #d9d9d9;
+    border-radius:18px;
+    padding:22px;
+    background:#ffffff;
+  "&gt;
+
+    &lt;header style="
+      border-left:8px solid #4c4a4f;
+      background:#f2f2f2;
+      padding:14px 16px;
+      border-radius:12px;
+    "&gt;
+
+      &lt;h1 style="margin:0 0 6px 0;font-size:1.4rem;"&gt;
+        Psychology Reflection Journal
+      &lt;/h1&gt;
+
+      &lt;p style="margin:0;color:#4c4a4f;font-size:.95rem;"&gt;
+        &lt;em&gt;This journal does not save. You may download it as a PDF.&lt;/em&gt;
+      &lt;/p&gt;
+
+    &lt;/header&gt;
+
+    &lt;section style="
+      margin-top:16px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+    "&gt;
+
+      &lt;div&gt;
+        &lt;label for="journalDate"&gt;
+          &lt;strong&gt;Date&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;input
+          id="journalDate"
+          type="date"
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:12px;
+            background:#fafafa;
+          "&gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;label for="journalMood"&gt;
+          &lt;strong&gt;Mood&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;select
+          id="journalMood"
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:12px;
+            background:#fafafa;
+          "&gt;
+
+          &lt;option value=""&gt;Select mood&lt;/option&gt;
+          &lt;option&gt;Calm&lt;/option&gt;
+          &lt;option&gt;Anxious&lt;/option&gt;
+          &lt;option&gt;Happy&lt;/option&gt;
+          &lt;option&gt;Overwhelmed&lt;/option&gt;
+          &lt;option&gt;Tired&lt;/option&gt;
+          &lt;option&gt;Motivated&lt;/option&gt;
+
+        &lt;/select&gt;
+      &lt;/div&gt;
+
+    &lt;/section&gt;
+
+    &lt;section style="margin-top:16px;"&gt;
+
+      &lt;label for="journalThoughts"&gt;
+        &lt;strong&gt;Thoughts&lt;/strong&gt;
+      &lt;/label&gt;
+
+      &lt;textarea
+        id="journalThoughts"
+        rows="4"
+        style="
+          width:100%;
+          margin-top:6px;
+          padding:12px;
+          border:1px solid #ccc;
+          border-radius:12px;
+          background:#fafafa;
+        "&gt;&lt;/textarea&gt;
+
+    &lt;/section&gt;
+
+    &lt;section style="margin-top:14px;"&gt;
+
+      &lt;label for="journalEmotions"&gt;
+        &lt;strong&gt;Emotions&lt;/strong&gt;
+      &lt;/label&gt;
+
+      &lt;textarea
+        id="journalEmotions"
+        rows="3"
+        placeholder="For example: anxious, excited, frustrated"
+        style="
+          width:100%;
+          margin-top:6px;
+          padding:12px;
+          border:1px solid #ccc;
+          border-radius:12px;
+          background:#fafafa;
+        "&gt;&lt;/textarea&gt;
+
+    &lt;/section&gt;
+
+    &lt;section style="margin-top:14px;"&gt;
+
+      &lt;label for="journalBody"&gt;
+        &lt;strong&gt;Body Sensations (optional)&lt;/strong&gt;
+      &lt;/label&gt;
+
+      &lt;textarea
+        id="journalBody"
+        rows="3"
+        placeholder="For example: tension, fatigue, restlessness"
+        style="
+          width:100%;
+          margin-top:6px;
+          padding:12px;
+          border:1px solid #ccc;
+          border-radius:12px;
+          background:#fafafa;
+        "&gt;&lt;/textarea&gt;
+
+    &lt;/section&gt;
+
+    &lt;section style="margin-top:14px;"&gt;
+
+      &lt;label for="journalReflection"&gt;
+        &lt;strong&gt;Reflection / Interpretation&lt;/strong&gt;
+      &lt;/label&gt;
+
+      &lt;textarea
+        id="journalReflection"
+        rows="4"
+        style="
+          width:100%;
+          margin-top:6px;
+          padding:12px;
+          border:1px solid #ccc;
+          border-radius:12px;
+          background:#fafafa;
+        "&gt;&lt;/textarea&gt;
+
+    &lt;/section&gt;
+
+    &lt;section style="margin-top:14px;"&gt;
+
+      &lt;label for="journalCoping"&gt;
+        &lt;strong&gt;Coping / Next Steps&lt;/strong&gt;
+      &lt;/label&gt;
+
+      &lt;textarea
+        id="journalCoping"
+        rows="3"
+        style="
+          width:100%;
+          margin-top:6px;
+          padding:12px;
+          border:1px solid #ccc;
+          border-radius:12px;
+          background:#fafafa;
+        "&gt;&lt;/textarea&gt;
+
+    &lt;/section&gt;
+
+    &lt;section style="margin-top:16px;"&gt;
+
+      &lt;button
+        id="downloadPdfBtn"
+        type="button"
+        onclick="window.print()"
+        style="
+          cursor:pointer;
+          border:1px solid #4c4a4f;
+          background:#4c4a4f;
+          color:#fff;
+          padding:10px 16px;
+          border-radius:12px;
+          font-weight:bold;
+        "&gt;
+
+        Download PDF
+
+      &lt;/button&gt;
+
+      &lt;p
+        id="printNote"
+        style="
+          margin-top:10px;
+          color:#4c4a4f;
+          font-size:.85rem;
+        "&gt;
+
+        Tip: After clicking
+        &lt;strong&gt;Download PDF&lt;/strong&gt;,
+        choose &lt;strong&gt;Save as PDF&lt;/strong&gt;
+        in the print window.
+
+      &lt;/p&gt;
+
+    &lt;/section&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+
+  <div style="margin-top:12px;">
+    <button
+      type="button"
+      onclick="copyJournalCode()"
+      style="
+        cursor:pointer;
+        border:1px solid #cb4900;
+        background:#cb4900;
+        color:#fff;
+        padding:10px 16px;
+        border-radius:12px;
+        font-weight:bold;
+      "
+    >
+      Copy HTML
+    </button>
+  </div>
+
+  <script>
+    function copyJournalCode() {
+      const codeBox = document.getElementById("journalCode");
+      codeBox.select();
+      codeBox.setSelectionRange(0, 999999);
+
+      navigator.clipboard.writeText(codeBox.value);
+
+      alert("Journal HTML copied!");
+    }
+  </script>
 </section>
-<section style="margin-top: 16px;"><label for="journalSituation"><strong>Situation / What happened?</strong></label> <textarea id="journalSituation" name="journalSituation" rows="3" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalThoughts"><strong>Thoughts</strong></label> <textarea id="journalThoughts" name="journalThoughts" rows="3" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalEmotions"><strong>Emotions</strong></label> <textarea id="journalEmotions" name="journalEmotions" rows="3" placeholder="For example: anxious, excited, frustrated" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalBody"><strong>Body Sensations (optional)</strong></label> <textarea id="journalBody" name="journalBody" rows="2" placeholder="For example: tension, fatigue, restlessness" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalReflection"><strong>Reflection / Interpretation</strong></label> <textarea id="journalReflection" name="journalReflection" rows="4" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 14px;"><label for="journalCoping"><strong>Coping / Next Steps</strong></label> <textarea id="journalCoping" name="journalCoping" rows="3" style="width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 12px; background: #fafafa;"></textarea></section>
-<section style="margin-top: 16px;"><button id="downloadPdfBtn" type="button" style="cursor: pointer; border: 1px solid #4c4a4f; background: #4c4a4f; color: #fff; padding: 10px 16px; border-radius: 12px; font-weight: bold;" onclick="window.print()"> Download PDF </button>
-<p id="printNote" style="margin-top: 10px; color: #4c4a4f; font-size: .85rem;">Tip: After clicking <strong>Download PDF</strong>, choose <strong>Save as PDF</strong> in the print window.</p>
-</section>
-</div>
-</section></body></html>
-    </textarea>
-
-    <p><a href="../index.html">← Back to catalog</a></p>
-  </section>
-
-</main>
-
-<script>
-  function copyCode(id) {
-    const el = document.getElementById(id);
-    el.select();
-    el.setSelectionRange(0, 999999);
-    document.execCommand("copy");
-    alert("Copied!");
-  }
-
-  function downloadCode(id, filename) {
-    const content = document.getElementById(id).value;
-    const blob = new Blob([content], {type:"text/html"});
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = filename;
-    a.click();
-  }
-</script>
-
-</body>
-</html>

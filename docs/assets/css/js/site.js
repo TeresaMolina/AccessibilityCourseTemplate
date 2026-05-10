@@ -2,7 +2,7 @@
 // Data for templates and widgets.
 
 const templates = [
-  { title: "Quiz Timer", file: "templates/quiz-timer.html", desc: "A simple timing/support page for quizzes/exams (non-automated).", tags: ["Template"] },
+  { title: "Exam Timer", file: "templates/exam-timer.html", desc: "A simple timing/support page for quizzes/exams (non-automated).", tags: ["Template"] },
   { title: "Birthday Widget Page", file: "templates/birthday.html", desc: "Fun morale booster page (HTML/CSS only).", tags: ["Template"] },
   { title: "Grades Calculator", file: "templates/grades-calculator.html", desc: "Calculator page (folder-based). Link points to its index if present.", tags: ["Tool"] },
   { title: "Graphing Calculator", file: "templates/point_grades-calculator.html", desc: "Graphing helper page (folder-based).", tags: ["Tool"] },
@@ -14,7 +14,7 @@ const templates = [
   { title: "Lecture Board", file: "templates/lecture-board.html", desc: "A template for organizing lecture materials, videos, and resources.", tags: ["Template"] },
   { title: "Music Board", file: "templates/music-board.html", desc: "A template for sharing music resources, playlists, and related content.", tags: ["Template"] },
   { title: "Study Guide", file: "templates/study-guide.html", desc: "A template for creating comprehensive study guides with sections for notes, resources, and practice questions.", tags: ["Template"] },
-  { title: "TA or Tutor Info", file: "widgets/ta-tutor-info.html", desc: "A widget for displaying TA or tutor contact information and office hours.", tags: ["Home"] }
+  { title: "TA or Tutor Info", file: "templates/ta-tutor-info.html", desc: "A template for displaying TA or tutor contact information and office hours.", tags: ["Home"] }
 ];
 
 const widgets = [

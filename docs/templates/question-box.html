@@ -96,75 +96,234 @@
 
     <h2>Copy HTML</h2>
 
-    <textarea id="questionCode" readonly
-      style="width:100%;height:360px;padding:12px;border:1px solid #ddd;border-radius:12px;font-family:monospace;box-sizing:border-box;">
-<!DOCTYPE html>
-<html lang="en"><head> 
-  <meta charset="utf-8"> 
-  <title>Question Box</title> 
-  <link rel="stylesheet" href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css"> 
- </head><body style="color:#202122;font-family:Lato,Arial,sans-serif;font-size:16px;"><section aria-label="Question Email Form" style="max-width: 700px; margin: 0 auto; color: #202122; line-height: 1.45;">
-<div style="border: 1px solid #e6e6e6; border-radius: 16px; padding: 16px; background: #fff;"><header style="border-left: 8px solid #cb4900; background: #fff7f0; padding: 12px 14px; border-radius: 12px;">
-<h1 style="margin: 0 0 4px 0; color: #ae3f00; font-size: 1.6rem; border: none; padding: 0;"><span style="font-size: 20px;">Ask Your Instructor</span></h1>
-<p style="margin: 0; color: #4c4a4f; font-size: 1rem;"><span style="font-size: 20px;">Fill in the form below to generate an email with your question.</span></p>
-</header>
-<div style="margin-top: 14px; display: grid; gap: 12px;">
-<div><span style="font-size: 20px;"><label for="instructorEmail"><strong>Instructor Email</strong></label> <input id="instructorEmail" type="email" placeholder="vaquero.instructor@utrgv.edu" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></span></div>
-<div><span style="font-size: 20px;"><label for="firstName"><strong>First Name</strong></label> <input id="firstName" type="text" value="Teresa" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></span></div>
-<div><span style="font-size: 20px;"><label for="lastName"><strong>Last Name</strong></label> <input id="lastName" type="text" value="Molina" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></span></div>
-<div><span style="font-size: 20px;"><label for="studentID"><strong>Student ID</strong></label> <input id="studentID" type="text" placeholder="ex. 20123456" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></span></div>
-<div><span style="font-size: 20px;"><label for="courseName"><strong>Course Name</strong></label> <input id="courseName" type="text" value="Accessible Course Template" placeholder="ex. UTRGV-1301-01-Spring-2024" style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></span></div>
-<div><span style="font-size: 20px;"><label for="studentQuestion"><strong>Your Question</strong></label></span> <textarea id="studentQuestion" rows="6" placeholder="Type your question here..." style="width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #ddd; border-radius: 12px;"></textarea></div>
-<button id="emailBtn" type="button" style="cursor: pointer; border: 1px solid #cb4900; background: #cb4900; color: #fff; padding: 10px 14px; border-radius: 12px; font-weight: bold; width: fit-content;"> Open Email Draft </button>
-<p style="margin: 0; color: #4c4a4f; font-size: .9rem;"><span style="font-size: 20px;">Please note: Be sure to have your professor's email address on file and that your browser is configured to open mailto links with your email client.</span></p>
-<div style="display: grid; gap: 6px;">
-<ul>
-<li><span style="font-size: 20px;"><a href="https://support.microsoft.com/en-us/office/make-outlook-the-default-program-for-email-contacts-and-calendar-ff7990c4-54c4-4390-8fe3-c0285226f021" target="_blank" rel="noopener" style="color: #cb4900; font-weight: bold; text-decoration: underline;"> Set up Outlook as default email client on Windows </a> <span href="https://support.microsoft.com/en-us/office/add-an-email-account-to-outlook-for-mac-6aeec61b-86af-40af-8ffe-985d0fc82ddb" target="_blank" rel="noopener" style="color: #cb4900; font-weight: bold; text-decoration: underline;"></span></span></li>
-<li><span style="font-size: 20px;"><a href="https://support.microsoft.com/en-us/office/add-an-email-account-to-outlook-for-mac-6aeec61b-86af-40af-8ffe-985d0fc82ddb" target="_blank" rel="noopener" style="color: #cb4900; font-weight: bold; text-decoration: underline;">Set up Outlook as default email client on Mac </a></span></li>
-<li><span style="font-size: 20px;"><a href="https://support.google.com/chromebook/thread/16718184/how-to-make-ms-outlook-the-default-email-in-chrome-os?hl=en" target="_blank" rel="noopener" style="color: #cb4900; font-weight: bold; text-decoration: underline;">Set up Outlook as default email client on ChromeOS </a></span></li>
-</ul>
-</div>
-</div>
-</div>
-<script>
-    (function () {
-      const btn = document.getElementById("emailBtn");
+<textarea
+  id="questionCode"
+  readonly
+  aria-label="Question Box HTML Code"
+  style="
+    width:100%;
+    min-height:500px;
+    padding:14px;
+    border:1px solid #d9d9d9;
+    border-radius:12px;
+    background:#f7f7f7;
+    font-family:Consolas,monospace;
+    font-size:.9rem;
+    line-height:1.45;
+    resize:vertical;
+    white-space:pre;
+    overflow:auto;
+    box-sizing:border-box;
+  "
+>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Question Box&lt;/title&gt;
 
-      btn.addEventListener("click", function () {
-        const instructorEmail = document.getElementById("instructorEmail").value.trim();
-        const firstName = document.getElementById("firstName").value.trim();
-        const lastName = document.getElementById("lastName").value.trim();
-        const studentID = document.getElementById("studentID").value.trim();
-        const courseName = document.getElementById("courseName").value.trim();
-        const question = document.getElementById("studentQuestion").value.trim();
+  &lt;link rel="stylesheet"
+    href="https://s.brightspace.com/lib/fonts/0.6.1/fonts.css"&gt;
+&lt;/head&gt;
 
-        if (!instructorEmail) {
-          alert("Please enter the instructor email address.");
-          return;
-        }
+&lt;body style="
+  color:#202122;
+  font-family:Lato,Arial,sans-serif;
+  font-size:16px;
+"&gt;
 
-        const subject =
-          firstName + " " + lastName + " | " + courseName + " | Question";
+&lt;section
+  aria-label="Question Email Form"
+  style="
+    max-width:700px;
+    margin:0 auto;
+    color:#202122;
+    line-height:1.45;
+  "
+&gt;
 
-        const body =
-          "Hello Professor,\n\n" +
-          "I have a question regarding " + courseName + ".\n\n" +
-          "My question:\n" +
-          question + "\n\n" +
-          "Thank you,\n" +
-          firstName + " " + lastName +
-          "\nStudent ID#: " + studentID;
+  &lt;div style="
+    border:1px solid #e6e6e6;
+    border-radius:16px;
+    padding:16px;
+    background:#fff;
+  "&gt;
 
-        const mailto =
-          "mailto:" + instructorEmail +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
+    &lt;header style="
+      border-left:8px solid #cb4900;
+      background:#fff7f0;
+      padding:12px 14px;
+      border-radius:12px;
+    "&gt;
 
-        window.location.href = mailto;
-      });
-    })();
-  </script></section></body></html>
-    </textarea>
+      &lt;h1 style="
+        margin:0 0 4px 0;
+        color:#ae3f00;
+        font-size:1.6rem;
+        border:none;
+        padding:0;
+      "&gt;
+        Ask Your Instructor
+      &lt;/h1&gt;
+
+      &lt;p style="
+        margin:0;
+        color:#4c4a4f;
+        font-size:1rem;
+      "&gt;
+        Fill in the form below to generate an email with your question.
+      &lt;/p&gt;
+
+    &lt;/header&gt;
+
+    &lt;div style="
+      margin-top:14px;
+      display:grid;
+      gap:12px;
+    "&gt;
+
+      &lt;div&gt;
+        &lt;label for="instructorEmail"&gt;
+          &lt;strong&gt;Instructor Email&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;input
+          id="instructorEmail"
+          type="email"
+          placeholder="vaquero.instructor@utrgv.edu"
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ddd;
+            border-radius:12px;
+          "
+        &gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;label for="firstName"&gt;
+          &lt;strong&gt;First Name&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;input
+          id="firstName"
+          type="text"
+          placeholder="First name"
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ddd;
+            border-radius:12px;
+          "
+        &gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;label for="lastName"&gt;
+          &lt;strong&gt;Last Name&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;input
+          id="lastName"
+          type="text"
+          placeholder="Last name"
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ddd;
+            border-radius:12px;
+          "
+        &gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;label for="studentID"&gt;
+          &lt;strong&gt;Student ID&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;input
+          id="studentID"
+          type="text"
+          placeholder="20123456"
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ddd;
+            border-radius:12px;
+          "
+        &gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;label for="courseName"&gt;
+          &lt;strong&gt;Course Name&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;input
+          id="courseName"
+          type="text"
+          placeholder="Course Name"
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ddd;
+            border-radius:12px;
+          "
+        &gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;label for="studentQuestion"&gt;
+          &lt;strong&gt;Your Question&lt;/strong&gt;
+        &lt;/label&gt;
+
+        &lt;textarea
+          id="studentQuestion"
+          rows="6"
+          placeholder="Type your question here..."
+          style="
+            width:100%;
+            margin-top:6px;
+            padding:10px;
+            border:1px solid #ddd;
+            border-radius:12px;
+          "
+        &gt;&lt;/textarea&gt;
+
+      &lt;/div&gt;
+
+      &lt;button
+        id="emailBtn"
+        type="button"
+        style="
+          cursor:pointer;
+          border:1px solid #cb4900;
+          background:#cb4900;
+          color:#fff;
+          padding:10px 14px;
+          border-radius:12px;
+          font-weight:bold;
+          width:fit-content;
+        "
+      &gt;
+
+        Open Email Draft
+
+      &lt;/button&gt;
+
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/section&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
 
     <p><a href="../index.html">← Back to catalog</a></p>
   </section>
